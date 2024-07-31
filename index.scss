@@ -1,0 +1,68 @@
+// Renk Değişkenleri
+$background-color-grey: #f7f8fa;
+$background-color-blue: #1ea1f2;
+$text-color-black: #000000;
+$text-color-nightgrey: #333333;
+$text-color-grey: #828282;
+$background-color-ıcewinddale: #e7ecf0;
+$background-color-lightblue: #a5d9fa;
+$color-white: #ffffff;
+
+
+
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &__button {
+        background-color: transparent;
+        border: none;
+        font-size: 16px;
+        padding: 10px;
+        margin: 5px 0;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        &--with-text {
+            background-color: $color-white;
+            color: $text-color-black;
+            font-size: 16px;
+            justify-content: flex-start;
+            border-radius: 25px;
+
+            &-img {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                margin-right: 10px;
+            }
+
+            &-text {
+                font-size: 16px;
+            }
+        }
+
+        &--twitter {
+            color: $background-color-blue;
+            font-size: 32px;
+            padding: 5px;
+            margin: 10px 0;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &__icon {
+        font-size: 24px;
+    }
+}
+
+

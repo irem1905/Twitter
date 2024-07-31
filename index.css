@@ -1,1 +1,47 @@
-/*# sourceMappingURL=index.css.map */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.sidebar__button {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  padding: 10px;
+  margin: 5px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.sidebar__button--with-text {
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 16px;
+  justify-content: flex-start;
+  border-radius: 25px;
+}
+.sidebar__button--with-text-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.sidebar__button--with-text-text {
+  font-size: 16px;
+}
+.sidebar__button--twitter {
+  color: #1ea1f2;
+  font-size: 32px;
+  padding: 5px;
+  margin: 10px 0;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sidebar__icon {
+  font-size: 24px;
+}/*# sourceMappingURL=index.css.map */
