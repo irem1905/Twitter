@@ -9,8 +9,6 @@ $background-color-lightblue: #a5d9fa;
 $color-white: #ffffff;
 
 
-
-
 .sidebar {
     display: flex;
     flex-direction: column;
@@ -63,6 +61,35 @@ $color-white: #ffffff;
     &__icon {
         font-size: 24px;
     }
+    &__button-text{
+        background-color: $background-color-blue;
+        color: $color-white;
+    }
 }
 
+.content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 
+    &__star {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+
+        &-img {
+            width: 50px;
+            height: 50px;
+        }
+    }
+}
+
+.navbar {
+
+    &__title {
+        font-size: 16px;
+        font-weight: bold;
+        color: $text-color-black;
+    }
+}
