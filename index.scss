@@ -1,18 +1,30 @@
 // Renk Değişkenleri
-$background-color-grey: #f7f8fa;
-$background-color-blue: #1ea1f2;
+$backgroundcolor-grey: #f7f8fa;
+$backgroundcolor-button-blue: #1ea1f2;
 $text-color-black: #000000;
-$text-color-nightgrey: #333333;
-$text-color-grey: #828282;
+$text-color-carbon: #333333;
+$text-color-trolley-grey: #828282;
 $background-color-ıcewinddale: #e7ecf0;
-$background-color-lightblue: #a5d9fa;
+$background-color-malmö-FF: #a5d9fa;
 $color-white: #ffffff;
+$line-color-steam: #ddd;
 
+body {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    margin: 0;
+}
 
 .sidebar {
+    flex: 0 0 20%; /* Yan barın genişliği */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    background-color: $color-white;
+    padding: 1rem;
+    box-sizing: border-box;
+    border-right: 0.5px solid $line-color-steam; /* Sağ tarafa ince çizgi*/
 
     &__button {
         background-color: transparent;
@@ -31,17 +43,6 @@ $color-white: #ffffff;
             font-size: 16px;
             justify-content: flex-start;
             border-radius: 25px;
-
-            &-img {
-                width: 30px;
-                height: 30px;
-                border-radius: 50%;
-                margin-right: 10px;
-            }
-
-            &-text {
-                font-size: 16px;
-            }
         }
 
         &--twitter {
@@ -58,23 +59,55 @@ $color-white: #ffffff;
         }
     }
 
+    &__button-img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
+    &__text {
+        font-size: 16px;
+    }
+
     &__icon {
         font-size: 24px;
     }
-    &__button-text{
+
+    &__button-text {
         background-color: $background-color-blue;
         color: $color-white;
     }
 }
 
 .content {
+    flex: 1; /* Orta kısmın genişliği*/
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;  //yukarı hizala
+    align-items: flex-start;      //sola hizala
+    background-color: $color-white;
+    padding: 1rem;
+    box-sizing: border-box;
+    border-right: 0.5px solid $line-color-steam; /* Sağ tarafa ince çizgi*/
+    border-left: 0.5px solid $line-color-steam;  /* Sol tarafa ince çizgi*/
+
+    &__navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0;
+        border-bottom: 1px solid #e6ecf0;
+    }
+
+    &__title {
+        font-size: 16px;
+        font-weight: bold;
+        color: $text-color-black;
+    }
 
     &__star {
         display: flex;
-        justify-content: center;
         align-items: center;
         margin-top: 20px;
 
@@ -83,13 +116,343 @@ $color-white: #ffffff;
             height: 50px;
         }
     }
+
+    &__post {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+
+        &-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        &-text {
+            font-size: 16px;
+            color: $text-color-grey;
+        }
+    }
+
+    &__toolbar {
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+
+        &-img {
+            width: 24px;
+            height: 24px;
+        }
+    }
 }
 
 .navbar {
-
     &__title {
         font-size: 16px;
         font-weight: bold;
         color: $text-color-black;
     }
 }
+
+.right {
+    flex: 0 0 20%; /* Sağ barın genişliğini belirliyoruz */
+    display: flex;
+    flex-direction: column;
+    background-color: $color-white;
+    padding: 1rem;
+    box-sizing: border-box;
+    border-left: 0.5px solid #ddd; /* Sol tarafa ince çizgi*/
+
+    &__panel {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+
+        &-search {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+
+            &-input {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #e6ecf0;
+                border-radius: 20px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+// body {
+//     display: flex;
+//     flex-direction: row;
+//     height: 100vh;
+//     margin: 0;
+// }
+
+// .sidebar {
+//     flex: 0 0 20%; /* Yan barın genişliğini belirliyoruz */
+//     display: flex;
+//     flex-direction: column;
+//     align-items: flex-start;
+//     background-color: #f5f5f5;
+//     padding: 1rem;
+//     box-sizing: border-box;
+
+//     &__button {
+//         background-color: transparent;
+//         border: none;
+//         font-size: 16px;
+//         padding: 10px;
+//         margin: 5px 0;
+//         cursor: pointer;
+//         display: flex;
+//         align-items: center;
+//         gap: 16px;
+
+//         &--with-text {
+//             background-color: $color-white;
+//             color: $text-color-black;
+//             font-size: 16px;
+//             justify-content: flex-start;
+//             border-radius: 25px;
+//         }
+
+//         &--twitter {
+//             color: $background-color-blue;
+//             font-size: 32px;
+//             padding: 5px;
+//             margin: 10px 0;
+//             border-radius: 50%;
+//             width: 40px;
+//             height: 40px;
+//             display: flex;
+//             justify-content: center;
+//             align-items: center;
+//         }
+//     }
+
+//     &__button-img {
+//         width: 30px;
+//         height: 30px;
+//         border-radius: 50%;
+//         margin-right: 10px;
+//     }
+
+//     &__text {
+//         font-size: 16px;
+//     }
+
+//     &__icon {
+//         font-size: 24px;
+//     }
+
+//     &__button-text {
+//         background-color: $background-color-blue;
+//         color: $color-white;
+//     }
+// }
+
+// .content {
+//     flex: 1; /* Orta kısmın genişliğini belirliyoruz */
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: flex-start;  //yukarı hizala
+//     align-items: flex-start;      //sola hizala
+//     background-color: #fff;
+//     padding: 1rem;
+//     box-sizing: border-box;
+
+//     &__navbar {
+//         display: flex;
+//         align-items: center;
+//         justify-content: space-between;
+//         padding: 10px 0;
+//         border-bottom: 1px solid #e6ecf0;
+//     }
+
+//     &__title {
+//         font-size: 16px;
+//         font-weight: bold;
+//         color: $text-color-black;
+//     }
+
+//     &__star {
+//         display: flex;
+//         align-items: center;
+//         margin-top: 20px;
+
+//         &-img {
+//             width: 50px;
+//             height: 50px;
+//         }
+//     }
+
+//     &__post {
+//         display: flex;
+//         align-items: center;
+//         margin-top: 20px;
+
+//         &-img {
+//             width: 50px;
+//             height: 50px;
+//             border-radius: 50%;
+//             margin-right: 10px;
+//         }
+
+//         &-text {
+//             font-size: 16px;
+//             color: $text-color-grey;
+//         }
+//     }
+
+//     &__toolbar {
+//         display: flex;
+//         align-items: center;
+//         padding: 10px 0;
+
+//         &-img {
+//             width: 24px;
+//             height: 24px;
+//         }
+//     }
+// }
+
+// .navbar {
+//     &__title {
+//         font-size: 16px;
+//         font-weight: bold;
+//         color: $text-color-black;
+//     }
+// }
+
+// .right {
+//     flex: 0 0 20%; /* Sağ barın genişliğini belirliyoruz */
+//     display: flex;
+//     flex-direction: column;
+//     background-color: #f5f5f5;
+//     padding: 1rem;
+//     box-sizing: border-box;
+
+//     &__panel {
+//         display: flex;
+//         flex-direction: column;
+//         padding: 20px;
+
+//         &-search {
+//             display: flex;
+//             align-items: center;
+//             margin-bottom: 20px;
+
+//             &-input {
+//                 width: 100%;
+//                 padding: 10px;
+//                 border: 1px solid #e6ecf0;
+//                 border-radius: 20px;
+//             }
+//         }
+//     }
+// }
+
+
+
+
+
+
+
+
+// .sidebar {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: flex-start;
+
+//     &__button {
+//         background-color: transparent;
+//         border: none;
+//         font-size: 16px;
+//         padding: 10px;
+//         margin: 5px 0;
+//         cursor: pointer;
+//         display: flex;
+//         align-items: center;
+//         gap: 16px;
+
+//         &--with-text {
+//             background-color: $color-white;
+//             color: $text-color-black;
+//             font-size: 16px;
+//             justify-content: flex-start;
+//             border-radius: 25px;
+
+//             &-img {
+//                 width: 30px;
+//                 height: 30px;
+//                 border-radius: 50%;
+//                 margin-right: 10px;
+//             }
+
+//             &-text {
+//                 font-size: 16px;
+//             }
+//         }
+
+//         &--twitter {
+//             color: $background-color-blue;
+//             font-size: 32px;
+//             padding: 5px;
+//             margin: 10px 0;
+//             border-radius: 50%;
+//             width: 40px;
+//             height: 40px;
+//             display: flex;
+//             justify-content: center;
+//             align-items: center;
+//         }
+//     }
+
+//     &__icon {
+//         font-size: 24px;
+//     }
+//     &__button-text{
+//         background-color: $background-color-blue;
+//         color: $color-white;
+//     }
+// }
+
+// .content {
+//     display: flex;
+//     justify-content: space-evenly;
+//     align-items: center;
+
+//     &__star {
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         margin-top: 20px;
+
+//         &-img {
+//             width: 50px;
+//             height: 50px;
+//         }
+//     }
+// }
+
+// .navbar {
+
+//     &__title {
+//         font-size: 16px;
+//         font-weight: bold;
+//         color: $text-color-black;
+//     }
+// }

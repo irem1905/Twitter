@@ -1,7 +1,20 @@
+@charset "UTF-8";
+body {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  margin: 0;
+}
+
 .sidebar {
+  flex: 0 0 20%; /* Yan barın genişliği */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  background-color: #ffffff;
+  padding: 1rem;
+  box-sizing: border-box;
+  border-right: 0.5px solid #ddd; /* Sağ tarafa ince çizgi*/
 }
 .sidebar__button {
   background-color: transparent;
@@ -21,15 +34,6 @@
   justify-content: flex-start;
   border-radius: 25px;
 }
-.sidebar__button--with-text-img {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-.sidebar__button--with-text-text {
-  font-size: 16px;
-}
 .sidebar__button--twitter {
   color: #1ea1f2;
   font-size: 32px;
@@ -42,6 +46,15 @@
   justify-content: center;
   align-items: center;
 }
+.sidebar__button-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.sidebar__text {
+  font-size: 16px;
+}
 .sidebar__icon {
   font-size: 24px;
 }
@@ -51,13 +64,31 @@
 }
 
 .content {
+  flex: 1; /* Orta kısmın genişliği*/
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: #ffffff;
+  padding: 1rem;
+  box-sizing: border-box;
+  border-right: 0.5px solid #ddd; /* Sağ tarafa ince çizgi*/
+  border-left: 0.5px solid #ddd; /* Sol tarafa ince çizgi*/
+}
+.content__navbar {
+  display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #e6ecf0;
+}
+.content__title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000000;
 }
 .content__star {
   display: flex;
-  justify-content: center;
   align-items: center;
   margin-top: 20px;
 }
@@ -65,9 +96,59 @@
   width: 50px;
   height: 50px;
 }
+.content__post {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+.content__post-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.content__post-text {
+  font-size: 16px;
+  color: #828282;
+}
+.content__toolbar {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+.content__toolbar-img {
+  width: 24px;
+  height: 24px;
+}
 
 .navbar__title {
   font-size: 16px;
   font-weight: bold;
   color: #000000;
+}
+
+.right {
+  flex: 0 0 20%; /* Sağ barın genişliğini belirliyoruz */
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  padding: 1rem;
+  box-sizing: border-box;
+  border-left: 0.5px solid #ddd; /* Sol tarafa ince çizgi*/
+}
+.right__panel {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.right__panel-search {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.right__panel-search-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e6ecf0;
+  border-radius: 20px;
 }/*# sourceMappingURL=index.css.map */
