@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <title>TWITTER</title>
     <link rel="stylesheet" href="index.css">
 </head>
@@ -47,118 +52,171 @@
             <span class="sidebar__text">More</span>
         </button>
 
-        <div> 
+        <div class="sidebar__tweet-container">
             <button class="sidebar__button sidebar__button--tweet">
-                <span class="sidebar__text">Tweet</span>
+                <span class="sidebar__tweet-text">Tweet</span>
             </button>
         </div>
     </div>
 
     <div class="content">
-        <div class="content__navbar">
-            <p class="content__title">Home</p>
-        </div>
-        <div class="content__star">
-            <img class="content__star-image" src="twitter-img/star.svg" alt="star">
-        </div>
-
-        <div class="content__post">
-            <img src="twitter-img/me.png" alt="Me" class="content__post-img">
-            <p class="content__post-text">What's happening</p>
+        <div class="content__header">
+            <div class="content__navbar">
+                <p class="content__title">Home</p>
+            </div>
+            <div class="content__star">
+                <img class="content__star-image" src="twitter-img/star.svg" alt="star">
+            </div>
         </div>
 
-        <!-- <div class="content__toolbar">
-            <img src="twitter-img/Image.svg" alt="" class="content__toolbar-img">
-        </div> -->
-    </div>      
+        <div class="content__post-container">
+            <div class="content__post">
+                <img src="twitter-img/me.png" alt="Me" class="content__post-img">
+                <p class="content__post-text">What's happening</p>
+            </div>
+
+            <div class="content__toolbar">
+                <img src="twitter-img/Image.svg" alt="Image" class="content__toolbar-img">
+                <img src="twitter-img/Gif.svg" alt="Gif" class="content__toolbar-img">
+                <img src="twitter-img/Stats.svg" alt="stats" class="content__toolbar-img">
+                <img src="twitter-img/Smiley.svg" alt="Smiley" class="content__toolbar-img">
+
+                <div class="content__toolbar-extra">
+                    <img src="twitter-img/Ellipse 1 (1).svg" alt="Ellipse">
+                    <div class="vertical-line"></div>
+                    <img src="twitter-img/+ (1).svg" alt="+">
+                    <button class="content__toolbar-extra-button">
+                        <span class="content__toolbar-extra-button-text">Tweet</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="content__main">
+
+        </div>
+    </div>
 
     <div class="right">
-        <!-- <div class="right__panel">
-            <div class="right__panel-search">
-                <input type="text" class="right__panel-input" placeholder="Search Twitter">
+        <div class="right__search">
+            <i class="fa-solid fa-search right__search-icon custom-icon"></i>
+            <input type="text" class="right__search-input" placeholder="Search Twitter">
+        </div>
+
+        <div class="right__trends">
+            <div class="right__trends-header">
+                <h2 class="right__trends-title">Paris Trend</h2>
+                <i class="fa-solid fa-cog right__trends-settings setting"></i>
             </div>
-        </div> -->
+            <div class="right__trends-list">
+                <!-- Trend item 1 -->
+                <div class="right__trends-list-item">
+                    <div class="right__trends-list-item-header">
+                        <span class="right__trends-list-item-category">1. Trending</span>
+                    </div>
+                    <div class="right__trends-list-item-name">#NovakDjokovıc</div>
+                    <div class="right__trends-list-item-tweets">456K Tweets</div>
+                    <i class="fa-solid fa-chevron-down right__trends-list-item-dropdown"></i>
+                </div>
+
+                <div class="right__trends-list-item">
+                    <div class="right__trends-list-item-header">
+                        <span class="right__trends-list-item-category">2. Trending</span>
+                    </div>
+                    <div class="right__trends-list-item-name">#RafaelNadal</div>
+                    <div class="right__trends-list-item-tweets">456K Tweets</div>
+                    <i class="fa-solid fa-chevron-down right__trends-list-item-dropdown"></i>
+                </div>
+
+                <div class="right__trends-list-item">
+                    <div class="right__trends-list-item-header">
+                        <span class="right__trends-list-item-category">3. Trending</span>
+                    </div>
+                    <div class="right__trends-list-item-name">#CarlosAlcaraz</div>
+                    <div class="right__trends-list-item-tweets">456K Tweets</div>
+                    <i class="fa-solid fa-chevron-down right__trends-list-item-dropdown"></i>
+                </div>
+
+                <div class="right__trends-list-item">
+                    <div class="right__trends-list-item-header">
+                        <span class="right__trends-list-item-category">1. Trending</span>
+                    </div>
+                    <div class="right__trends-list-item-name">#StefanosTsitsipas</div>
+                    <div class="right__trends-list-item-tweets">456K Tweets</div>
+                    <i class="fa-solid fa-chevron-down right__trends-list-item-dropdown"></i>
+                </div>
+
+                <div class="right__trends-list-item">
+                    <div class="right__trends-list-item-header">
+                        <span class="right__trends-list-item-category">4. Trending</span>
+                    </div>
+                    <div class="right__trends-list-item-name">#RogerFederer</div>
+                    <div class="right__trends-list-item-tweets">456K Tweets</div>
+                    <i class="fa-solid fa-chevron-down right__trends-list-item-dropdown"></i>
+                </div>
+
+                <div class="right__trends-list-item">
+                    <div class="right__trends-list-item-header">
+                        <span class="right__trends-list-item-category">5. Trending</span>
+                    </div>
+                    <div class="right__trends-list-item-name">#DaniilMedvedev</div>
+                    <div class="right__trends-list-item-tweets">456K Tweets</div>
+                    <i class="fa-solid fa-chevron-down right__trends-list-item-dropdown"></i>
+                </div>
+
+                <div class="right__trends-list-item">
+                    <div class="right__trends-list-item-header">
+                        <span class="right__trends-list-item-category">6. Trending</span>
+                    </div>
+                    <div class="right__trends-list-item-name">#GrigorDimitrov
+                    </div>
+                    <div class="right__trends-list-item-tweets">456K Tweets</div>
+                    <i class="fa-solid fa-chevron-down right__trends-list-item-dropdown"></i>
+                </div>
+            </div>
+            <div class="right__trends-show-more">Show More</div>
+        </div>
+        <div class="left__friends">
+            <div class="left__friends-header">
+                <h2 class="left__friends-header-title">Who to follow</h2>
+            </div>
+            <div class="left__friends-list">
+                <div class="left__friends-list-item">
+                    <img src="twitter-img/McFly.png" alt="Profile Image" class="left__friends-list-item-img">
+                    <div class="left__friends-list-item-info">
+                        <span class="left__friends-list-item-info-name">McFly</span>
+                        <span class="left__friends-list-item-info-username">@levraimcfly</span>
+                    </div>
+                    <button class="left__friends-list-item-follow">Follow</button>
+                </div>
+
+                <div class="left__friends-list-item">
+                    <img src="twitter-img/JohnDoe.png" alt="Profile Image" class="left__friends-list-item-img">
+                    <div class="left__friends-list-item-info">
+                        <span class="left__friends-list-item-info-name">JohnDoe</span>
+                        <span class="left__friends-list-item-info-username">@johndoe</span>
+                    </div>
+                    <button class="left__friends-list-item-follow">Follow</button>
+                </div>
+
+                <div class="left__friends-list-item">
+                    <img src="twitter-img/Janis.png" alt="Profile Image" class="left__friends-list-item-img">
+                    <div class="left__friends-list-item-info">
+                        <div class="left__friends-list-item-info-certified">
+                            <span class="left__friends-list-item-info-certified-name">Janis Joplin</span>
+                            <img src="twitter-img/Certified.svg" alt="Certified">
+                        </div>
+
+                        <span class="left__friends-list-item-info-username">@realjanice</span>
+                    </div>
+                    <button class="left__friends-list-item-follow">Follow</button>
+                </div>
+            </div>
+            <div class="left__trends-show-more">Show More</div>
+        </div>
     </div>
+
 
 </body>
-
-
-
-
-
-
-
-<!-- <body>
-    <div class="sidebar">
-        <button class="sidebar__button sidebar__button--twitter">
-            <i class="fa-brands fa-twitter"></i>
-        </button>
-        <button class="sidebar__button">
-            <i class="fa-solid fa-house"></i>
-            <span class="sidebar__text">Home</span>
-        </button>
-        <button class="sidebar__button">
-            <i class="fa-solid fa-hashtag"></i>
-            <span class="sidebar__text">Explore</span>
-        </button>
-        <button class="sidebar__button">
-            <i class="fa-regular fa-bell"></i>
-            <span class="sidebar__text">Notifıcations</span>
-        </button>
-        <button class="sidebar__button">
-            <i class="fa-regular fa-envelope"></i>
-            <span class="sidebar__text">Messages</span>
-        </button>
-        <button class="sidebar__button">
-            <i class="fa-regular fa-bookmark"></i>
-            <span class="sidebar__text">Bookmarks</span>
-        </button>
-        <button class="sidebar__button">
-            <i class="fa-solid fa-list"></i>
-            <span class="sidebar__text">Lists</span>
-        </button>
-        <button class="sidebar__button sidebar__button--with-text">
-            <img src="twitter-img/küçük.png" alt="Profile" class="sidebar__button-img">
-            <span class="sidebar__button-text">Profile</span>
-        </button>
-        <button class="sidebar__button">
-            <img src="twitter-img/more.svg" alt="More" class="sidebar__icon sidebar__icon--image">
-            <span class="sidebar__text">More</span>
-        </button>
-
-        <div> 
-            <button class="sidebar__button">
-                <span class="sidebar__button-text">Tweet</span>
-            </button>
-        </div>
-    </div>
-
-    <div class="content">
-        <div class="navbar">
-            <p class="navbar__title">Home</p>
-        </div>
-        <div class="content__star">
-            <img class="star-image-path" src="twitter-img/star.svg" alt="star">
-        </div>
-
-        <div class="">
-            <img src="twitter-img/me.png" alt="Me">
-            <p class="">What's happening</p>
-        </div>
-
-        <div class="toolbar">
-            <img src="twitter-img/Image.svg" alt="">
-        </div>
-    </div>  
-
-    <div class="right">
-        <!-- <div class="right__panel">
-            <div class="right-panel__search">
-                <input type="text" placeholder="Search Twitter">
-            </div>
-        </div> -->
-    <!-- </div>
-
-</body> --> -->
 
 </html>
