@@ -168,6 +168,50 @@ body {
             font-style: normal;
         }
     }
+
+    .content__main {
+        padding: 20px;    
+        &-section {
+            margin-bottom: 15px;
+    
+            &-user1 {
+                display: flex;
+                align-items: center;
+                padding: 10px;
+                background-color: #fff;
+                border-radius: 8px;
+    
+                &-info {
+                    display: flex;
+                    align-items: center;
+                    margin-right: 10px;
+    
+                    &-img {
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        margin-right: 10px;
+                    }
+    
+                    &-name {
+                        font-size: 16px;
+                    }
+                }
+    
+                &-certified-img {
+                    width: 21px;
+                    height: 21px;
+                    margin-right: 10px;
+                }
+    
+                &-time {
+                    font-size: 14px;
+                    color: $text-color-trolley-grey7;
+                }
+            }
+        }
+    }
+    
 }
 
 .content__toolbar {
@@ -185,7 +229,7 @@ body {
     &-extra {
         display: flex;
         gap: 15px;
-        margin-left: 40%;
+        margin-left: 45%;
     }
 
     .content__toolbar-extra {
@@ -201,9 +245,27 @@ body {
             height: 24px; // Çizginin yüksekliği
             background-color: $line-Noghrei-Silver;
         }
+
+        &-button {
+            width: 98px;
+            height: 42px;
+            background-color: $background-color-malmö-FF;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+
+            // &:hover {
+            //     background-color: #1a91da;
+            // }
+
+            &-text {
+                color: $color-white;
+            }
+        }
     }
 
 }
+
 
 .right {
     flex: 0 0 20%;
@@ -335,12 +397,11 @@ body {
 
             &-header {
                 margin-bottom: 16px;
-            }
 
-            &-title {
-                font-size: 1.2em;
-                font-weight: bold;
-                color: #1da1f2;
+                &-title {
+                    font-size: 1.2em;
+                    font-weight: bold;
+                }
             }
 
             &-list {
@@ -361,18 +422,40 @@ body {
                     &-info {
                         flex: 1;
 
-                        &-name {
-                            font-size: 14px;
-                            font-weight: bold;
+                        &-certified {
                             display: flex;
                             align-items: center;
 
-                            &-tick {
-                                font-size: 14px;
-                                color: $backgroundcolor-button-blue;
-                                margin-left: 4px;
+                            &-name {
+                                font-size: 16px;
+                                color: #333;
+                                margin-right: 5px;
+
+                                &-tick {
+                                    font-size: 14px;
+                                    color: $backgroundcolor-button-blue;
+                                    margin-left: 4px;
+                                }
+                            }
+
+                            &-img {
+                                width: 16px;
+                                height: 16px;
                             }
                         }
+
+                        // &-name {
+                        //     font-size: 14px;
+                        //     font-weight: bold;
+                        //     display: flex;
+                        //     align-items: center;
+
+                        //     &-tick {
+                        //         font-size: 14px;
+                        //         color: $backgroundcolor-button-blue;
+                        //         margin-left: 4px;
+                        //     }
+                        // }
 
                         &-username {
                             font-size: 10px;
@@ -390,16 +473,15 @@ body {
                         font-weight: bold;
                         border: 1px solid;
                     }
+                    &-show-more {
+                        text-align: center;
+                        font-size: 15px;
+                        color: $backgroundcolor-button-blue;
+                        cursor: pointer;
+                        margin-top: 10px;
+                    }
                 }
             }
         }
-    }
-
-    &-show-more {
-        text-align: center;
-        font-size: 15px;
-        color: $backgroundcolor-button-blue;
-        cursor: pointer;
-        margin-top: 10px;
     }
 }

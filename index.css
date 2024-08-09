@@ -138,6 +138,42 @@ body {
   font-weight: 400;
   font-style: normal;
 }
+.content .content__main {
+  padding: 20px;
+}
+.content .content__main-section {
+  margin-bottom: 15px;
+}
+.content .content__main-section-user1 {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+.content .content__main-section-user1-info {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+.content .content__main-section-user1-info-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.content .content__main-section-user1-info-name {
+  font-size: 16px;
+}
+.content .content__main-section-user1-certified-img {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+}
+.content .content__main-section-user1-time {
+  font-size: 14px;
+  color: #777;
+}
 
 .content__toolbar {
   display: flex;
@@ -153,7 +189,7 @@ body {
 .content__toolbar-extra {
   display: flex;
   gap: 15px;
-  margin-left: 40%;
+  margin-left: 45%;
 }
 .content__toolbar .content__toolbar-extra {
   display: flex;
@@ -166,6 +202,17 @@ body {
   width: 1px;
   height: 24px;
   background-color: #bdbdbd;
+}
+.content__toolbar .content__toolbar-extra-button {
+  width: 98px;
+  height: 42px;
+  background-color: #a5d9fa;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.content__toolbar .content__toolbar-extra-button-text {
+  color: #ffffff;
 }
 
 .right {
@@ -280,10 +327,9 @@ body {
 .right .left__friends-header {
   margin-bottom: 16px;
 }
-.right .left__friends-title {
+.right .left__friends-header-title {
   font-size: 1.2em;
   font-weight: bold;
-  color: #1da1f2;
 }
 .right .left__friends-list-item {
   display: flex;
@@ -301,16 +347,23 @@ body {
 .right .left__friends-list-item-info {
   flex: 1;
 }
-.right .left__friends-list-item-info-name {
-  font-size: 14px;
-  font-weight: bold;
+.right .left__friends-list-item-info-certified {
   display: flex;
   align-items: center;
 }
-.right .left__friends-list-item-info-name-tick {
+.right .left__friends-list-item-info-certified-name {
+  font-size: 16px;
+  color: #333;
+  margin-right: 5px;
+}
+.right .left__friends-list-item-info-certified-name-tick {
   font-size: 14px;
   color: #1ea1f2;
   margin-left: 4px;
+}
+.right .left__friends-list-item-info-certified-img {
+  width: 16px;
+  height: 16px;
 }
 .right .left__friends-list-item-info-username {
   font-size: 10px;
@@ -326,7 +379,7 @@ body {
   font-weight: bold;
   border: 1px solid;
 }
-.right-show-more {
+.right .left__friends-list-item-show-more {
   text-align: center;
   font-size: 15px;
   color: #1ea1f2;
