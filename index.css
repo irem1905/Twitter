@@ -7,7 +7,7 @@ body {
 }
 
 .sidebar {
-  flex: 0 0 20%;
+  flex: 0 0 22%;
   /* Yan barın genişliği */
   display: flex;
   flex-direction: column;
@@ -69,7 +69,7 @@ body {
 }
 
 .content {
-  flex: 0 0 60%;
+  flex: 0 0 53%;
   /* Orta kısmın genişliği */
   display: flex;
   flex-direction: column;
@@ -80,8 +80,6 @@ body {
   box-sizing: border-box;
   border-right: 0.5px solid #ddd;
   /* Sağ tarafa ince çizgi*/
-  border-left: 0.5px solid #ddd;
-  /* Sol tarafa ince çizgi*/
 }
 .content__header {
   display: flex;
@@ -147,7 +145,6 @@ body {
 .content .content__main-section-user1 {
   display: flex;
   align-items: center;
-  padding: 10px;
   background-color: #fff;
   border-radius: 8px;
 }
@@ -166,13 +163,46 @@ body {
   font-size: 16px;
 }
 .content .content__main-section-user1-certified-img {
-  width: 16px;
-  height: 16px;
+  width: 21px;
+  height: 21px;
   margin-right: 10px;
 }
 .content .content__main-section-user1-time {
-  font-size: 14px;
-  color: #777;
+  font-size: 16px;
+  color: #828282;
+}
+.content .content__main-tweet {
+  margin-left: 51px;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+.content .content__main-tweet-text {
+  font-size: 16px;
+  line-height: 1.5;
+  display: block;
+  color: #333333;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.content .content__main-tweet-text-hashtag {
+  color: #1ea1f2;
+}
+.content .content__main-tweet-img {
+  margin-top: 10px;
+  width: 100%;
+  border-radius: 8px;
+}
+.content .content__main-tweet-text-hashtag-actions {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 11px;
+}
+.content .content__main-tweet-text-hashtag-actions img {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
 }
 
 .content__toolbar {
@@ -216,7 +246,7 @@ body {
 }
 
 .right {
-  flex: 0 0 20%;
+  flex: 0 0 26%;
   /* Sağ kısım genişliği */
   background-color: #ffffff;
   padding: 1rem;
@@ -266,7 +296,7 @@ body {
 .right__trends-title {
   font-size: 1.2em;
   font-weight: bold;
-  color: #14171a;
+  color: #16161a;
 }
 .right__trends-settings {
   font-size: 1.2em;
@@ -288,7 +318,7 @@ body {
   color: #929292;
 }
 .right__trends-list-item-name {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
   margin: 5px 0;
 }
@@ -357,7 +387,7 @@ body {
   margin-right: 5px;
 }
 .right .left__friends-list-item-info-certified-name-tick {
-  font-size: 14px;
+  font-size: 16px;
   color: #1ea1f2;
   margin-left: 4px;
 }
@@ -366,7 +396,7 @@ body {
   height: 16px;
 }
 .right .left__friends-list-item-info-username {
-  font-size: 10px;
+  font-size: 12px;
   color: #657786;
 }
 .right .left__friends-list-item-follow {
@@ -375,7 +405,7 @@ body {
   border-radius: 16px;
   padding: 6px 12px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
   border: 1px solid;
 }

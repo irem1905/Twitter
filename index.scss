@@ -23,7 +23,7 @@ body {
 }
 
 .sidebar {
-    flex: 0 0 20%;
+    flex: 0 0 22%;
     /* Yan barın genişliği */
     display: flex;
     flex-direction: column;
@@ -91,7 +91,7 @@ body {
 }
 
 .content {
-    flex: 0 0 60%;
+    flex: 0 0 53%;
     /* Orta kısmın genişliği */
     display: flex;
     flex-direction: column;
@@ -102,8 +102,8 @@ body {
     box-sizing: border-box;
     border-right: 0.5px solid $line-color-steam;
     /* Sağ tarafa ince çizgi*/
-    border-left: 0.5px solid $line-color-steam;
-    /* Sol tarafa ince çizgi*/
+    // border-left: 0.5px solid $line-color-steam;
+    // /* Sol tarafa ince çizgi*/
 
     &__header {
         display: flex;
@@ -166,52 +166,94 @@ body {
             font-family: "Roboto", sans-serif;
             font-weight: 400;
             font-style: normal;
+
         }
     }
 
     .content__main {
-        padding: 20px;    
+        padding: 20px;
+
         &-section {
             margin-bottom: 15px;
-    
+
             &-user1 {
                 display: flex;
                 align-items: center;
-                padding: 10px;
                 background-color: #fff;
                 border-radius: 8px;
-    
+
                 &-info {
                     display: flex;
                     align-items: center;
                     margin-right: 10px;
-    
+
                     &-img {
                         width: 40px;
                         height: 40px;
                         border-radius: 50%;
                         margin-right: 10px;
                     }
-    
+
                     &-name {
                         font-size: 16px;
                     }
                 }
-    
+
                 &-certified-img {
                     width: 21px;
                     height: 21px;
                     margin-right: 10px;
                 }
-    
+
                 &-time {
-                    font-size: 14px;
-                    color: $text-color-trolley-grey7;
+                    font-size: 16px;
+                    color: $text-color-trolley-grey;
                 }
             }
         }
     }
-    
+
+    .content__main-tweet {
+        margin-left: 51px;
+        display: flex;
+        flex-direction: column;
+        gap: 11px;
+
+        &-text {
+            font-size: 16px;
+            line-height: 1.5;
+            display: block;
+            color: $text-color-carbon;
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+
+            &-hashtag {
+                color: $backgroundcolor-button-blue;
+            }
+        }
+
+        &-img {
+            margin-top: 10px;
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        &-text-hashtag-actions {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 11px;
+
+            img {
+                width: 16px;
+                height: 16px;
+                cursor: pointer;
+                // &:hover {
+                //     opacity: 0.8;
+                // }
+            }
+        }
+    }
 }
 
 .content__toolbar {
@@ -268,7 +310,7 @@ body {
 
 
 .right {
-    flex: 0 0 20%;
+    flex: 0 0 26%;
     /* Sağ kısım genişliği */
     background-color: $color-white;
     padding: 1rem;
@@ -324,7 +366,7 @@ body {
         &-title {
             font-size: 1.2em;
             font-weight: bold;
-            color: #14171a; // Yazı rengi
+            color: #16161a; // Yazı rengi
         }
 
         &-settings {
@@ -351,7 +393,7 @@ body {
                 }
 
                 &-name {
-                    font-size: 14px;
+                    font-size: 16px;
                     font-weight: bold;
                     margin: 5px 0;
                 }
@@ -432,7 +474,7 @@ body {
                                 margin-right: 5px;
 
                                 &-tick {
-                                    font-size: 14px;
+                                    font-size: 16px;
                                     color: $backgroundcolor-button-blue;
                                     margin-left: 4px;
                                 }
@@ -445,20 +487,20 @@ body {
                         }
 
                         // &-name {
-                        //     font-size: 14px;
+                        //     font-size: 16px;
                         //     font-weight: bold;
                         //     display: flex;
                         //     align-items: center;
 
                         //     &-tick {
-                        //         font-size: 14px;
+                        //         font-size: 16px;
                         //         color: $backgroundcolor-button-blue;
                         //         margin-left: 4px;
                         //     }
                         // }
 
                         &-username {
-                            font-size: 10px;
+                            font-size: 12px;
                             color: #657786;
                         }
                     }
@@ -469,10 +511,11 @@ body {
                         border-radius: 16px;
                         padding: 6px 12px;
                         cursor: pointer;
-                        font-size: 14px;
+                        font-size: 16px;
                         font-weight: bold;
                         border: 1px solid;
                     }
+
                     &-show-more {
                         text-align: center;
                         font-size: 15px;
