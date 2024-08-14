@@ -1,37 +1,39 @@
 // Renk Değişkenleri
 $backgroundcolor-grey: #f7f8fa;
-$backgroundcolor-button-blue: #1ea1f2;
-$text-color-black: #000000;
-$text-color-carbon: #333333;
-$text-color-trolley-grey: #828282;
-$background-color-ıcewinddale: #e7ecf0;
-$background-color-malmö-FF: #a5d9fa;
-$color-white: #ffffff;
-$line-color-steam: #ddd;
-$text-color-nickel: #929292;
-$line-color-pico-metal: #c2c4c6;
-$background-color-zhēn-zhū-bái-pearl: #f6f8fa;
-$line-color-Windswept-Beach: #e2e4e6;
-$line-Noghrei-Silver: #bdbdbd;
+$button-blue: #1ea1f2;
+$black: #000000;
+$carbon: #333333;
+$trolley-grey: #828282;
+$ıce-winddale: #e7ecf0;
+$malmö-FF: #a5d9fa;
+$white: #ffffff;
+$steam: #ddd;
+$nickel: #929292;
+$pico-metal: #c2c4c6;
+$zhēn-zhū-bái-pearl: #f6f8fa;
+$Windswept-Beach: #e2e4e6;
+$Noghrei-Silver: #bdbdbd;
+$Morning-Haze: #e1e8ed;
+$Space-Convoy: #657786;
 
 body {
     display: flex;
     flex-direction: row;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
     // overflow: auto;
 }
 
 .sidebar {
-    flex: 0 0 22%;
+        flex: 0 0 22%;
     /* Yan barın genişliği */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    background-color: $color-white;
+    background-color: $white;
     padding: 1rem;
     box-sizing: border-box;
-    border-right: 0.5px solid $line-color-steam;
+    border-right: 0.5px solid $steam;
     /* Sağ tarafa ince çizgi*/
 
     &__button {
@@ -46,7 +48,7 @@ body {
         gap: 16px;
 
         &--twitter {
-            color: $backgroundcolor-button-blue;
+            color: $button-blue;
             font-size: 32px;
             padding: 5px;
             margin: 10px 0;
@@ -67,7 +69,7 @@ body {
     }
 
     &__text {
-        color: $text-color-carbon;
+        color: $carbon;
         font-size: 16px;
         font-family: "Roboto", sans-serif;
         font-weight: 700;
@@ -85,22 +87,22 @@ body {
         height: 50px;
         border-radius: 32px;
         width: 150px;
-        background-color: $backgroundcolor-button-blue;
-        color: $color-white;
+        background-color:$button-blue;
+        color: $white;
     }
 }
 
 .content {
-    flex: 0 0 53%;
+    // flex: 0 0 53%;
     /* Orta kısmın genişliği */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    background-color: $color-white;
+    background-color: $white;
     padding: 1rem;
     box-sizing: border-box;
-    border-right: 0.5px solid $line-color-steam;
+    border-right: 0.5px solid $steam;
     /* Sağ tarafa ince çizgi*/
     // border-left: 0.5px solid $line-color-steam;
     // /* Sol tarafa ince çizgi*/
@@ -111,7 +113,7 @@ body {
         width: 100%;
         justify-content: space-between;
         margin-bottom: 16px;
-        border-bottom: 1px solid $line-color-steam;
+        border-bottom: 1px solid $steam;
         /* Header altına çizgi */
     }
 
@@ -123,7 +125,7 @@ body {
     &__title {
         font-size: 20px;
         font-weight: bold;
-        color: $text-color-black;
+        color: $black;
     }
 
     &__star {
@@ -141,7 +143,7 @@ body {
         flex-direction: column;
         gap: 15px;
         width: 100%;
-        border-bottom: 9px solid $background-color-ıcewinddale;
+        border-bottom: 9px solid $ıce-winddale;
         /* Altına çizgi */
         padding-bottom: 10px;
         /* Çizgiye biraz boşluk */
@@ -162,7 +164,7 @@ body {
 
         &-text {
             font-size: 16px;
-            color: $text-color-trolley-grey;
+            color: $trolley-grey;
             font-family: "Roboto", sans-serif;
             font-weight: 400;
             font-style: normal;
@@ -176,10 +178,10 @@ body {
         &-section {
             margin-bottom: 15px;
 
-            &-user1 {
+            &-user {
                 display: flex;
                 align-items: center;
-                background-color: #fff;
+                background-color: $white;
                 border-radius: 8px;
 
                 &-info {
@@ -207,7 +209,56 @@ body {
 
                 &-time {
                     font-size: 16px;
-                    color: $text-color-trolley-grey;
+                    color: $trolley-grey;
+                }
+            }
+        }
+
+        &-divider {
+            border: none;
+            border-top: 1px solid $steam;
+            margin: 20px 0;
+        }
+
+        &-user2 {
+            display: flex;
+            align-items: center;
+            background-color: $white;
+            border-radius: 8px;
+            padding: 10px;
+    
+            &-info {
+                display: flex;
+                align-items: center;
+                margin-right: 10px;
+    
+                &-img {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                }
+    
+                &-name {
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+            }
+    
+            &-certified-img {
+                width: 21px;
+                height: 21px;
+                margin-right: 10px;
+            }
+    
+            &-meta {
+                display: flex;
+                align-items: center;
+    
+                &-time {
+                    font-size: 14px;
+                    color: $trolley-grey;
+                    margin-right: 5px;
                 }
             }
         }
@@ -223,13 +274,13 @@ body {
             font-size: 16px;
             line-height: 1.5;
             display: block;
-            color: $text-color-carbon;
+            color: $carbon;
             font-family: "Roboto", sans-serif;
             font-weight: 400;
             font-style: normal;
 
             &-hashtag {
-                color: $backgroundcolor-button-blue;
+                color: $button-blue;
             }
         }
 
@@ -244,7 +295,7 @@ body {
             justify-content: space-around;
             margin-top: 11px;
 
-            img {
+            &-img {
                 width: 16px;
                 height: 16px;
                 cursor: pointer;
@@ -254,6 +305,7 @@ body {
             }
         }
     }
+
 }
 
 .content__toolbar {
@@ -278,20 +330,20 @@ body {
         display: flex;
         align-items: center;
 
-        img {
+        &-img {
             margin: 0 10px;
         }
 
         .vertical-line {
             width: 1px;
             height: 24px; // Çizginin yüksekliği
-            background-color: $line-Noghrei-Silver;
+            background-color: $Noghrei-Silver;
         }
 
         &-button {
             width: 98px;
             height: 42px;
-            background-color: $background-color-malmö-FF;
+            background-color: $malmö-FF;
             border: none;
             border-radius: 20px;
             cursor: pointer;
@@ -301,7 +353,7 @@ body {
             // }
 
             &-text {
-                color: $color-white;
+                color: $white;
             }
         }
     }
@@ -312,7 +364,7 @@ body {
 .right {
     flex: 0 0 26%;
     /* Sağ kısım genişliği */
-    background-color: $color-white;
+    background-color: $white;
     padding: 1rem;
     box-sizing: border-box;
 
@@ -322,14 +374,14 @@ body {
         gap: 8px;
         padding: 8px;
         border-radius: 32px;
-        background-color: $background-color-ıcewinddale;
+        background-color: $ıce-winddale;
         /* Arka plan rengi */
 
         &-icon {
             font-size: 20px;
 
             &.custom-icon {
-                color: $text-color-trolley-grey; // İstediğiniz renkle değiştirebilirsiniz
+                color: $trolley-grey; // İstediğiniz renkle değiştirebilirsiniz
             }
         }
     }
@@ -341,7 +393,7 @@ body {
         font-size: 13px;
         padding: 8px;
         border-radius: 32px;
-        background-color: $background-color-ıcewinddale;
+        background-color: $ıce-winddale;
     }
 
     &__search-button {
@@ -353,7 +405,7 @@ body {
 
     &__trends {
         margin-top: 16px;
-        background-color: $background-color-zhēn-zhū-bái-pearl;
+        background-color: $zhēn-zhū-bái-pearl;
         padding: 16px;
         border-radius: 16px;
 
@@ -372,13 +424,13 @@ body {
         &-settings {
             font-size: 1.2em;
             cursor: pointer;
-            color: $backgroundcolor-button-blue; // İkon rengi
+            color: $button-blue; // İkon rengi
         }
 
         &-list {
             &-item {
                 padding: 10px 0;
-                border-bottom: 1px solid $line-color-Windswept-Beach;
+                border-bottom: 1px solid $Windswept-Beach;
                 position: relative;
 
                 &-header {
@@ -389,7 +441,7 @@ body {
 
                 &-category {
                     font-size: 13px;
-                    color: $text-color-nickel; // Kategori yazı rengi
+                    color: $nickel; // Kategori yazı rengi
                 }
 
                 &-name {
@@ -400,12 +452,12 @@ body {
 
                 &-tweets {
                     font-size: 0.8em;
-                    color: $text-color-nickel; // Tweet sayısı yazı rengi
+                    color: $nickel; // Tweet sayısı yazı rengi
                 }
 
                 &-dropdown {
                     font-size: 11px;
-                    color: $text-color-trolley-grey ; // Dropdown ikon rengi
+                    color: $trolley-grey; // Dropdown ikon rengi
                     position: absolute;
                     right: 0;
                     bottom: 10px;
@@ -417,7 +469,7 @@ body {
         &-show-more {
             text-align: center;
             font-size: 15px;
-            color: $backgroundcolor-button-blue;
+            color: $button-blue;
             cursor: pointer;
             margin-top: 10px;
             // border-top: 1px solid $line-color-Windswept-Beach;
@@ -427,13 +479,13 @@ body {
     .left {
         flex: 0 0 20%;
         /* Sol kısımın genişliği */
-        background-color: $color-white;
+        background-color: $white;
         padding: 1rem;
         box-sizing: border-box;
 
         &__friends {
             margin-top: 16px;
-            background-color: $background-color-zhēn-zhū-bái-pearl;
+            background-color: $zhēn-zhū-bái-pearl;
             padding: 16px;
             border-radius: 16px;
 
@@ -452,7 +504,7 @@ body {
                     align-items: center;
                     gap: 8px;
                     padding: 10px 0;
-                    border-bottom: 1px solid #e1e8ed;
+                    border-bottom: 1px solid $Morning-Haze;
 
                     &-img {
                         width: 40px;
@@ -470,20 +522,20 @@ body {
 
                             &-name {
                                 font-size: 16px;
-                                color: #333;
+                                color: $carbon;
                                 margin-right: 5px;
 
                                 &-tick {
                                     font-size: 16px;
-                                    color: $backgroundcolor-button-blue;
+                                    color: $button-blue;
                                     margin-left: 4px;
                                 }
                             }
-
                             &-img {
                                 width: 16px;
                                 height: 16px;
                             }
+
                         }
 
                         // &-name {
@@ -500,14 +552,14 @@ body {
                         // }
 
                         &-username {
-                            font-size: 12px;
-                            color: #657786;
+                            font-size: 14px;
+                            color: $Space-Convoy;
                         }
                     }
 
                     &-follow {
-                        background-color: $background-color-zhēn-zhū-bái-pearl;
-                        color: $backgroundcolor-button-blue;
+                        background-color: $zhēn-zhū-bái-pearl;
+                        color: $button-blue;
                         border-radius: 16px;
                         padding: 6px 12px;
                         cursor: pointer;
@@ -519,7 +571,7 @@ body {
                     &-show-more {
                         text-align: center;
                         font-size: 15px;
-                        color: $backgroundcolor-button-blue;
+                        color: $button-blue;
                         cursor: pointer;
                         margin-top: 10px;
                     }
@@ -528,3 +580,4 @@ body {
         }
     }
 }
+
