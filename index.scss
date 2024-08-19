@@ -19,24 +19,24 @@ $Space-Convoy: #657786;
 body {
     display: flex;
     flex-direction: row;
-    min-height: 100vh;
+    min-height: 100%;
     margin: 0;
     // overflow: auto;
 }
 
 .sidebar {
-        flex: 0 0 22%;
+    flex: 0 0 22%;
     /* Yan barın genişliği */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     background-color: $white;
-    padding: 1rem;
+    padding: 48px;
     box-sizing: border-box;
     border-right: 0.5px solid $steam;
     /* Sağ tarafa ince çizgi*/
 
-    &__button {
+    .sidebar-button {
         background-color: transparent;
         border: none;
         font-size: 16px;
@@ -47,7 +47,7 @@ body {
         align-items: center;
         gap: 16px;
 
-        &--twitter {
+        &-twitter {
             color: $button-blue;
             font-size: 32px;
             padding: 5px;
@@ -61,14 +61,14 @@ body {
         }
     }
 
-    &__button-img {
+    .sidebar-button-img {
         width: 30px;
         height: 30px;
         border-radius: 50%;
         margin-right: 10px;
     }
 
-    &__text {
+    .sidebar-text {
         color: $carbon;
         font-size: 16px;
         font-family: "Roboto", sans-serif;
@@ -76,21 +76,104 @@ body {
         font-style: normal;
     }
 
-    &__icon {
+    .sidebar-icon {
         font-size: 24px;
     }
 
-    &__tweet-text {
+    .sidebar-tweet-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .sidebar-tweet-text {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 50px;
         border-radius: 32px;
         width: 150px;
-        background-color:$button-blue;
+        background-color: $button-blue;
         color: $white;
     }
 }
+
+
+
+
+
+
+
+
+
+
+// .sidebar {
+//         flex: 0 0 22%;
+//     /* Yan barın genişliği */
+//     display: flex;
+//     flex-direction: column;
+//     align-items: flex-start;
+//     background-color: $white;
+//     padding: 1rem;
+//     box-sizing: border-box;
+//     border-right: 0.5px solid $steam;
+//     /* Sağ tarafa ince çizgi*/
+
+//     &__button {
+//         background-color: transparent;
+//         border: none;
+//         font-size: 16px;
+//         padding: 10px;
+//         margin: 5px 0;
+//         cursor: pointer;
+//         display: flex;
+//         align-items: center;
+//         gap: 16px;
+
+//         &--twitter {
+//             color: $button-blue;
+//             font-size: 32px;
+//             padding: 5px;
+//             margin: 10px 0;
+//             border-radius: 50%;
+//             width: 40px;
+//             height: 40px;
+//             display: flex;
+//             justify-content: center;
+//             align-items: center;
+//         }
+//     }
+
+//     &__button-img {
+//         width: 30px;
+//         height: 30px;
+//         border-radius: 50%;
+//         margin-right: 10px;
+//     }
+
+//     &__text {
+//         color: $carbon;
+//         font-size: 16px;
+//         font-family: "Roboto", sans-serif;
+//         font-weight: 700;
+//         font-style: normal;
+//     }
+
+//     &__icon {
+//         font-size: 24px;
+//     }
+
+//     &__tweet-text {
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         height: 50px;
+//         border-radius: 32px;
+//         width: 150px;
+//         background-color:$button-blue;
+//         color: $white;
+//     }
+// }
 
 .content {
     // flex: 0 0 53%;
@@ -220,7 +303,7 @@ body {
             margin: 20px 0;
         }
 
-        &-user2 {
+        &-user {
             display: flex;
             align-items: center;
             background-color: $white;
@@ -269,6 +352,8 @@ body {
         display: flex;
         flex-direction: column;
         gap: 11px;
+
+
 
         &-text {
             font-size: 16px;
@@ -519,6 +604,7 @@ body {
                         &-certified {
                             display: flex;
                             align-items: center;
+                            gap: 4px;
 
                             &-name {
                                 font-size: 16px;
@@ -532,8 +618,8 @@ body {
                                 }
                             }
                             &-img {
-                                width: 16px;
-                                height: 16px;
+                                // width: 16px;
+                                // height: 16px;
                             }
 
                         }

@@ -17,45 +17,45 @@
 
 <body>
     <div class="sidebar">
-        <button class="sidebar__button sidebar__button--twitter">
-            <i class="sidebar__icon sidebar__icon--twitter fa-brands fa-twitter"></i>
+        <button class="sidebar-button sidebar-button-twitter">
+            <i class="sidebar-icon sidebar-icon-twitter fa-brands fa-twitter"></i>
         </button>
-        <button class="sidebar__button">
-            <i class="sidebar__icon sidebar__icon--home fa-solid fa-house"></i>
-            <span class="sidebar__text">Home</span>
+        <button class="sidebar-button">
+            <i class="sidebar-icon sidebar-icon-home fa-solid fa-house"></i>
+            <span class="sidebar-text">Home</span>
         </button>
-        <button class="sidebar__button">
-            <i class="sidebar__icon sidebar__icon--explore fa-solid fa-hashtag"></i>
-            <span class="sidebar__text">Explore</span>
+        <button class="sidebar-button">
+            <i class="sidebar-icon sidebar-icon-explore fa-solid fa-hashtag"></i>
+            <span class="sidebar-text">Explore</span>
         </button>
-        <button class="sidebar__button">
-            <i class="sidebar__icon sidebar__icon--notifications fa-regular fa-bell"></i>
-            <span class="sidebar__text">Notifications</span>
+        <button class="sidebar-button">
+            <i class="sidebar-icon sidebar-icon-notifications fa-regular fa-bell"></i>
+            <span class="sidebar-text">Notifications</span>
         </button>
-        <button class="sidebar__button">
-            <i class="sidebar__icon sidebar__icon--messages fa-regular fa-envelope"></i>
-            <span class="sidebar__text">Messages</span>
+        <button class="sidebar-button">
+            <i class="sidebar-icon sidebar-icon-messages fa-regular fa-envelope"></i>
+            <span class="sidebar-text">Messages</span>
         </button>
-        <button class="sidebar__button">
-            <i class="sidebar__icon sidebar__icon--bookmarks fa-regular fa-bookmark"></i>
-            <span class="sidebar__text">Bookmarks</span>
+        <button class="sidebar-button">
+            <i class="sidebar-icon sidebar-icon-bookmarks fa-regular fa-bookmark"></i>
+            <span class="sidebar-text">Bookmarks</span>
         </button>
-        <button class="sidebar__button">
-            <i class="sidebar__icon sidebar__icon--lists fa-solid fa-list"></i>
-            <span class="sidebar__text">Lists</span>
+        <button class="sidebar-button">
+            <i class="sidebar-icon sidebar-icon-lists fa-solid fa-list"></i>
+            <span class="sidebar-text">Lists</span>
         </button>
-        <button class="sidebar__button sidebar__button--profile">
-            <img src="twitter-img/küçük.png" alt="Profile" class="sidebar__button-img" />
-            <span class="sidebar__text">Profile</span>
+        <button class="sidebar-button sidebar-button-profile">
+            <img src="twitter-img/küçük.png" alt="Profile" class="sidebar-button-img" />
+            <span class="sidebar-text">Profile</span>
         </button>
-        <button class="sidebar__button">
-            <img src="twitter-img/more.svg" alt="More" class="sidebar__icon sidebar__icon--more" />
-            <span class="sidebar__text">More</span>
+        <button class="sidebar-button">
+            <img src="twitter-img/more.svg" alt="More" class="sidebar-icon sidebar-icon-more" />
+            <span class="sidebar-text">More</span>
         </button>
 
-        <div class="sidebar__tweet-container">
-            <button class="sidebar__button sidebar__button--tweet">
-                <span class="sidebar__tweet-text">Tweet</span>
+        <div class="sidebar-tweet-container">
+            <button class="sidebar-button sidebar-button-tweet">
+                <span class="sidebar-tweet-text">Tweet</span>
             </button>
         </div>
     </div>
@@ -108,6 +108,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="content__main-tweet">
                 <span class="content__main-tweet-text">This is a tweet. It can be long, or short. Depends on what you
                     have
@@ -126,7 +127,6 @@
                     <img src="twitter-img/upload.svg" alt="upload" />
                 </div>
             </div>
-            <hr class="content__main-divider" />    
 
             <div class="content__main-section">
                 <div class="content__main-section-user">
@@ -138,25 +138,31 @@
                         class="content__main-section-user-certified-img" />
                     <div class="content__main-section-user-meta">
                         <span class="content__main-section-user-time">@Travis Wade • 14s</span>
-                        <img src="twitter-img/Chevron down.svg" alt="Chevron" />
+                        <img src="twitter-img/Chevron down.svg" alt="Chevron"/>
                     </div>
                 </div>
             </div>
             <div class="content__main-tweet">
-                <span class="content__main-tweet-text">This is a tweet. It can be long, or short. Depends on what you have to say. It can have some hashtags too. <span class="content__main-tweet-text-hashtag">#likethis</span> 
+                <span class="content__main-tweet-text">
+                    This is a tweet. It can be long, or short. Depends on what you
+                    have to say. It can have some hashtags too.
+
+                <span class="content__main-tweet-text-hashtag">#likethis</span>
                 </span>
+
                 <div class="content__main-tweet-text-hashtag-actions">
-                    <img src="twitter-img/Message.svg" alt="message" />
-                    <img src="twitter-img/retweet.svg" alt="retweet" />
-                    <img src="twitter-img/like.svg" alt="like" />
-                    <img src="twitter-img/upload.svg" alt="upload" />
+                    <img src="twitter-img/Message.svg" alt="message"/>
+                    <img src="twitter-img/retweet.svg" alt="retweet"/>
+                    <img src="twitter-img/like.svg" alt="like"/>
+                    <img src="twitter-img/upload.svg" alt="upload"/>
                 </div>
             </div>
 
             <div class="content__main-section">
                 <div class="content__main-section-user">
                     <div class="content__main-section-user-info">
-                        <img src="twitter-img/Serenity.png" alt="Serenity" class="content__main-section-user-info-img" />
+                        <img src="twitter-img/Serenity.png" alt="Serenity"
+                            class="content__main-section-user-info-img" />
                         <span class="content__main-section-user-info-name">Serenity Jones</span>
                     </div>
                     <img src="twitter-img/Certified.svg" alt="Certified"
@@ -228,13 +234,15 @@
                     <img src="twitter-img/Certified.svg" alt="Certified"
                         class="content__main-section-user-certified-img" />
                     <div class="content__main-section-user-meta">
-                        <span class="content__main-section-user-time">@Kristin Murphy  • 14s</span>
+                        <span class="content__main-section-user-time">@Kristin Murphy • 14s</span>
                         <img src="twitter-img/Chevron down.svg" alt="Chevron" />
                     </div>
                 </div>
             </div>
             <div class="content__main-tweet">
-                <span class="content__main-tweet-text">This is a tweet. It can be long, or short. Depends on what you have to say. It can have some hashtags too. <span class="content__main-tweet-text-hashtag">#likethis</span> 
+                <span class="content__main-tweet-text">This is a tweet. It can be long, or short. Depends on what you
+                    have to say. It can have some hashtags too. <span
+                        class="content__main-tweet-text-hashtag">#likethis</span>
                 </span>
                 <img src="twitter-img/black.png" alt="black" />
                 <div class="content__main-tweet-text-hashtag-actions">
@@ -244,10 +252,7 @@
                     <img src="twitter-img/upload.svg" alt="upload" />
                 </div>
             </div>
-
         </div>
-
-
     </div>
 
     <div class="right">
@@ -336,7 +341,7 @@
                 <div class="left__friends-list-item">
                     <img src="twitter-img/McFly.png" alt="Profile Image" class="left__friends-list-item-img" />
                     <div class="left__friends-list-item-info">
-                        <div class="left__friends-list-item-header">
+                        <div class="left__friends-list-item-info-certified">
                             <span class="left__friends-list-item-header-info-name">McFly</span>
                             <img class="left__friends-list-item-header-info-certified-img"
                                 src="twitter-img/Certified.svg" alt="Certified" />
@@ -349,7 +354,7 @@
                 <div class="left__friends-list-item">
                     <img src="twitter-img/JohnDoe.png" alt="Profile Image" class="left__friends-list-item-img" />
                     <div class="left__friends-list-item-info">
-                        <div left__friends-list-item-info-certified>
+                        <div class="left__friends-list-item-info-certified" >
                             <span class="left__friends-list-item-info-name">JohnDoe</span>
                             <img class="left__friends-list-item-info-certified-img" src="twitter-img/Certified.svg"
                                 alt="Certified" />

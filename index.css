@@ -2,7 +2,7 @@
 body {
   display: flex;
   flex-direction: row;
-  min-height: 100vh;
+  min-height: 100%;
   margin: 0;
 }
 
@@ -13,12 +13,12 @@ body {
   flex-direction: column;
   align-items: flex-start;
   background-color: #ffffff;
-  padding: 1rem;
+  padding: 48px;
   box-sizing: border-box;
   border-right: 0.5px solid #ddd;
   /* Sağ tarafa ince çizgi*/
 }
-.sidebar__button {
+.sidebar .sidebar-button {
   background-color: transparent;
   border: none;
   font-size: 16px;
@@ -29,7 +29,7 @@ body {
   align-items: center;
   gap: 16px;
 }
-.sidebar__button--twitter {
+.sidebar .sidebar-button-twitter {
   color: #1ea1f2;
   font-size: 32px;
   padding: 5px;
@@ -41,23 +41,28 @@ body {
   justify-content: center;
   align-items: center;
 }
-.sidebar__button-img {
+.sidebar .sidebar-button-img {
   width: 30px;
   height: 30px;
   border-radius: 50%;
   margin-right: 10px;
 }
-.sidebar__text {
+.sidebar .sidebar-text {
   color: #333333;
   font-size: 16px;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-style: normal;
 }
-.sidebar__icon {
+.sidebar .sidebar-icon {
   font-size: 24px;
 }
-.sidebar__tweet-text {
+.sidebar .sidebar-tweet-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.sidebar .sidebar-tweet-text {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -175,38 +180,38 @@ body {
   border-top: 1px solid #ddd;
   margin: 20px 0;
 }
-.content .content__main-user2 {
+.content .content__main-user {
   display: flex;
   align-items: center;
   background-color: #ffffff;
   border-radius: 8px;
   padding: 10px;
 }
-.content .content__main-user2-info {
+.content .content__main-user-info {
   display: flex;
   align-items: center;
   margin-right: 10px;
 }
-.content .content__main-user2-info-img {
+.content .content__main-user-info-img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   margin-right: 10px;
 }
-.content .content__main-user2-info-name {
+.content .content__main-user-info-name {
   font-size: 16px;
   font-weight: bold;
 }
-.content .content__main-user2-certified-img {
+.content .content__main-user-certified-img {
   width: 21px;
   height: 21px;
   margin-right: 10px;
 }
-.content .content__main-user2-meta {
+.content .content__main-user-meta {
   display: flex;
   align-items: center;
 }
-.content .content__main-user2-meta-time {
+.content .content__main-user-meta-time {
   font-size: 14px;
   color: #828282;
   margin-right: 5px;
@@ -420,6 +425,7 @@ body {
 .right .left__friends-list-item-info-certified {
   display: flex;
   align-items: center;
+  gap: 4px;
 }
 .right .left__friends-list-item-info-certified-name {
   font-size: 16px;
@@ -430,10 +436,6 @@ body {
   font-size: 16px;
   color: #1ea1f2;
   margin-left: 4px;
-}
-.right .left__friends-list-item-info-certified-img {
-  width: 16px;
-  height: 16px;
 }
 .right .left__friends-list-item-info-username {
   font-size: 14px;
