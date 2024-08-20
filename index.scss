@@ -16,6 +16,22 @@ $Noghrei-Silver: #bdbdbd;
 $Morning-Haze: #e1e8ed;
 $Space-Convoy: #657786;
 
+// Boyut Değişkenleri
+$font-size: 16px;
+$font-size: 15px;
+$font-size: 13px;
+$font-size: 14px;
+$font-size: 11px;
+$font-size: 24px;
+$font-size: 20px;
+
+// Font Değişkenleri
+$font1: "Roboto", sans-serif;
+$font-weight-medium: 500;
+$font-weight-regular: 400;
+$font-weight-bold: bold;
+
+
 body {
     display: flex;
     flex-direction: row;
@@ -36,7 +52,7 @@ body {
     border-right: 0.5px solid $steam;
     /* Sağ tarafa ince çizgi*/
 
-    .sidebar-button {
+    &-button {
         background-color: transparent;
         border: none;
         font-size: 16px;
@@ -61,32 +77,32 @@ body {
         }
     }
 
-    .sidebar-button-img {
+    &-img {
         width: 30px;
         height: 30px;
         border-radius: 50%;
         margin-right: 10px;
     }
 
-    .sidebar-text {
+    &-text {
         color: $carbon;
         font-size: 16px;
-        font-family: "Roboto", sans-serif;
-        font-weight: 700;
+        font-family: $font1;
+        font-weight: 500;
         font-style: normal;
     }
 
-    .sidebar-icon {
+    &-icon {
         font-size: 24px;
     }
 
-    .sidebar-tweet-container {
+    &-tweet-container {
         width: 100%;
         display: flex;
         justify-content: center;
     }
 
-    .sidebar-tweet-text {
+    &-tweet-text {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -97,13 +113,6 @@ body {
         color: $white;
     }
 }
-
-
-
-
-
-
-
 
 
 
@@ -183,7 +192,7 @@ body {
     justify-content: flex-start;
     align-items: flex-start;
     background-color: $white;
-    padding: 1rem;
+    // padding: 1rem;
     box-sizing: border-box;
     border-right: 0.5px solid $steam;
     /* Sağ tarafa ince çizgi*/
@@ -194,8 +203,9 @@ body {
         display: flex;
         align-items: center;
         width: 100%;
+        padding: 54px 32px 0 32px;
         justify-content: space-between;
-        margin-bottom: 16px;
+        // margin-bottom: 16px;
         border-bottom: 1px solid $steam;
         /* Header altına çizgi */
     }
@@ -212,19 +222,13 @@ body {
     }
 
     &__star {
-        display: flex;
-        align-items: center;
-
-        &-image {
-            width: 24px;
-            height: 24px;
-        }
+        margin-right: 55px;
     }
 
     &__post-container {
         display: flex;
         flex-direction: column;
-        gap: 15px;
+        // gap: 15px;
         width: 100%;
         border-bottom: 9px solid $ıce-winddale;
         /* Altına çizgi */
@@ -243,12 +247,13 @@ body {
             height: 50px;
             border-radius: 50%;
             margin-right: 10px;
+            margin-left: 19px;
         }
 
         &-text {
             font-size: 16px;
             color: $trolley-grey;
-            font-family: "Roboto", sans-serif;
+            font-family: $font1;
             font-weight: 400;
             font-style: normal;
 
@@ -256,16 +261,21 @@ body {
     }
 
     .content__main {
-        padding: 20px;
+        // padding: 20px;
 
         &-section {
             margin-bottom: 15px;
+            padding: 15px;
+
+
 
             &-user {
                 display: flex;
                 align-items: center;
                 background-color: $white;
                 border-radius: 8px;
+
+                &-conteiner
 
                 &-info {
                     display: flex;
@@ -297,11 +307,11 @@ body {
             }
         }
 
-        &-divider {
-            border: none;
-            border-top: 1px solid $steam;
-            margin: 20px 0;
-        }
+        // &-divider {
+        //     border: none;
+        //     border-top: 1px solid $steam;
+        //     margin: 20px 0;
+        // }
 
         &-user {
             display: flex;
@@ -309,35 +319,35 @@ body {
             background-color: $white;
             border-radius: 8px;
             padding: 10px;
-    
+
             &-info {
                 display: flex;
                 align-items: center;
                 margin-right: 10px;
-    
+
                 &-img {
                     width: 40px;
                     height: 40px;
                     border-radius: 50%;
                     margin-right: 10px;
                 }
-    
+
                 &-name {
                     font-size: 16px;
                     font-weight: bold;
                 }
             }
-    
+
             &-certified-img {
                 width: 21px;
                 height: 21px;
                 margin-right: 10px;
             }
-    
+
             &-meta {
                 display: flex;
                 align-items: center;
-    
+
                 &-time {
                     font-size: 14px;
                     color: $trolley-grey;
@@ -348,19 +358,17 @@ body {
     }
 
     .content__main-tweet {
-        margin-left: 51px;
+        // margin-left: 51px;
         display: flex;
         flex-direction: column;
         gap: 11px;
-
-
 
         &-text {
             font-size: 16px;
             line-height: 1.5;
             display: block;
             color: $carbon;
-            font-family: "Roboto", sans-serif;
+            font-family: $font1;
             font-weight: 400;
             font-style: normal;
 
@@ -379,6 +387,9 @@ body {
             display: flex;
             justify-content: space-around;
             margin-top: 11px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid $steam;
+
 
             &-img {
                 width: 16px;
@@ -388,6 +399,7 @@ body {
                 //     opacity: 0.8;
                 // }
             }
+
         }
     }
 
@@ -398,7 +410,7 @@ body {
     align-items: center;
     gap: 10px;
     padding: 10px 0;
-    margin-left: 9%;
+    margin-left: 14%;
 
     &-img {
         width: 24px;
@@ -617,6 +629,7 @@ body {
                                     margin-left: 4px;
                                 }
                             }
+
                             &-img {
                                 // width: 16px;
                                 // height: 16px;
@@ -666,4 +679,10 @@ body {
         }
     }
 }
+
+
+
+
+
+
 
