@@ -17,395 +17,327 @@ $Morning-Haze: #e1e8ed;
 $Space-Convoy: #657786;
 
 // Boyut Değişkenleri
-$font-size: 16px;
-$font-size: 15px;
-$font-size: 13px;
-$font-size: 14px;
-$font-size: 11px;
-$font-size: 24px;
-$font-size: 20px;
+$fs-11: 11px;
+$fs-13: 13px;
+$fs-14: 14px;
+$fs-15: 15px;
+$fs-16: 16px;
+$fs-20: 20px;
+$fs-24: 24px;
+$fs-32: 32px;
 
 // Font Değişkenleri
-$font1: "Roboto", sans-serif;
+$ff-roboto: "Roboto", sans-serif;
 $font-weight-medium: 500;
 $font-weight-regular: 400;
 $font-weight-bold: bold;
 
-
 body {
-    display: flex;
-    flex-direction: row;
-    min-height: 100%;
-    margin: 0;
-    // overflow: auto;
+  display: flex;
+  flex-direction: row;
+  min-height: 100%;
+  margin: 0;
+  // overflow: auto;
 }
 
 .sidebar {
-    flex: 0 0 22%;
-    /* Yan barın genişliği */
+  flex: 0 0 22%;
+  /* Yan barın genişliği */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: $white;
+  padding: 48px;
+  box-sizing: border-box;
+  border-right: 0.5px solid $steam;
+  /* Sağ tarafa ince çizgi*/
+
+  &-button {
+    background-color: transparent;
+    border: none;
+    font-size: $fs-16;
+    padding: 10px;
+    margin: 5px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    &-twitter {
+      color: $button-blue;
+      font-size: $fs-32;
+      padding: 5px;
+      margin: 10px 0;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  &-text {
+    color: $carbon;
+    font-size: $fs-16;
+    font-family: $ff-roboto;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  &-icon {
+    font-size: $fs-24;
+  }
+
+  &-tweet-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  &-tweet-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border-radius: 32px;
+    width: 150px;
+    background-color: $button-blue;
+    color: $white;
+  }
+}
+
+.content {
+  // flex: 0 0 53%;
+  /* Orta kısmın genişliği */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: $white;
+  // padding: 1rem;
+  box-sizing: border-box;
+  border-right: 0.5px solid $steam;
+  /* Sağ tarafa ince çizgi*/
+  // border-left: 0.5px solid $line-color-steam;
+  // /* Sol tarafa ince çizgi*/
+
+  &__header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 20px 32px 0 32px;
+    justify-content: space-between;
+    // margin-bottom: 16px;
+    border-bottom: 1px solid $steam;
+    // position: sticky;
+    // z-index: 10;
+  }
+
+  &__navbar {
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: $fs-20;
+    font-weight: bold;
+    color: $black;
+  }
+
+  &__star {
+    margin-right: 55px;
+  }
+
+  &__post-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    background-color: $white;
-    padding: 48px;
-    box-sizing: border-box;
-    border-right: 0.5px solid $steam;
-    /* Sağ tarafa ince çizgi*/
+    // gap: 15px;
+    width: 100%;
+    border-bottom: 9px solid $ıce-winddale;
+    /* Altına çizgi */
+    padding-bottom: 10px;
+    /* Çizgiye biraz boşluk */
+    position: sticky;
+  }
 
-    &-button {
-        background-color: transparent;
-        border: none;
-        font-size: 16px;
-        padding: 10px;
-        margin: 5px 0;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        gap: 16px;
-
-        &-twitter {
-            color: $button-blue;
-            font-size: 32px;
-            padding: 5px;
-            margin: 10px 0;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    }
+  &__post {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 8px;
 
     &-img {
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        margin-right: 10px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 10px;
+      margin-left: 19px;
     }
 
     &-text {
-        color: $carbon;
-        font-size: 16px;
-        font-family: $font1;
-        font-weight: 500;
-        font-style: normal;
+      font-size: $fs-16;
+      color: $trolley-grey;
+      font-family: $ff-roboto;
+      font-weight: 400;
+      font-style: normal;
     }
+  }
 
-    &-icon {
-        font-size: 24px;
-    }
+  &__main {
+    overflow-y: auto;
+    max-height: calc(84vh - 120px); 
 
-    &-tweet-container {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
+    &-section {
+      // margin-bottom: 15px;
+      padding: 16px 0 16px 32px;
 
-    &-tweet-text {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 50px;
-        border-radius: 32px;
-        width: 150px;
-        background-color: $button-blue;
-        color: $white;
-    }
-}
-
-
-
-// .sidebar {
-//         flex: 0 0 22%;
-//     /* Yan barın genişliği */
-//     display: flex;
-//     flex-direction: column;
-//     align-items: flex-start;
-//     background-color: $white;
-//     padding: 1rem;
-//     box-sizing: border-box;
-//     border-right: 0.5px solid $steam;
-//     /* Sağ tarafa ince çizgi*/
-
-//     &__button {
-//         background-color: transparent;
-//         border: none;
-//         font-size: 16px;
-//         padding: 10px;
-//         margin: 5px 0;
-//         cursor: pointer;
-//         display: flex;
-//         align-items: center;
-//         gap: 16px;
-
-//         &--twitter {
-//             color: $button-blue;
-//             font-size: 32px;
-//             padding: 5px;
-//             margin: 10px 0;
-//             border-radius: 50%;
-//             width: 40px;
-//             height: 40px;
-//             display: flex;
-//             justify-content: center;
-//             align-items: center;
-//         }
-//     }
-
-//     &__button-img {
-//         width: 30px;
-//         height: 30px;
-//         border-radius: 50%;
-//         margin-right: 10px;
-//     }
-
-//     &__text {
-//         color: $carbon;
-//         font-size: 16px;
-//         font-family: "Roboto", sans-serif;
-//         font-weight: 700;
-//         font-style: normal;
-//     }
-
-//     &__icon {
-//         font-size: 24px;
-//     }
-
-//     &__tweet-text {
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//         height: 50px;
-//         border-radius: 32px;
-//         width: 150px;
-//         background-color:$button-blue;
-//         color: $white;
-//     }
-// }
-
-.content {
-    // flex: 0 0 53%;
-    /* Orta kısmın genişliği */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    background-color: $white;
-    // padding: 1rem;
-    box-sizing: border-box;
-    border-right: 0.5px solid $steam;
-    /* Sağ tarafa ince çizgi*/
-    // border-left: 0.5px solid $line-color-steam;
-    // /* Sol tarafa ince çizgi*/
-
-    &__header {
+      &-user {
         display: flex;
         align-items: center;
-        width: 100%;
-        padding: 54px 32px 0 32px;
-        justify-content: space-between;
-        // margin-bottom: 16px;
-        border-bottom: 1px solid $steam;
-        /* Header altına çizgi */
-    }
+        background-color: $white;
+        border-radius: 8px;
 
-    &__navbar {
-        display: flex;
-        align-items: center;
-    }
+        &-info {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          font-family: $ff-roboto;
+          font-weight: 700;
+        }
 
-    &__title {
-        font-size: 20px;
-        font-weight: bold;
-        color: $black;
-    }
+        &-conteiner {
+          display: flex;
+          align-items: center;
+          margin-right: 10px;
 
-    &__star {
-        margin-right: 55px;
-    }
-
-    &__post-container {
-        display: flex;
-        flex-direction: column;
-        // gap: 15px;
-        width: 100%;
-        border-bottom: 9px solid $ıce-winddale;
-        /* Altına çizgi */
-        padding-bottom: 10px;
-        /* Çizgiye biraz boşluk */
-    }
-
-    &__post {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        margin-top: 8px;
-
-        &-img {
-            width: 50px;
-            height: 50px;
+          &-img {
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             margin-right: 10px;
-            margin-left: 19px;
+          }
+
+          &-name {
+            font-size: $fs-16;
+          }
         }
 
-        &-text {
-            font-size: 16px;
-            color: $trolley-grey;
-            font-family: $font1;
-            font-weight: 400;
-            font-style: normal;
-
+        &-certified-img {
+          width: 21px;
+          height: 21px;
+          margin-right: 10px;
         }
+
+        &-time {
+          font-size: $fs-16;
+          color: $trolley-grey;
+        }
+      }
     }
 
-    .content__main {
-        // padding: 20px;
+    &-user {
+      display: flex;
+      align-items: center;
+      background-color: $white;
+      border-radius: 8px;
+      padding: 10px;
 
-        &-section {
-            margin-bottom: 15px;
-            padding: 15px;
-
-
-
-            &-user {
-                display: flex;
-                align-items: center;
-                background-color: $white;
-                border-radius: 8px;
-
-                &-conteiner
-
-                &-info {
-                    display: flex;
-                    align-items: center;
-                    margin-right: 10px;
-
-                    &-img {
-                        width: 40px;
-                        height: 40px;
-                        border-radius: 50%;
-                        margin-right: 10px;
-                    }
-
-                    &-name {
-                        font-size: 16px;
-                    }
-                }
-
-                &-certified-img {
-                    width: 21px;
-                    height: 21px;
-                    margin-right: 10px;
-                }
-
-                &-time {
-                    font-size: 16px;
-                    color: $trolley-grey;
-                }
-            }
-        }
-
-        // &-divider {
-        //     border: none;
-        //     border-top: 1px solid $steam;
-        //     margin: 20px 0;
-        // }
-
-        &-user {
-            display: flex;
-            align-items: center;
-            background-color: $white;
-            border-radius: 8px;
-            padding: 10px;
-
-            &-info {
-                display: flex;
-                align-items: center;
-                margin-right: 10px;
-
-                &-img {
-                    width: 40px;
-                    height: 40px;
-                    border-radius: 50%;
-                    margin-right: 10px;
-                }
-
-                &-name {
-                    font-size: 16px;
-                    font-weight: bold;
-                }
-            }
-
-            &-certified-img {
-                width: 21px;
-                height: 21px;
-                margin-right: 10px;
-            }
-
-            &-meta {
-                display: flex;
-                align-items: center;
-
-                &-time {
-                    font-size: 14px;
-                    color: $trolley-grey;
-                    margin-right: 5px;
-                }
-            }
-        }
-    }
-
-    .content__main-tweet {
-        // margin-left: 51px;
+      &-info {
         display: flex;
-        flex-direction: column;
-        gap: 11px;
-
-        &-text {
-            font-size: 16px;
-            line-height: 1.5;
-            display: block;
-            color: $carbon;
-            font-family: $font1;
-            font-weight: 400;
-            font-style: normal;
-
-            &-hashtag {
-                color: $button-blue;
-            }
-        }
+        align-items: center;
+        margin-right: 10px;
 
         &-img {
-            margin-top: 10px;
-            width: 100%;
-            border-radius: 8px;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          margin-right: 10px;
         }
 
-        &-text-hashtag-actions {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 11px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid $steam;
-
-
-            &-img {
-                width: 16px;
-                height: 16px;
-                cursor: pointer;
-                // &:hover {
-                //     opacity: 0.8;
-                // }
-            }
-
+        &-name {
+          font-size: $fs-16;
+          font-weight: bold;
         }
+      }
+
+      &-certified-img {
+        width: 21px;
+        height: 21px;
+        margin-right: 10px;
+      }
+
+      &-meta {
+        display: flex;
+        align-items: center;
+
+        &-time {
+          font-size: $fs-14;
+          color: $trolley-grey;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+
+  .content__main-tweet {
+    // margin-left: 51px;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+
+    &-body {
+      padding: 0 0 0 11%;
     }
 
-}
+    &-text {
+      font-size: $fs-16;
+      line-height: 1.5;
+      display: block;
+      color: $carbon;
+      font-family: $ff-roboto;
+      font-weight: 400;
+      font-style: normal;
+      padding: 0 0 0 11%;
 
-.content__toolbar {
+      &-hashtag {
+        color: $button-blue;
+      }
+    }
+
+    &-image {
+      padding: 0 1% 0 11%;
+    }
+
+    &-img {
+      margin-top: 10px;
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    &-text-hashtag-actions {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 11px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid $steam;
+
+      &-img {
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .content__toolbar {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -413,276 +345,228 @@ body {
     margin-left: 14%;
 
     &-img {
-        width: 24px;
-        height: 24px;
+      width: 24px;
+      height: 24px;
     }
 
     &-extra {
-        display: flex;
-        gap: 15px;
-        margin-left: 45%;
+      display: flex;
+      gap: 15px;
+      margin-left: 45%;
     }
 
     .content__toolbar-extra {
-        display: flex;
-        align-items: center;
+      display: flex;
+      align-items: center;
 
-        &-img {
-            margin: 0 10px;
+      &-img {
+        margin: 0 10px;
+      }
+
+      &-button {
+        width: 98px;
+        height: 42px;
+        background-color: $malmö-FF;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+
+        &-text {
+          color: $white;
         }
-
-        .vertical-line {
-            width: 1px;
-            height: 24px; // Çizginin yüksekliği
-            background-color: $Noghrei-Silver;
-        }
-
-        &-button {
-            width: 98px;
-            height: 42px;
-            background-color: $malmö-FF;
-            border: none;
-            border-radius: 20px;
-            cursor: pointer;
-
-            // &:hover {
-            //     background-color: #1a91da;
-            // }
-
-            &-text {
-                color: $white;
-            }
-        }
+      }
     }
-
+  }
 }
 
 
-.right {
-    flex: 0 0 26%;
-    /* Sağ kısım genişliği */
-    background-color: $white;
-    padding: 1rem;
-    box-sizing: border-box;
+.explore {
+  flex: 0 0 26%;
+  background-color: $white;
+  padding: 24px;
+  box-sizing: border-box;
 
-    &__search {
+  &__search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+    border-radius: 32px;
+    background-color: $ıce-winddale;
+    /* Arka plan rengi */
+
+    &-icon {
+      font-size: $fs-20;
+
+      &.custom-icon {
+        color: $trolley-grey;
+      }
+    }
+  }
+
+  &__search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: $fs-13;
+    padding: 8px;
+    border-radius: 32px;
+    background-color: $ıce-winddale;
+  }
+
+  &__search-button {
+    background-color: transparent;
+    border: none;
+    font-size: $fs-16;
+    cursor: pointer;
+  }
+
+  &__trends {
+    margin-top: 16px;
+    background-color: $zhēn-zhū-bái-pearl;
+    padding: 16px;
+    border-radius: 16px;
+
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-title {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: $black;
+    }
+
+    &-settings {
+      font-size: 1.2em;
+      cursor: pointer;
+      color: $button-blue;
+    }
+
+    &-list {
+      &-item {
+        padding: 10px 0;
+        border-bottom: 1px solid $Windswept-Beach;
+        position: relative;
+
+        &-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        &-category {
+          font-size: $fs-13;
+          color: $nickel;
+        }
+
+        &-name {
+          font-size: $fs-16;
+          font-weight: bold;
+          margin: 5px 0;
+        }
+
+        &-tweets {
+          font-size: 0.8em;
+          color: $nickel;
+        }
+
+        &-dropdown {
+          font-size: $fs-11;
+          color: $trolley-grey;
+          position: absolute;
+          right: 0;
+          bottom: 10px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    &-show-more {
+      text-align: center;
+      font-size: $fs-15;
+      color: $button-blue;
+      cursor: pointer;
+      margin-top: 10px;
+      // border-top: 1px solid $line-color-Windswept-Beach;
+    }
+  }
+
+
+  &__friends {
+    margin-top: 24px;
+    background-color: $zhēn-zhū-bái-pearl;
+    padding: 16px;
+    border-radius: 16px;
+
+    &-header {
+      margin-bottom: 16px;
+
+      &-title {
+        font-size: 1.2em;
+        font-weight: bold;
+      }
+    }
+
+    &-list {
+      &-item {
         display: flex;
         align-items: center;
         gap: 8px;
-        padding: 8px;
-        border-radius: 32px;
-        background-color: $ıce-winddale;
-        /* Arka plan rengi */
+        padding: 10px 0;
+        border-bottom: 1px solid $Morning-Haze;
 
-        &-icon {
-            font-size: 20px;
-
-            &.custom-icon {
-                color: $trolley-grey; // İstediğiniz renkle değiştirebilirsiniz
-            }
+        &-img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          margin-right: 10px;
         }
-    }
 
-    &__search-input {
-        flex: 1;
-        border: none;
-        outline: none;
-        font-size: 13px;
-        padding: 8px;
-        border-radius: 32px;
-        background-color: $ıce-winddale;
-    }
+        &-info {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
 
-    &__search-button {
-        background-color: transparent;
-        border: none;
-        font-size: 16px;
-        cursor: pointer;
-    }
-
-    &__trends {
-        margin-top: 16px;
-        background-color: $zhēn-zhū-bái-pearl;
-        padding: 16px;
-        border-radius: 16px;
-
-        &-header {
+          &-certified {
             display: flex;
-            justify-content: space-between;
             align-items: center;
-        }
+            gap: 4px;
 
-        &-title {
-            font-size: 1.2em;
-            font-weight: bold;
-            color: #16161a; // Yazı rengi
-        }
-
-        &-settings {
-            font-size: 1.2em;
-            cursor: pointer;
-            color: $button-blue; // İkon rengi
-        }
-
-        &-list {
-            &-item {
-                padding: 10px 0;
-                border-bottom: 1px solid $Windswept-Beach;
-                position: relative;
-
-                &-header {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                }
-
-                &-category {
-                    font-size: 13px;
-                    color: $nickel; // Kategori yazı rengi
-                }
-
-                &-name {
-                    font-size: 16px;
-                    font-weight: bold;
-                    margin: 5px 0;
-                }
-
-                &-tweets {
-                    font-size: 0.8em;
-                    color: $nickel; // Tweet sayısı yazı rengi
-                }
-
-                &-dropdown {
-                    font-size: 11px;
-                    color: $trolley-grey; // Dropdown ikon rengi
-                    position: absolute;
-                    right: 0;
-                    bottom: 10px;
-                    cursor: pointer;
-                }
+            &-name {
+              font-size: $fs-16;
+              color: $carbon;
+              margin-right: 5px;
             }
+          }
+
+          &-username {
+            font-size: $fs-14;
+            color: $Space-Convoy;
+          }
+        }
+
+        &-follow {
+          background-color: $zhēn-zhū-bái-pearl;
+          color: $button-blue;
+          border-radius: 16px;
+          padding: 6px 12px;
+          cursor: pointer;
+          font-size: $fs-16;
+          font-weight: bold;
+          border: 1px solid;
         }
 
         &-show-more {
-            text-align: center;
-            font-size: 15px;
-            color: $button-blue;
-            cursor: pointer;
-            margin-top: 10px;
-            // border-top: 1px solid $line-color-Windswept-Beach;
+          text-align: center;
+          font-size: $fs-15;
+          color: $button-blue;
+          cursor: pointer;
+          margin-top: 10px;
         }
+      }
     }
-
-    .left {
-        flex: 0 0 20%;
-        /* Sol kısımın genişliği */
-        background-color: $white;
-        padding: 1rem;
-        box-sizing: border-box;
-
-        &__friends {
-            margin-top: 16px;
-            background-color: $zhēn-zhū-bái-pearl;
-            padding: 16px;
-            border-radius: 16px;
-
-            &-header {
-                margin-bottom: 16px;
-
-                &-title {
-                    font-size: 1.2em;
-                    font-weight: bold;
-                }
-            }
-
-            &-list {
-                &-item {
-                    display: flex;
-                    align-items: center;
-                    gap: 8px;
-                    padding: 10px 0;
-                    border-bottom: 1px solid $Morning-Haze;
-
-                    &-img {
-                        width: 40px;
-                        height: 40px;
-                        border-radius: 50%;
-                        margin-right: 10px;
-                    }
-
-                    &-info {
-                        flex: 1;
-
-                        &-certified {
-                            display: flex;
-                            align-items: center;
-                            gap: 4px;
-
-                            &-name {
-                                font-size: 16px;
-                                color: $carbon;
-                                margin-right: 5px;
-
-                                &-tick {
-                                    font-size: 16px;
-                                    color: $button-blue;
-                                    margin-left: 4px;
-                                }
-                            }
-
-                            &-img {
-                                // width: 16px;
-                                // height: 16px;
-                            }
-
-                        }
-
-                        // &-name {
-                        //     font-size: 16px;
-                        //     font-weight: bold;
-                        //     display: flex;
-                        //     align-items: center;
-
-                        //     &-tick {
-                        //         font-size: 16px;
-                        //         color: $backgroundcolor-button-blue;
-                        //         margin-left: 4px;
-                        //     }
-                        // }
-
-                        &-username {
-                            font-size: 14px;
-                            color: $Space-Convoy;
-                        }
-                    }
-
-                    &-follow {
-                        background-color: $zhēn-zhū-bái-pearl;
-                        color: $button-blue;
-                        border-radius: 16px;
-                        padding: 6px 12px;
-                        cursor: pointer;
-                        font-size: 16px;
-                        font-weight: bold;
-                        border: 1px solid;
-                    }
-
-                    &-show-more {
-                        text-align: center;
-                        font-size: 15px;
-                        color: $button-blue;
-                        cursor: pointer;
-                        margin-top: 10px;
-                    }
-                }
-            }
-        }
-    }
+  }
 }
-
-
-
-
-
-
-
