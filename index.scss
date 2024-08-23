@@ -37,7 +37,6 @@ body {
   flex-direction: row;
   min-height: 100%;
   margin: 0;
-  // overflow: auto;
 }
 
 .sidebar {
@@ -159,13 +158,12 @@ body {
   &__post-container {
     display: flex;
     flex-direction: column;
-    // gap: 15px;
     width: 100%;
     border-bottom: 9px solid $ıce-winddale;
-    /* Altına çizgi */
     padding-bottom: 10px;
-    /* Çizgiye biraz boşluk */
     position: sticky;
+    top: 0;
+    background-color: $white;
   }
 
   &__post {
@@ -193,7 +191,8 @@ body {
 
   &__main {
     overflow-y: auto;
-    max-height: calc(84vh - 120px); 
+    margin-top: 20px;
+    // max-height: calc(84vh - 120px); 
 
     &-section {
       // margin-bottom: 15px;
