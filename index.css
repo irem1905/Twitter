@@ -249,7 +249,15 @@ body {
   padding-bottom: 10px;
   border-bottom: 1px solid #ddd;
 }
-.content .content__main-tweet-text-hashtag-actions-img {
+.content .content__main-tweet-text-hashtag-actions-button {
+  border: none;
+  background-color: #ffffff;
+}
+.content .content__main-tweet-text-hashtag-actions i {
+  font-size: 18px;
+  color: #828282;
+}
+.content .content__main-tweet-text-hashtag-actions i-img {
   width: 16px;
   height: 16px;
   cursor: pointer;
