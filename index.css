@@ -114,6 +114,9 @@ body {
   top: 0;
   background-color: #ffffff;
 }
+.content__post-container.hidden {
+  display: none;
+}
 .content__post {
   display: flex;
   align-items: center;
@@ -449,6 +452,7 @@ body {
 }
 .explore__friends-list-item-show-more {
   text-align: center;
+  border: none;
   font-size: 15px;
   color: #1ea1f2;
   cursor: pointer;
