@@ -84,6 +84,9 @@ body {
   border-right: 0.5px solid #ddd;
   /* Sağ tarafa ince çizgi*/
 }
+.content-hashtag {
+  color: #1ea1f2;
+}
 .content__header {
   display: flex;
   align-items: center;

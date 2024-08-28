@@ -54,3 +54,102 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+document.addEventListener('DOMContentLoaded', () => {
+  const contentMain = document.createElement('div');
+  contentMain.classList.add('content__main');
+
+
+  const tweets = [
+    {
+      imgSrc: "twitter-img/Annie.png",
+      name: "Annie",
+      username: "@annie",
+      time: "14s",
+      text: `This is a tweet. It can be long, or short. Depends on what you have to say. It can have some hashtags too. #likethis This is a tweet. It can be long, or short. Depends on what you have to say. It can have some hashtags too. <span class="content-hashtag">#likethis</span>`,
+      tweetImage: "twitter-img/yellow.png"
+    },
+
+    {
+      imgSrc: "twitter-img/Jorge.png",
+      name: "Jorge Mckinney",
+      username: "@Travis Wade",
+      time: "14s",
+      text: `This is a tweet. It can be long, or short. Depends on what you have
+              to say. It can have some hashtags too. #likethis`,
+    },    
+
+    {
+      imgSrc: "twitter-img/Serenity.png",
+      name: "Serenity Jones",
+      username: "@Crystal Robinson",
+      time: "14s",
+      text: `This is a tweet. It can be long, or short. Depends on what you have to say. It can have some hashtags too. #likethis This is a tweet. It can be long, or short. Depends on what you have to say. It can have some hashtags too. #likethis`,
+      tweetImage: "twitter-img/red.png"
+    },
+
+    {
+      imgSrc: "twitter-img/Dianne.png",
+      name: "Dianne Fisher",
+      username: "@Clyde Lowe",
+      time: "14s",
+      text: `This is a tweet. It can be long, or short. Depends on what you have
+              to say. It can have some hashtags too. #likethis`,
+      tweetImage: "twitter-img/car.png"
+    },
+    
+    {
+      imgSrc: "twitter-img/Dustin.png",
+      name: "Dustin Alexander",
+      username: "@Kristin Murphy",
+      time: "14s",
+      text: `This is a tweet. It can be long, or short. Depends on what you have
+              to say. It can have some hashtags too. #likethis`,
+      tweetImage: "twitter-img/black.png"
+    },
+
+  ];
+
+  tweets.forEach(tweet => {
+    const tweetSection = document.createElement('div');
+    tweetSection.classList.add('content__main-section');
+
+    const userDiv = `
+      <div class="content__main-section-user">
+        <div class="content__main-section-user-info">
+          <img src="${tweet.imgSrc}" alt="${tweet.name}" class="content__main-section-user-info-img" />
+          <span class="content__main-section-user-info-name">${tweet.name}</span>
+        </div>
+        <div class="content__main-section-user-meta">
+          <span class="content__main-section-user-time">${tweet.username} • ${tweet.time}</span>
+          <img src="twitter-img/Chevron down.svg" alt="Chevron"/>
+        </div>
+      </div>
+    `;
+
+    const tweetDiv = `
+      <div class="content__main-tweet">
+        <span class="content__main-tweet-text">${tweet.text}</span>
+        <img src="${tweet.tweetImage}" alt="tweet image" class="content__main-tweet-image" />
+        <div class="content__main-tweet-text-hashtag-actions">
+          <button class="content__main-tweet-text-hashtag-actions-button" id="comment-button">
+            <i class="fa-regular fa-comment"></i>
+          </button>
+          <button class="content__main-tweet-text-hashtag-actions-button" id="retweet-button">
+            <i class="fa-solid fa-retweet"></i>
+          </button>
+          <button class="content__main-tweet-text-hashtag-actions-button" id="like-button">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+          <button class="content__main-tweet-text-hashtag-actions-button" id="upload-button">
+            <i class="fa-solid fa-arrow-up-from-bracket"></i>
+          </button>
+        </div>
+      </div>
+    `;
+
+    tweetSection.innerHTML = userDiv + tweetDiv;
+    contentMain.appendChild(tweetSection);
+  });
+
+  document.querySelector('.content').appendChild(contentMain);
+});
