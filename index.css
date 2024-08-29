@@ -54,9 +54,6 @@ body {
   font-weight: 500;
   font-style: normal;
 }
-.sidebar-icon {
-  font-size: 24px;
-}
 .sidebar-tweet-container {
   width: 100%;
   display: flex;
@@ -146,6 +143,7 @@ body {
 }
 .content__main-section {
   padding: 16px 0 16px 32px;
+  border-bottom: 1px solid #ddd;
 }
 .content__main-section-user {
   display: flex;
@@ -237,9 +235,6 @@ body {
   font-style: normal;
   padding: 0 0 0 11%;
 }
-.content .content__main-tweet-text-hashtag {
-  color: #1ea1f2;
-}
 .content .content__main-tweet-image {
   padding: 0 1% 0 11%;
 }
@@ -253,7 +248,6 @@ body {
   justify-content: space-around;
   margin-top: 11px;
   padding-bottom: 10px;
-  border-bottom: 1px solid #ddd;
 }
 .content .content__main-tweet-text-hashtag-actions-button {
   border: none;

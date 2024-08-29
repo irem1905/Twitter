@@ -92,9 +92,9 @@ body {
     font-style: normal;
   }
 
-  &-icon {
-    font-size: $fs-24;
-  }
+  // &-icon {
+  //   font-size: $fs-24;
+  // }  
 
   &-tweet-container {
     width: 100%;
@@ -206,6 +206,7 @@ body {
     &-section {
       // margin-bottom: 15px;
       padding: 16px 0 16px 32px;
+      border-bottom: 1px solid $steam;
 
       &-user {
         display: flex;
@@ -315,9 +316,9 @@ body {
       font-style: normal;
       padding: 0 0 0 11%;
 
-      &-hashtag {
-        color: $button-blue;
-      }
+      // &-hashtag {
+      //   color: $button-blue;
+      // }
     }
 
     &-image {
@@ -335,7 +336,7 @@ body {
       justify-content: space-around;
       margin-top: 11px;
       padding-bottom: 10px;
-      border-bottom: 1px solid $steam;
+      // border-bottom: 1px solid $steam;
 
       &-button{
         border: none;

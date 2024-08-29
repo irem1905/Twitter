@@ -153,3 +153,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelector('.content').appendChild(contentMain);
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  console.log("Sayfa yüklendi!");
+  
+  const tweetButton = document.querySelector(".sidebar-tweet-text");
+  tweetButton.addEventListener("click", function() {
+      console.log("Tweet butonuna tıklandı!");
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  console.log("Sayfa yüklendi!");
+  
+  const tweetButton = document.querySelector(".sidebar-tweet-text");
+  tweetButton.addEventListener("click", function() {
+      console.log("Tweet butonuna tıklandı!");
+  });
+});
+
+
