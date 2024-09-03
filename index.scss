@@ -25,7 +25,7 @@ $fs-16: 16px;
 $fs-18: 18px;
 $fs-20: 20px;
 $fs-24: 24px;
-$fs-32: 32px;
+$fs-30: 30px;
 
 // Font Değişkenleri
 $ff-roboto: "Roboto", sans-serif;
@@ -65,7 +65,7 @@ body {
 
     &-twitter {
       color: $button-blue;
-      font-size: $fs-32;
+      font-size: $fs-30;
       padding: 5px;
       margin: 10px 0;
       border-radius: 50%;
@@ -111,25 +111,19 @@ body {
     width: 150px;
     background-color: $button-blue;
     color: $white;
-  }
+  }    
 }
 
 .content {
-  // flex: 0 0 53%;
-  /* Orta kısmın genişliği */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   background-color: $white;
-  // padding: 1rem;
   box-sizing: border-box;
   border-right: 0.5px solid $steam;
-  /* Sağ tarafa ince çizgi*/
-  // border-left: 0.5px solid $line-color-steam;
-  // /* Sol tarafa ince çizgi*/
 
-  &-hashtag{
+  &-hashtag {
     color: $button-blue;
   }
 
@@ -139,10 +133,7 @@ body {
     width: 100%;
     padding: 20px 32px 0 32px;
     justify-content: space-between;
-    // margin-bottom: 16px;
     border-bottom: 1px solid $steam;
-    // position: sticky;
-    // z-index: 10;
   }
 
   &__navbar {
@@ -201,10 +192,8 @@ body {
   &__main {
     overflow-y: auto;
     margin-top: 20px;
-    // max-height: calc(84vh - 120px); 
 
     &-section {
-      // margin-bottom: 15px;
       padding: 16px 0 16px 32px;
       border-bottom: 1px solid $steam;
 
@@ -243,6 +232,7 @@ body {
           width: 21px;
           height: 21px;
           margin-right: 10px;
+          margin-left: 8px;
         }
 
         &-time {
@@ -296,8 +286,7 @@ body {
     }
   }
 
-  .content__main-tweet {
-    // margin-left: 51px;
+  &__main-tweet {
     display: flex;
     flex-direction: column;
     gap: 11px;
@@ -315,10 +304,6 @@ body {
       font-weight: 400;
       font-style: normal;
       padding: 0 0 0 11%;
-
-      // &-hashtag {
-      //   color: $button-blue;
-      // }
     }
 
     &-image {
@@ -336,28 +321,26 @@ body {
       justify-content: space-around;
       margin-top: 11px;
       padding-bottom: 10px;
-      // border-bottom: 1px solid $steam;
 
-      &-button{
+      &-button {
         border: none;
         background-color: $white;
       }
 
       i {
-        font-size: $fs-18; 
+        font-size: $fs-18;
         color: $trolley-grey;
-      
 
-      &-img {
-        width: 16px;
-        height: 16px;
-        cursor: pointer;
+        &-img {
+          width: 16px;
+          height: 16px;
+          cursor: pointer;
+        }
       }
     }
   }
-  }
 
-  .content__toolbar {
+  &__toolbar {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -375,145 +358,219 @@ body {
       margin-left: 45%;
     }
 
-    .content__toolbar-extra {
-      display: flex;
-      align-items: center;
+    &-extra-img {
+      margin: 0 10px;
+    }
 
-      &-img {
-        margin: 0 10px;
-      }
+    &-extra-button {
+      width: 98px;
+      height: 42px;
+      background-color: $malmö-FF;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
 
-      &-button {
-        width: 98px;
-        height: 42px;
-        background-color: $malmö-FF;
-        border: none;
-        border-radius: 20px;
-        cursor: pointer;
-
-        &-text {
-          color: $white;
-        }
+      &-text {
+        color: $white;
       }
     }
   }
 }
 
+// .explore {
+//   flex: 0 0 26%;
+//   background-color: $white;
+//   padding: 24px;
+//   box-sizing: border-box;
+
+//   &__search {
+//     display: flex;
+//     align-items: center;
+//     gap: 8px;
+//     padding: 8px;
+//     border-radius: 32px;
+//     background-color: $ıce-winddale;
+
+//     &-icon {
+//       font-size: $fs-20;
+
+//       &.custom-icon {
+//         color: $trolley-grey;
+//       }
+//     }
+//   }
+
+//   &__search-input {
+//     flex: 1;
+//     border: none;
+//     outline: none;
+//     font-size: $fs-13;
+//     padding: 8px;
+//     border-radius: 32px;
+//     background-color: $ıce-winddale;
+//   }
+
+//   &__search-button {
+//     background-color: transparent;
+//     border: none;
+//     font-size: $fs-16;
+//     cursor: pointer;
+//   }
+
+//   &__trends {
+//     margin-top: 16px;
+//     background-color: $zhēn-zhū-bái-pearl;
+//     padding: 16px;
+//     border-radius: 16px;
+
+//     &-header {
+//       display: flex;
+//       justify-content: space-between;
+//       align-items: center;
+//     }
+
+//     &-title {
+//       font-size: 1.2em;
+//       font-weight: bold;
+//       color: $black;
+//     }
+
+//     &-settings {
+//       font-size: 1.2em;
+//       cursor: pointer;
+//       color: $button-blue;
+//     }
+
+//     &-list {
+//       &-item {
+//         padding: 10px 0;
+//         border-bottom: 1px solid $Windswept-Beach;
+//         position: relative;
+
+//         &-header {
+//           display: flex;
+//           justify-content: space-between;
+//           align-items: center;
+//         }
+
+//         &-category {
+//           font-size: $fs-13;
+//           color: $nickel;
+//         }
+
+//         &-name {
+//           font-size: $fs-16;
+//           font-weight: bold;
+//           margin: 5px 0;
+//         }
+
+//         &-tweets {
+//           font-size: 0.8em;
+//           color: $nickel;
+//         }
+
+//         &-dropdown {
+//           font-size: $fs-11;
+//           color: $trolley-grey;
+//           position: absolute;
+//           right: 0;
+//           bottom: 10px;
+//           cursor: pointer;
+//         }
+//       }
+//     }
+
+//     &-show-more {
+//       text-align: center;
+//       font-size: $fs-15;
+//       color: $button-blue;
+//       cursor: pointer;
+//       margin-top: 10px;
+//       // border-top: 1px solid $line-color-Windswept-Beach;
+//     }
+//   }
+
+
+//   &__friends {
+//     margin-top: 24px;
+//     background-color: $zhēn-zhū-bái-pearl;
+//     padding: 16px;
+//     border-radius: 16px;
+
+//     &-header {
+//       margin-bottom: 16px;
+
+//       &-title {
+//         font-size: 1.2em;
+//         font-weight: bold;
+//       }
+//     }
+
+//     &-list {
+//       &-item {
+//         display: flex;
+//         align-items: center;
+//         gap: 8px;
+//         padding: 10px 0;
+//         border-bottom: 1px solid $Morning-Haze;
+
+//         &-img {
+//           width: 40px;
+//           height: 40px;
+//           border-radius: 50%;
+//           margin-right: 10px;
+//         }
+
+//         &-info {
+//           flex: 1;
+//           display: flex;
+//           flex-direction: column;
+
+//           &-certified {
+//             display: flex;
+//             align-items: center;
+//             gap: 4px;
+
+//             &-name {
+//               font-size: $fs-16;
+//               color: $carbon;
+//               margin-right: 5px;
+//             }
+//           }
+
+//           &-username {
+//             font-size: $fs-14;
+//             color: $Space-Convoy;
+//           }
+//         }
+
+//         &-follow {
+//           background-color: $zhēn-zhū-bái-pearl;
+//           color: $button-blue;
+//           border-radius: 16px;
+//           padding: 6px 12px;
+//           cursor: pointer;
+//           font-size: $fs-16;
+//           font-weight: bold;
+//           border: 1px solid;
+//         }
+
+//         &-show-more {
+//           text-align: center;
+//           border: none;
+//           font-size: $fs-15;
+//           color: $button-blue;
+//           cursor: pointer;
+//           margin-top: 10px;
+//         }
+//       }
+//     }
+//   }
+// }
+
 
 .explore {
-  flex: 0 0 26%;
-  background-color: $white;
-  padding: 24px;
-  box-sizing: border-box;
-
-  &__search {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 8px;
-    border-radius: 32px;
-    background-color: $ıce-winddale;
-    /* Arka plan rengi */
-
-    &-icon {
-      font-size: $fs-20;
-
-      &.custom-icon {
-        color: $trolley-grey;
-      }
-    }
-  }
-
-  &__search-input {
-    flex: 1;
-    border: none;
-    outline: none;
-    font-size: $fs-13;
-    padding: 8px;
-    border-radius: 32px;
-    background-color: $ıce-winddale;
-  }
-
-  &__search-button {
-    background-color: transparent;
-    border: none;
-    font-size: $fs-16;
-    cursor: pointer;
-  }
-
-  &__trends {
-    margin-top: 16px;
-    background-color: $zhēn-zhū-bái-pearl;
-    padding: 16px;
-    border-radius: 16px;
-
-    &-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    &-title {
-      font-size: 1.2em;
-      font-weight: bold;
-      color: $black;
-    }
-
-    &-settings {
-      font-size: 1.2em;
-      cursor: pointer;
-      color: $button-blue;
-    }
-
-    &-list {
-      &-item {
-        padding: 10px 0;
-        border-bottom: 1px solid $Windswept-Beach;
-        position: relative;
-
-        &-header {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-        }
-
-        &-category {
-          font-size: $fs-13;
-          color: $nickel;
-        }
-
-        &-name {
-          font-size: $fs-16;
-          font-weight: bold;
-          margin: 5px 0;
-        }
-
-        &-tweets {
-          font-size: 0.8em;
-          color: $nickel;
-        }
-
-        &-dropdown {
-          font-size: $fs-11;
-          color: $trolley-grey;
-          position: absolute;
-          right: 0;
-          bottom: 10px;
-          cursor: pointer;
-        }
-      }
-    }
-
-    &-show-more {
-      text-align: center;
-      font-size: $fs-15;
-      color: $button-blue;
-      cursor: pointer;
-      margin-top: 10px;
-      // border-top: 1px solid $line-color-Windswept-Beach;
-    }
-  }
-
+  // Mevcut kodlar...
 
   &__friends {
     margin-top: 24px;
@@ -537,6 +594,7 @@ body {
         gap: 8px;
         padding: 10px 0;
         border-bottom: 1px solid $Morning-Haze;
+        position: relative; /* Bilgi kutusunu konumlandırmak için gerekli */
 
         &-img {
           width: 40px;
@@ -566,6 +624,21 @@ body {
             font-size: $fs-14;
             color: $Space-Convoy;
           }
+
+          /* Kullanıcı bilgileri kutusu */
+          &-details {
+            display: none; /* Başlangıçta gizli */
+            position: absolute;
+            background-color: #f6f8fa;
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 200px;
+            z-index: 10;
+            top: 40px; /* Pozisyonunu ayarlayın */
+            left: 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+          }
         }
 
         &-follow {
@@ -586,6 +659,10 @@ body {
           color: $button-blue;
           cursor: pointer;
           margin-top: 10px;
+        }
+
+        &:hover .explore__friends-list-item-info-details {
+          display: block; /* Üzerine gelindiğinde göster */
         }
       }
     }

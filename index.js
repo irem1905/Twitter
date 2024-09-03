@@ -58,15 +58,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const contentMain = document.createElement('div');
   contentMain.classList.add('content__main');
 
-
   const tweets = [
     {
       imgSrc: "twitter-img/Annie.png",
       name: "Annie",
       username: "@annie",
       time: "14s",
-      text: `This is a tweet. It can be long, or short. Depends on what you have to say. It can have some hashtags too. #likethis This is a tweet. It can be long, or short. Depends on what you have to say. It can have some hashtags too. <span class="content-hashtag">#likethis</span>`,
-      tweetImage: "twitter-img/yellow.png"
+      text: `This is a tweet. It can be long, or short. Depends on what you have to say. It can have some hashtags too. <span class="content-hashtag">#likethis</span> This is a tweet. It can be long, or short. Depends on what you have to say. It can have some hashtags too. <span class="content-hashtag">#likethis</span>`,
+      tweetImage: "twitter-img/yellow.png",
+      certified: true // Mavi tik için bu özellik kullanılıyo!!
     },
 
     {
@@ -75,7 +75,8 @@ document.addEventListener('DOMContentLoaded', () => {
       username: "@Travis Wade",
       time: "14s",
       text: `This is a tweet. It can be long, or short. Depends on what you have
-              to say. It can have some hashtags too. #likethis`,
+              to say. It can have some hashtags too. <span class="content-hashtag">#likethis</span>`,
+      certified: true
     },    
 
     {
@@ -83,8 +84,9 @@ document.addEventListener('DOMContentLoaded', () => {
       name: "Serenity Jones",
       username: "@Crystal Robinson",
       time: "14s",
-      text: `This is a tweet. It can be long, or short. Depends on what you have to say. It can have some hashtags too. #likethis This is a tweet. It can be long, or short. Depends on what you have to say. It can have some hashtags too. #likethis`,
-      tweetImage: "twitter-img/red.png"
+      text: `This is a tweet. It can be long, or short. Depends on what you have to say. It can have some hashtags too. <span class="content-hashtag">#likethis</span> This is a tweet. It can be long, or short. Depends on what you have to say. It can have some hashtags too. <span class="content-hashtag">#likethis</span>`,
+      tweetImage: "twitter-img/red.png",
+      certified: true
     },
 
     {
@@ -93,8 +95,9 @@ document.addEventListener('DOMContentLoaded', () => {
       username: "@Clyde Lowe",
       time: "14s",
       text: `This is a tweet. It can be long, or short. Depends on what you have
-              to say. It can have some hashtags too. #likethis`,
-      tweetImage: "twitter-img/car.png"
+              to say. It can have some hashtags too.<span class="content-hashtag">#likethis</span>`,
+      tweetImage: "twitter-img/car.png",
+      certified: true
     },
     
     {
@@ -103,10 +106,10 @@ document.addEventListener('DOMContentLoaded', () => {
       username: "@Kristin Murphy",
       time: "14s",
       text: `This is a tweet. It can be long, or short. Depends on what you have
-              to say. It can have some hashtags too. #likethis`,
-      tweetImage: "twitter-img/black.png"
+              to say. It can have some hashtags too. <span class="content-hashtag">#likethis</span>`,
+      tweetImage: "twitter-img/black.png",
+      certified: true
     },
-
   ];
 
   tweets.forEach(tweet => {
@@ -118,6 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="content__main-section-user-info">
           <img src="${tweet.imgSrc}" alt="${tweet.name}" class="content__main-section-user-info-img" />
           <span class="content__main-section-user-info-name">${tweet.name}</span>
+          ${tweet.certified ? '<img src="twitter-img/Certified.svg" alt="Certified" class="content__main-section-user-info-Certified" />' : ''}
         </div>
         <div class="content__main-section-user-meta">
           <span class="content__main-section-user-time">${tweet.username} • ${tweet.time}</span>
@@ -127,26 +131,26 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
 
     const tweetDiv = `
-      <div class="content__main-tweet">
-        <span class="content__main-tweet-text">${tweet.text}</span>
-        <img src="${tweet.tweetImage}" alt="tweet image" class="content__main-tweet-image" />
-        <div class="content__main-tweet-text-hashtag-actions">
-          <button class="content__main-tweet-text-hashtag-actions-button" id="comment-button">
-            <i class="fa-regular fa-comment"></i>
-          </button>
-          <button class="content__main-tweet-text-hashtag-actions-button" id="retweet-button">
-            <i class="fa-solid fa-retweet"></i>
-          </button>
-          <button class="content__main-tweet-text-hashtag-actions-button" id="like-button">
-            <i class="fa-regular fa-heart"></i>
-          </button>
-          <button class="content__main-tweet-text-hashtag-actions-button" id="upload-button">
-            <i class="fa-solid fa-arrow-up-from-bracket"></i>
-          </button>
-        </div>
+    <div class="content__main-tweet">
+      <span class="content__main-tweet-text">${tweet.text}</span>
+      ${tweet.tweetImage ? `<img src="${tweet.tweetImage}" alt="tweet image" class="content__main-tweet-image"/>` : ''}
+      <div class="content__main-tweet-text-hashtag-actions">
+        <button class="content__main-tweet-text-hashtag-actions-button" id="comment-button">
+          <i class="fa-regular fa-comment"></i>
+        </button>
+        <button class="content__main-tweet-text-hashtag-actions-button" id="retweet-button">
+          <i class="fa-solid fa-retweet"></i>
+        </button>
+        <button class="content__main-tweet-text-hashtag-actions-button" id="like-button">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <button class="content__main-tweet-text-hashtag-actions-button" id="upload-button">
+          <i class="fa-solid fa-arrow-up-from-bracket"></i>
+        </button>
       </div>
-    `;
-
+    </div>
+  `;
+  
     tweetSection.innerHTML = userDiv + tweetDiv;
     contentMain.appendChild(tweetSection);
   });
@@ -154,22 +158,20 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelector('.content').appendChild(contentMain);
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-  console.log("Sayfa yüklendi!");
+
+toll
+
+document.querySelectorAll('.explore__friends-list-item').forEach(item => {
+  item.addEventListener('mouseenter', () => {
+    const infoBox = item.querySelector('.explore__friends-list-item-info-details');
+    infoBox.style.display = 'block';
+  });
   
-  const tweetButton = document.querySelector(".sidebar-tweet-text");
-  tweetButton.addEventListener("click", function() {
-      console.log("Tweet butonuna tıklandı!");
+  item.addEventListener('mouseleave', () => {
+    const infoBox = item.querySelector('.explore__friends-list-item-info-details');
+    infoBox.style.display = 'none';
   });
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-  console.log("Sayfa yüklendi!");
-  
-  const tweetButton = document.querySelector(".sidebar-tweet-text");
-  tweetButton.addEventListener("click", function() {
-      console.log("Tweet butonuna tıklandı!");
-  });
-});
 
 

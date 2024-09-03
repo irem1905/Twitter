@@ -31,7 +31,7 @@ body {
 }
 .sidebar-button-twitter {
   color: #1ea1f2;
-  font-size: 32px;
+  font-size: 30px;
   padding: 5px;
   margin: 10px 0;
   border-radius: 50%;
@@ -71,7 +71,6 @@ body {
 }
 
 .content {
-  /* Orta kısmın genişliği */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -79,7 +78,6 @@ body {
   background-color: #ffffff;
   box-sizing: border-box;
   border-right: 0.5px solid #ddd;
-  /* Sağ tarafa ince çizgi*/
 }
 .content-hashtag {
   color: #1ea1f2;
@@ -176,6 +174,7 @@ body {
   width: 21px;
   height: 21px;
   margin-right: 10px;
+  margin-left: 8px;
 }
 .content__main-section-user-time {
   font-size: 16px;
@@ -217,15 +216,15 @@ body {
   color: #828282;
   margin-right: 5px;
 }
-.content .content__main-tweet {
+.content__main-tweet {
   display: flex;
   flex-direction: column;
   gap: 11px;
 }
-.content .content__main-tweet-body {
+.content__main-tweet-body {
   padding: 0 0 0 11%;
 }
-.content .content__main-tweet-text {
+.content__main-tweet-text {
   font-size: 16px;
   line-height: 1.5;
   display: block;
@@ -235,57 +234,53 @@ body {
   font-style: normal;
   padding: 0 0 0 11%;
 }
-.content .content__main-tweet-image {
+.content__main-tweet-image {
   padding: 0 1% 0 11%;
 }
-.content .content__main-tweet-img {
+.content__main-tweet-img {
   margin-top: 10px;
   width: 100%;
   border-radius: 8px;
 }
-.content .content__main-tweet-text-hashtag-actions {
+.content__main-tweet-text-hashtag-actions {
   display: flex;
   justify-content: space-around;
   margin-top: 11px;
   padding-bottom: 10px;
 }
-.content .content__main-tweet-text-hashtag-actions-button {
+.content__main-tweet-text-hashtag-actions-button {
   border: none;
   background-color: #ffffff;
 }
-.content .content__main-tweet-text-hashtag-actions i {
+.content__main-tweet-text-hashtag-actions i {
   font-size: 18px;
   color: #828282;
 }
-.content .content__main-tweet-text-hashtag-actions i-img {
+.content__main-tweet-text-hashtag-actions i-img {
   width: 16px;
   height: 16px;
   cursor: pointer;
 }
-.content .content__toolbar {
+.content__toolbar {
   display: flex;
   align-items: center;
   gap: 10px;
   padding: 10px 0;
   margin-left: 14%;
 }
-.content .content__toolbar-img {
+.content__toolbar-img {
   width: 24px;
   height: 24px;
 }
-.content .content__toolbar-extra {
+.content__toolbar-extra {
   display: flex;
   gap: 15px;
   margin-left: 45%;
 }
-.content .content__toolbar .content__toolbar-extra {
-  display: flex;
-  align-items: center;
-}
-.content .content__toolbar .content__toolbar-extra-img {
+.content__toolbar-extra-img {
   margin: 0 10px;
 }
-.content .content__toolbar .content__toolbar-extra-button {
+.content__toolbar-extra-button {
   width: 98px;
   height: 42px;
   background-color: #a5d9fa;
@@ -293,105 +288,10 @@ body {
   border-radius: 20px;
   cursor: pointer;
 }
-.content .content__toolbar .content__toolbar-extra-button-text {
+.content__toolbar-extra-button-text {
   color: #ffffff;
 }
 
-.explore {
-  flex: 0 0 26%;
-  background-color: #ffffff;
-  padding: 24px;
-  box-sizing: border-box;
-}
-.explore__search {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px;
-  border-radius: 32px;
-  background-color: #e7ecf0;
-  /* Arka plan rengi */
-}
-.explore__search-icon {
-  font-size: 20px;
-}
-.explore__search-icon.custom-icon {
-  color: #828282;
-}
-.explore__search-input {
-  flex: 1;
-  border: none;
-  outline: none;
-  font-size: 13px;
-  padding: 8px;
-  border-radius: 32px;
-  background-color: #e7ecf0;
-}
-.explore__search-button {
-  background-color: transparent;
-  border: none;
-  font-size: 16px;
-  cursor: pointer;
-}
-.explore__trends {
-  margin-top: 16px;
-  background-color: #f6f8fa;
-  padding: 16px;
-  border-radius: 16px;
-}
-.explore__trends-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.explore__trends-title {
-  font-size: 1.2em;
-  font-weight: bold;
-  color: #000000;
-}
-.explore__trends-settings {
-  font-size: 1.2em;
-  cursor: pointer;
-  color: #1ea1f2;
-}
-.explore__trends-list-item {
-  padding: 10px 0;
-  border-bottom: 1px solid #e2e4e6;
-  position: relative;
-}
-.explore__trends-list-item-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.explore__trends-list-item-category {
-  font-size: 13px;
-  color: #929292;
-}
-.explore__trends-list-item-name {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 5px 0;
-}
-.explore__trends-list-item-tweets {
-  font-size: 0.8em;
-  color: #929292;
-}
-.explore__trends-list-item-dropdown {
-  font-size: 11px;
-  color: #828282;
-  position: absolute;
-  right: 0;
-  bottom: 10px;
-  cursor: pointer;
-}
-.explore__trends-show-more {
-  text-align: center;
-  font-size: 15px;
-  color: #1ea1f2;
-  cursor: pointer;
-  margin-top: 10px;
-}
 .explore__friends {
   margin-top: 24px;
   background-color: #f6f8fa;
@@ -411,6 +311,7 @@ body {
   gap: 8px;
   padding: 10px 0;
   border-bottom: 1px solid #e1e8ed;
+  position: relative; /* Bilgi kutusunu konumlandırmak için gerekli */
 }
 .explore__friends-list-item-img {
   width: 40px;
@@ -422,6 +323,7 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
+  /* Kullanıcı bilgileri kutusu */
 }
 .explore__friends-list-item-info-certified {
   display: flex;
@@ -436,6 +338,19 @@ body {
 .explore__friends-list-item-info-username {
   font-size: 14px;
   color: #657786;
+}
+.explore__friends-list-item-info-details {
+  display: none; /* Başlangıçta gizli */
+  position: absolute;
+  background-color: #f6f8fa;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 200px;
+  z-index: 10;
+  top: 40px; /* Pozisyonunu ayarlayın */
+  left: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
 }
 .explore__friends-list-item-follow {
   background-color: #f6f8fa;
@@ -454,4 +369,7 @@ body {
   color: #1ea1f2;
   cursor: pointer;
   margin-top: 10px;
+}
+.explore__friends-list-item:hover .explore__friends-list-item-info-details {
+  display: block; /* Üzerine gelindiğinde göster */
 }/*# sourceMappingURL=index.css.map */
