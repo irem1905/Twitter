@@ -16,7 +16,6 @@ body {
   padding: 48px;
   box-sizing: border-box;
   border-right: 0.5px solid #ddd;
-  /* Sağ tarafa ince çizgi*/
 }
 .sidebar-button {
   background-color: transparent;
@@ -292,6 +291,100 @@ body {
   color: #ffffff;
 }
 
+.explore {
+  flex: 0 0 26%;
+  background-color: #ffffff;
+  padding: 24px;
+  box-sizing: border-box;
+}
+.explore__search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 32px;
+  background-color: #e7ecf0;
+}
+.explore__search-icon {
+  font-size: 20px;
+}
+.explore__search-icon.custom-icon {
+  color: #828282;
+}
+.explore__search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 13px;
+  padding: 8px;
+  border-radius: 32px;
+  background-color: #e7ecf0;
+}
+.explore__search-button {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+.explore__trends {
+  margin-top: 16px;
+  background-color: #f6f8fa;
+  padding: 16px;
+  border-radius: 16px;
+}
+.explore__trends-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.explore__trends-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #000000;
+}
+.explore__trends-settings {
+  font-size: 1.2em;
+  cursor: pointer;
+  color: #1ea1f2;
+}
+.explore__trends-list-item {
+  padding: 10px 0;
+  border-bottom: 1px solid #e2e4e6;
+  position: relative;
+}
+.explore__trends-list-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.explore__trends-list-item-category {
+  font-size: 13px;
+  color: #929292;
+}
+.explore__trends-list-item-name {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+.explore__trends-list-item-tweets {
+  font-size: 0.8em;
+  color: #929292;
+}
+.explore__trends-list-item-dropdown {
+  font-size: 11px;
+  color: #828282;
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  cursor: pointer;
+}
+.explore__trends-show-more {
+  text-align: center;
+  font-size: 15px;
+  color: #1ea1f2;
+  cursor: pointer;
+  margin-top: 10px;
+}
 .explore__friends {
   margin-top: 24px;
   background-color: #f6f8fa;
@@ -311,7 +404,7 @@ body {
   gap: 8px;
   padding: 10px 0;
   border-bottom: 1px solid #e1e8ed;
-  position: relative; /* Bilgi kutusunu konumlandırmak için gerekli */
+  position: relative;
 }
 .explore__friends-list-item-img {
   width: 40px;
@@ -323,7 +416,6 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  /* Kullanıcı bilgileri kutusu */
 }
 .explore__friends-list-item-info-certified {
   display: flex;
@@ -340,17 +432,49 @@ body {
   color: #657786;
 }
 .explore__friends-list-item-info-details {
-  display: none; /* Başlangıçta gizli */
+  display: none;
   position: absolute;
   background-color: #f6f8fa;
-  border: 1px solid #ccc;
   padding: 10px;
-  width: 200px;
+  width: 280px;
   z-index: 10;
-  top: 40px; /* Pozisyonunu ayarlayın */
+  top: 40px;
   left: 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
+}
+.explore__friends-list-item-info-details-header {
+  display: flex;
+  padding: 5px;
+  justify-content: space-between;
+}
+.explore__friends-list-item-info-details-header-button {
+  background-color: #f6f8fa;
+  color: #1ea1f2;
+  border-radius: 20px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  border: 1px solid #1ea1f2;
+}
+.explore__friends-list-item-info-details-credentials {
+  display: flex;
+  gap: 5px;
+}
+.explore__friends-list-item-info-details-credentials-name {
+  color: #000000;
+}
+.explore__friends-list-item-info-details-username {
+  color: #657786;
+  font-size: 14px;
+  margin: 0;
+}
+.explore__friends-list-item-info-details-bio {
+  color: #333333;
+  margin-top: 8px;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
 }
 .explore__friends-list-item-follow {
   background-color: #f6f8fa;
@@ -360,7 +484,7 @@ body {
   cursor: pointer;
   font-size: 16px;
   font-weight: bold;
-  border: 1px solid;
+  border: 1px solid #1ea1f2;
 }
 .explore__friends-list-item-show-more {
   text-align: center;
@@ -371,5 +495,5 @@ body {
   margin-top: 10px;
 }
 .explore__friends-list-item:hover .explore__friends-list-item-info-details {
-  display: block; /* Üzerine gelindiğinde göster */
+  display: block;
 }/*# sourceMappingURL=index.css.map */

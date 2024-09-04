@@ -40,631 +40,804 @@ body {
   margin: 0;
 }
 
-.sidebar {
-  flex: 0 0 22%;
-  /* Yan barın genişliği */
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  background-color: $white;
-  padding: 48px;
-  box-sizing: border-box;
-  border-right: 0.5px solid $steam;
-  /* Sağ tarafa ince çizgi*/
 
-  &-button {
-    background-color: transparent;
-    border: none;
-    font-size: $fs-16;
-    padding: 10px;
-    margin: 5px 0;
-    cursor: pointer;
+
+  .sidebar {
+    flex: 0 0 22%;
+    /* Yan barın genişliği */
     display: flex;
-    align-items: center;
-    gap: 16px;
-
-    &-twitter {
-      color: $button-blue;
-      font-size: $fs-30;
-      padding: 5px;
-      margin: 10px 0;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: $white;
+    padding: 48px;
+    box-sizing: border-box;
+    border-right: 0.5px solid $steam;
+  
+    &-button {
+      background-color: transparent;
+      border: none;
+      font-size: $fs-16;
+      padding: 10px;
+      margin: 5px 0;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+  
+      &-twitter {
+        color: $button-blue;
+        font-size: $fs-30;
+        padding: 5px;
+        margin: 10px 0;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  
+    &-img {
+      width: 30px;
+      height: 30px;
       border-radius: 50%;
-      width: 40px;
-      height: 40px;
+      margin-right: 10px;
+    }
+  
+    &-text {
+      color: $carbon;
+      font-size: $fs-16;
+      font-family: $ff-roboto;
+      font-weight: 500;
+      font-style: normal;
+    }
+  
+    // &-icon {
+    //   font-size: $fs-24;
+    // }  
+  
+    &-tweet-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  
+    &-tweet-text {
       display: flex;
       justify-content: center;
       align-items: center;
-    }
+      height: 50px;
+      border-radius: 32px;
+      width: 150px;
+      background-color: $button-blue;
+      color: $white;
+    }    
   }
-
-  &-img {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
-
-  &-text {
-    color: $carbon;
-    font-size: $fs-16;
-    font-family: $ff-roboto;
-    font-weight: 500;
-    font-style: normal;
-  }
-
-  // &-icon {
-  //   font-size: $fs-24;
-  // }  
-
-  &-tweet-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-  &-tweet-text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-    border-radius: 32px;
-    width: 150px;
-    background-color: $button-blue;
-    color: $white;
-  }    
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  background-color: $white;
-  box-sizing: border-box;
-  border-right: 0.5px solid $steam;
-
-  &-hashtag {
-    color: $button-blue;
-  }
-
-  &__header {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    padding: 20px 32px 0 32px;
-    justify-content: space-between;
-    border-bottom: 1px solid $steam;
-  }
-
-  &__navbar {
-    display: flex;
-    align-items: center;
-  }
-
-  &__title {
-    font-size: $fs-20;
-    font-weight: bold;
-    color: $black;
-  }
-
-  &__star {
-    margin-right: 55px;
-  }
-
-  &__post-container {
+  
+  .content {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    border-bottom: 9px solid $ıce-winddale;
-    padding-bottom: 10px;
-    position: sticky;
-    top: 0;
+    justify-content: flex-start;
+    align-items: flex-start;
     background-color: $white;
-
-    &.hidden {
-      display: none;
+    box-sizing: border-box;
+    border-right: 0.5px solid $steam;
+  
+    &-hashtag {
+      color: $button-blue;
     }
-  }
-
-  &__post {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-top: 8px;
-
-    &-img {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      margin-right: 10px;
-      margin-left: 19px;
-    }
-
-    &-text {
-      font-size: $fs-16;
-      color: $trolley-grey;
-      font-family: $ff-roboto;
-      font-weight: 400;
-      font-style: normal;
-    }
-  }
-
-  &__main {
-    overflow-y: auto;
-    margin-top: 20px;
-
-    &-section {
-      padding: 16px 0 16px 32px;
+  
+    &__header {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      padding: 20px 32px 0 32px;
+      justify-content: space-between;
       border-bottom: 1px solid $steam;
-
+    }
+  
+    &__navbar {
+      display: flex;
+      align-items: center;
+    }
+  
+    &__title {
+      font-size: $fs-20;
+      font-weight: bold;
+      color: $black;
+    }
+  
+    &__star {
+      margin-right: 55px;
+    }
+  
+    &__post-container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      border-bottom: 9px solid $ıce-winddale;
+      padding-bottom: 10px;
+      position: sticky;
+      top: 0;
+      background-color: $white;
+  
+      &.hidden {
+        display: none;
+      }
+    }
+  
+    &__post {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-top: 8px;
+  
+      &-img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 10px;
+        margin-left: 19px;
+      }
+  
+      &-text {
+        font-size: $fs-16;
+        color: $trolley-grey;
+        font-family: $ff-roboto;
+        font-weight: 400;
+        font-style: normal;
+      }
+    }
+  
+    &__main {
+      overflow-y: auto;
+      margin-top: 20px;
+  
+      &-section {
+        padding: 16px 0 16px 32px;
+        border-bottom: 1px solid $steam;
+  
+        &-user {
+          display: flex;
+          align-items: center;
+          background-color: $white;
+          border-radius: 8px;
+  
+          &-info {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-family: $ff-roboto;
+            font-weight: 700;
+          }
+  
+          &-conteiner {
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+  
+            &-img {
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              margin-right: 10px;
+            }
+  
+            &-name {
+              font-size: $fs-16;
+            }
+          }
+  
+          &-certified-img {
+            width: 21px;
+            height: 21px;
+            margin-right: 10px;
+            margin-left: 8px;
+          }
+  
+          &-time {
+            font-size: $fs-16;
+            color: $trolley-grey;
+          }
+        }
+      }
+  
       &-user {
         display: flex;
         align-items: center;
         background-color: $white;
         border-radius: 8px;
-
+        padding: 10px;
+  
         &-info {
           display: flex;
           align-items: center;
-          gap: 16px;
-          font-family: $ff-roboto;
-          font-weight: 700;
-        }
-
-        &-conteiner {
-          display: flex;
-          align-items: center;
           margin-right: 10px;
-
+  
           &-img {
             width: 40px;
             height: 40px;
             border-radius: 50%;
             margin-right: 10px;
           }
-
+  
           &-name {
             font-size: $fs-16;
+            font-weight: bold;
           }
         }
-
+  
         &-certified-img {
           width: 21px;
           height: 21px;
           margin-right: 10px;
-          margin-left: 8px;
         }
-
-        &-time {
-          font-size: $fs-16;
-          color: $trolley-grey;
+  
+        &-meta {
+          display: flex;
+          align-items: center;
+  
+          &-time {
+            font-size: $fs-14;
+            color: $trolley-grey;
+            margin-right: 5px;
+          }
         }
       }
     }
-
-    &-user {
+  
+    &__main-tweet {
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+  
+      &-body {
+        padding: 0 0 0 11%;
+      }
+  
+      &-text {
+        font-size: $fs-16;
+        line-height: 1.5;
+        display: block;
+        color: $carbon;
+        font-family: $ff-roboto;
+        font-weight: 400;
+        font-style: normal;
+        padding: 0 0 0 11%;
+      }
+  
+      &-image {
+        padding: 0 1% 0 11%;
+      }
+  
+      &-img {
+        margin-top: 10px;
+        width: 100%;
+        border-radius: 8px;
+      }
+  
+      &-text-hashtag-actions {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 11px;
+        padding-bottom: 10px;
+  
+        &-button {
+          border: none;
+          background-color: $white;
+        }
+  
+        i {
+          font-size: $fs-18;
+          color: $trolley-grey;
+  
+          &-img {
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  
+    &__toolbar {
       display: flex;
       align-items: center;
-      background-color: $white;
-      border-radius: 8px;
-      padding: 10px;
-
-      &-info {
+      gap: 10px;
+      padding: 10px 0;
+      margin-left: 14%;
+  
+      &-img {
+        width: 24px;
+        height: 24px;
+      }
+  
+      &-extra {
         display: flex;
-        align-items: center;
-        margin-right: 10px;
-
-        &-img {
-          width: 40px;
-          height: 40px;
-          border-radius: 50%;
-          margin-right: 10px;
-        }
-
-        &-name {
-          font-size: $fs-16;
-          font-weight: bold;
-        }
+        gap: 15px;
+        margin-left: 45%;
       }
-
-      &-certified-img {
-        width: 21px;
-        height: 21px;
-        margin-right: 10px;
+  
+      &-extra-img {
+        margin: 0 10px;
       }
-
-      &-meta {
-        display: flex;
-        align-items: center;
-
-        &-time {
-          font-size: $fs-14;
-          color: $trolley-grey;
-          margin-right: 5px;
-        }
-      }
-    }
-  }
-
-  &__main-tweet {
-    display: flex;
-    flex-direction: column;
-    gap: 11px;
-
-    &-body {
-      padding: 0 0 0 11%;
-    }
-
-    &-text {
-      font-size: $fs-16;
-      line-height: 1.5;
-      display: block;
-      color: $carbon;
-      font-family: $ff-roboto;
-      font-weight: 400;
-      font-style: normal;
-      padding: 0 0 0 11%;
-    }
-
-    &-image {
-      padding: 0 1% 0 11%;
-    }
-
-    &-img {
-      margin-top: 10px;
-      width: 100%;
-      border-radius: 8px;
-    }
-
-    &-text-hashtag-actions {
-      display: flex;
-      justify-content: space-around;
-      margin-top: 11px;
-      padding-bottom: 10px;
-
-      &-button {
+  
+      &-extra-button {
+        width: 98px;
+        height: 42px;
+        background-color: $malmö-FF;
         border: none;
-        background-color: $white;
-      }
-
-      i {
-        font-size: $fs-18;
-        color: $trolley-grey;
-
-        &-img {
-          width: 16px;
-          height: 16px;
-          cursor: pointer;
+        border-radius: 20px;
+        cursor: pointer;
+  
+        &-text {
+          color: $white;
         }
       }
     }
   }
-
-  &__toolbar {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 10px 0;
-    margin-left: 14%;
-
-    &-img {
-      width: 24px;
-      height: 24px;
-    }
-
-    &-extra {
+  
+  // .explore {
+  //   flex: 0 0 26%;
+  //   background-color: $white;
+  //   padding: 24px;
+  //   box-sizing: border-box;
+  
+  //   &__search {
+  //     display: flex;
+  //     align-items: center;
+  //     gap: 8px;
+  //     padding: 8px;
+  //     border-radius: 32px;
+  //     background-color: $ıce-winddale;
+  
+  //     &-icon {
+  //       font-size: $fs-20;
+  
+  //       &.custom-icon {
+  //         color: $trolley-grey;
+  //       }
+  //     }
+  //   }
+  
+  //   &__search-input {
+  //     flex: 1;
+  //     border: none;
+  //     outline: none;
+  //     font-size: $fs-13;
+  //     padding: 8px;
+  //     border-radius: 32px;
+  //     background-color: $ıce-winddale;
+  //   }
+  
+  //   &__search-button {
+  //     background-color: transparent;
+  //     border: none;
+  //     font-size: $fs-16;
+  //     cursor: pointer;
+  //   }
+  
+  //   &__trends {
+  //     margin-top: 16px;
+  //     background-color: $zhēn-zhū-bái-pearl;
+  //     padding: 16px;
+  //     border-radius: 16px;
+  
+  //     &-header {
+  //       display: flex;
+  //       justify-content: space-between;
+  //       align-items: center;
+  //     }
+  
+  //     &-title {
+  //       font-size: 1.2em;
+  //       font-weight: bold;
+  //       color: $black;
+  //     }
+  
+  //     &-settings {
+  //       font-size: 1.2em;
+  //       cursor: pointer;
+  //       color: $button-blue;
+  //     }
+  
+  //     &-list {
+  //       &-item {
+  //         padding: 10px 0;
+  //         border-bottom: 1px solid $Windswept-Beach;
+  //         position: relative;
+  
+  //         &-header {
+  //           display: flex;
+  //           justify-content: space-between;
+  //           align-items: center;
+  //         }
+  
+  //         &-category {
+  //           font-size: $fs-13;
+  //           color: $nickel;
+  //         }
+  
+  //         &-name {
+  //           font-size: $fs-16;
+  //           font-weight: bold;
+  //           margin: 5px 0;
+  //         }
+  
+  //         &-tweets {
+  //           font-size: 0.8em;
+  //           color: $nickel;
+  //         }
+  
+  //         &-dropdown {
+  //           font-size: $fs-11;
+  //           color: $trolley-grey;
+  //           position: absolute;
+  //           right: 0;
+  //           bottom: 10px;
+  //           cursor: pointer;
+  //         }
+  //       }
+  //     }
+  
+  //     &-show-more {
+  //       text-align: center;
+  //       font-size: $fs-15;
+  //       color: $button-blue;
+  //       cursor: pointer;
+  //       margin-top: 10px;
+  //       // border-top: 1px solid $line-color-Windswept-Beach;
+  //     }
+  //   }
+  
+  //   &__friends {
+  //     margin-top: 24px;
+  //     background-color: $zhēn-zhū-bái-pearl;
+  //     padding: 16px;
+  //     border-radius: 16px;
+  
+  //     &-header {
+  //       margin-bottom: 16px;
+  
+  //       &-title {
+  //         font-size: 1.2em;
+  //         font-weight: bold;
+  //       }
+  //     }
+  
+  //     &-list {
+  //       &-item {
+  //         display: flex;
+  //         align-items: center;
+  //         gap: 8px;
+  //         padding: 10px 0;
+  //         border-bottom: 1px solid $Morning-Haze;
+  //         position: relative; 
+  
+  //         &-img {
+  //           width: 40px;
+  //           height: 40px;
+  //           border-radius: 50%;
+  //           margin-right: 10px;
+  //         }
+  
+  //         &-info {
+  //           flex: 1;
+  //           display: flex;
+  //           flex-direction: column;
+  
+  //           &-certified {
+  //             display: flex;
+  //             align-items: center;
+  //             gap: 4px;
+  
+  //             &-name {
+  //               font-size: $fs-16;
+  //               color: $carbon;
+  //               margin-right: 5px;
+  //             }
+  //           }
+  
+  //           &-username {
+  //             font-size: $fs-14;
+  //             color: $Space-Convoy;
+  //           }
+  
+  //           &-details {
+  //             display: none;
+  //             position: absolute;
+  //             background-color: #f6f8fa;
+  //             border: 1px solid #ccc;
+  //             padding: 10px;
+  //             width: 280px;
+  //             z-index: 10;
+  //             top: 40px; 
+  //             left: 0;
+  //             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  //             border-radius: 20px;
+  //           }
+  //         }
+  
+  //         &-follow {
+  //           background-color: $zhēn-zhū-bái-pearl;
+  //           color: $button-blue;
+  //           border-radius: 16px;
+  //           padding: 6px 12px;
+  //           cursor: pointer;
+  //           font-size: $fs-16;
+  //           font-weight: bold;
+  //           border: 1px solid;
+  //         }
+  
+  //         &-show-more {
+  //           text-align: center;
+  //           border: none;
+  //           font-size: $fs-15;
+  //           color: $button-blue;
+  //           cursor: pointer;
+  //           margin-top: 10px;
+  //         }
+  
+  //         &:hover .explore__friends-list-item-info-details {
+  //           display: block; 
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+  
+  .explore {
+    flex: 0 0 26%;
+    background-color: $white;
+    padding: 24px;
+    box-sizing: border-box;
+  
+    &__search {
       display: flex;
-      gap: 15px;
-      margin-left: 45%;
-    }
-
-    &-extra-img {
-      margin: 0 10px;
-    }
-
-    &-extra-button {
-      width: 98px;
-      height: 42px;
-      background-color: $malmö-FF;
-      border: none;
-      border-radius: 20px;
-      cursor: pointer;
-
-      &-text {
-        color: $white;
+      align-items: center;
+      gap: 8px;
+      padding: 8px;
+      border-radius: 32px;
+      background-color: $ıce-winddale;
+  
+      &-icon {
+        font-size: $fs-20;
+  
+        &.custom-icon {
+          color: $trolley-grey;
+        }
       }
     }
-  }
-}
-
-// .explore {
-//   flex: 0 0 26%;
-//   background-color: $white;
-//   padding: 24px;
-//   box-sizing: border-box;
-
-//   &__search {
-//     display: flex;
-//     align-items: center;
-//     gap: 8px;
-//     padding: 8px;
-//     border-radius: 32px;
-//     background-color: $ıce-winddale;
-
-//     &-icon {
-//       font-size: $fs-20;
-
-//       &.custom-icon {
-//         color: $trolley-grey;
-//       }
-//     }
-//   }
-
-//   &__search-input {
-//     flex: 1;
-//     border: none;
-//     outline: none;
-//     font-size: $fs-13;
-//     padding: 8px;
-//     border-radius: 32px;
-//     background-color: $ıce-winddale;
-//   }
-
-//   &__search-button {
-//     background-color: transparent;
-//     border: none;
-//     font-size: $fs-16;
-//     cursor: pointer;
-//   }
-
-//   &__trends {
-//     margin-top: 16px;
-//     background-color: $zhēn-zhū-bái-pearl;
-//     padding: 16px;
-//     border-radius: 16px;
-
-//     &-header {
-//       display: flex;
-//       justify-content: space-between;
-//       align-items: center;
-//     }
-
-//     &-title {
-//       font-size: 1.2em;
-//       font-weight: bold;
-//       color: $black;
-//     }
-
-//     &-settings {
-//       font-size: 1.2em;
-//       cursor: pointer;
-//       color: $button-blue;
-//     }
-
-//     &-list {
-//       &-item {
-//         padding: 10px 0;
-//         border-bottom: 1px solid $Windswept-Beach;
-//         position: relative;
-
-//         &-header {
-//           display: flex;
-//           justify-content: space-between;
-//           align-items: center;
-//         }
-
-//         &-category {
-//           font-size: $fs-13;
-//           color: $nickel;
-//         }
-
-//         &-name {
-//           font-size: $fs-16;
-//           font-weight: bold;
-//           margin: 5px 0;
-//         }
-
-//         &-tweets {
-//           font-size: 0.8em;
-//           color: $nickel;
-//         }
-
-//         &-dropdown {
-//           font-size: $fs-11;
-//           color: $trolley-grey;
-//           position: absolute;
-//           right: 0;
-//           bottom: 10px;
-//           cursor: pointer;
-//         }
-//       }
-//     }
-
-//     &-show-more {
-//       text-align: center;
-//       font-size: $fs-15;
-//       color: $button-blue;
-//       cursor: pointer;
-//       margin-top: 10px;
-//       // border-top: 1px solid $line-color-Windswept-Beach;
-//     }
-//   }
-
-
-//   &__friends {
-//     margin-top: 24px;
-//     background-color: $zhēn-zhū-bái-pearl;
-//     padding: 16px;
-//     border-radius: 16px;
-
-//     &-header {
-//       margin-bottom: 16px;
-
-//       &-title {
-//         font-size: 1.2em;
-//         font-weight: bold;
-//       }
-//     }
-
-//     &-list {
-//       &-item {
-//         display: flex;
-//         align-items: center;
-//         gap: 8px;
-//         padding: 10px 0;
-//         border-bottom: 1px solid $Morning-Haze;
-
-//         &-img {
-//           width: 40px;
-//           height: 40px;
-//           border-radius: 50%;
-//           margin-right: 10px;
-//         }
-
-//         &-info {
-//           flex: 1;
-//           display: flex;
-//           flex-direction: column;
-
-//           &-certified {
-//             display: flex;
-//             align-items: center;
-//             gap: 4px;
-
-//             &-name {
-//               font-size: $fs-16;
-//               color: $carbon;
-//               margin-right: 5px;
-//             }
-//           }
-
-//           &-username {
-//             font-size: $fs-14;
-//             color: $Space-Convoy;
-//           }
-//         }
-
-//         &-follow {
-//           background-color: $zhēn-zhū-bái-pearl;
-//           color: $button-blue;
-//           border-radius: 16px;
-//           padding: 6px 12px;
-//           cursor: pointer;
-//           font-size: $fs-16;
-//           font-weight: bold;
-//           border: 1px solid;
-//         }
-
-//         &-show-more {
-//           text-align: center;
-//           border: none;
-//           font-size: $fs-15;
-//           color: $button-blue;
-//           cursor: pointer;
-//           margin-top: 10px;
-//         }
-//       }
-//     }
-//   }
-// }
-
-
-.explore {
-  // Mevcut kodlar...
-
-  &__friends {
-    margin-top: 24px;
-    background-color: $zhēn-zhū-bái-pearl;
-    padding: 16px;
-    border-radius: 16px;
-
-    &-header {
-      margin-bottom: 16px;
-
+  
+    &__search-input {
+      flex: 1;
+      border: none;
+      outline: none;
+      font-size: $fs-13;
+      padding: 8px;
+      border-radius: 32px;
+      background-color: $ıce-winddale;
+    }
+  
+    &__search-button {
+      background-color: transparent;
+      border: none;
+      font-size: $fs-16;
+      cursor: pointer;
+    }
+  
+    &__trends {
+      margin-top: 16px;
+      background-color: $zhēn-zhū-bái-pearl;
+      padding: 16px;
+      border-radius: 16px;
+  
+      &-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+  
       &-title {
         font-size: 1.2em;
         font-weight: bold;
+        color: $black;
+      }
+  
+      &-settings {
+        font-size: 1.2em;
+        cursor: pointer;
+        color: $button-blue;
+      }
+  
+      &-list {
+        &-item {
+          padding: 10px 0;
+          border-bottom: 1px solid $Windswept-Beach;
+          position: relative;
+  
+          &-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }
+  
+          &-category {
+            font-size: $fs-13;
+            color: $nickel;
+          }
+  
+          &-name {
+            font-size: $fs-16;
+            font-weight: bold;
+            margin: 5px 0;
+          }
+  
+          &-tweets {
+            font-size: 0.8em;
+            color: $nickel;
+          }
+  
+          &-dropdown {
+            font-size: $fs-11;
+            color: $trolley-grey;
+            position: absolute;
+            right: 0;
+            bottom: 10px;
+            cursor: pointer;
+          }
+        }
+      }
+  
+      &-show-more {
+        text-align: center;
+        font-size: $fs-15;
+        color: $button-blue;
+        cursor: pointer;
+        margin-top: 10px;
+        // border-top: 1px solid $line-color-Windswept-Beach;
       }
     }
-
-    &-list {
-      &-item {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        padding: 10px 0;
-        border-bottom: 1px solid $Morning-Haze;
-        position: relative; /* Bilgi kutusunu konumlandırmak için gerekli */
-
-        &-img {
-          width: 40px;
-          height: 40px;
-          border-radius: 50%;
-          margin-right: 10px;
+  
+    &__friends {
+      margin-top: 24px;
+      background-color: $zhēn-zhū-bái-pearl;
+      padding: 16px;
+      border-radius: 16px;
+  
+      &-header {
+        margin-bottom: 16px;
+  
+        &-title {
+          font-size: 1.2em;
+          font-weight: bold;
         }
-
-        &-info {
-          flex: 1;
+      }
+  
+      &-list {
+        &-item {
           display: flex;
-          flex-direction: column;
-
-          &-certified {
+          align-items: center;
+          gap: 8px;
+          padding: 10px 0;
+          border-bottom: 1px solid $Morning-Haze;
+          position: relative; 
+  
+          &-img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+          }
+  
+          &-info {
+            flex: 1;
             display: flex;
-            align-items: center;
-            gap: 4px;
-
-            &-name {
-              font-size: $fs-16;
-              color: $carbon;
-              margin-right: 5px;
+            flex-direction: column;
+  
+            &-certified {
+              display: flex;
+              align-items: center;
+              gap: 4px;
+  
+              &-name {
+                font-size: $fs-16;
+                color: $carbon;
+                margin-right: 5px;
+              }
+            }
+  
+            &-username {
+              font-size: $fs-14;
+              color: $Space-Convoy;
+            }
+  
+            &-details {
+              display: none;
+              position: absolute;
+              background-color: $zhēn-zhū-bái-pearl;
+              padding: 10px;
+              width: 280px;
+              z-index: 10;
+              top: 40px; 
+              left: 0;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+              border-radius: 20px;
+  
+              &-header{
+                display: flex;
+                padding: 5px;
+                justify-content: space-between;
+  
+                &-button{
+                  background-color: $zhēn-zhū-bái-pearl;
+                  color: $button-blue;
+                  border-radius: 20px;
+                  padding: 6px 12px;
+                  cursor: pointer;
+                  font-size: 16px;
+                  font-weight: bold;
+                  border: 1px solid $button-blue;
+                }
+              }
+              &-credentials{
+                display: flex;
+                gap: 5px;
+  
+                &-name{
+                  color: $black;
+                }
+              }
+  
+              &-username{
+                  color: $Space-Convoy;
+                  font-size: 14px;
+                  margin: 0;
+              }
+  
+              &-bio{
+                    color: $carbon;
+                    margin-top: 8px;
+                    font-size: 14px;
+                    font-family: $ff-roboto;
+              }
             }
           }
-
-          &-username {
-            font-size: $fs-14;
-            color: $Space-Convoy;
+  
+          &-follow {
+            background-color: $zhēn-zhū-bái-pearl;
+            color: $button-blue;
+            border-radius: 16px;
+            padding: 6px 12px;
+            cursor: pointer;
+            font-size: $fs-16;
+            font-weight: bold;
+            border: 1px solid $button-blue;
           }
-
-          /* Kullanıcı bilgileri kutusu */
-          &-details {
-            display: none; /* Başlangıçta gizli */
-            position: absolute;
-            background-color: #f6f8fa;
-            border: 1px solid #ccc;
-            padding: 10px;
-            width: 200px;
-            z-index: 10;
-            top: 40px; /* Pozisyonunu ayarlayın */
-            left: 0;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 20px;
+  
+          &-show-more {
+            text-align: center;
+            border: none;
+            font-size: $fs-15;
+            color: $button-blue;
+            cursor: pointer;
+            margin-top: 10px;
           }
-        }
-
-        &-follow {
-          background-color: $zhēn-zhū-bái-pearl;
-          color: $button-blue;
-          border-radius: 16px;
-          padding: 6px 12px;
-          cursor: pointer;
-          font-size: $fs-16;
-          font-weight: bold;
-          border: 1px solid;
-        }
-
-        &-show-more {
-          text-align: center;
-          border: none;
-          font-size: $fs-15;
-          color: $button-blue;
-          cursor: pointer;
-          margin-top: 10px;
-        }
-
-        &:hover .explore__friends-list-item-info-details {
-          display: block; /* Üzerine gelindiğinde göster */
+  
+          &:hover .explore__friends-list-item-info-details {
+            display: block; 
+          }
         }
       }
     }
   }
-}
+
+
+
+
+
+
+
+
+
