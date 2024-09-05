@@ -201,7 +201,7 @@ document.addEventListener('DOMContentLoaded', function () {
         </div>
         <div class="explore__trends-list-item-name">${trend.name}</div>
         <div class="explore__trends-list-item-tweets">${trend.tweets}</div>
-        <i class="fa-solid fa-chevron-down tw-explore__trends-list-item-dropdown"></i>
+        <i class="fa-solid fa-chevron-down explore__trends-list-item-dropdown"></i>
       `;
       trendsList.appendChild(trendItem);
     });
@@ -239,7 +239,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: "Annie",
       username: "@annie",
       time: "14s",
-      text: `This is a tweet. It can be long, or short. Depends on what you have to say. It can have some hashtags too. <span class="tw-content-hashtag">#likethis</span> This is a tweet. It can be long, or short. Depends on what you have to say. It can have some hashtags too. <span class="tw-content-hashtag">#likethis</span>`,
+      text: `This is a tweet. It can be long, or short. Depends on what you have to say. It can have some hashtags too. <span class="content-hashtag">#likethis</span> This is a tweet. It can be long, or short. Depends on what you have to say. It can have some hashtags too. <span class="content-hashtag">#likethis</span>`,
       tweetImage: "twitter-img/yellow.png",
       certified: true
     },
@@ -249,7 +249,7 @@ document.addEventListener('DOMContentLoaded', () => {
       username: "@Travis Wade",
       time: "14s",
       text: `This is a tweet. It can be long, or short. Depends on what you have
-              to say. It can have some hashtags too. <span class="tw-content-hashtag">#likethis</span>`,
+              to say. It can have some hashtags too. <span class="content-hashtag">#likethis</span>`,
       certified: true
     },
     {
@@ -257,7 +257,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: "Serenity Jones",
       username: "@Crystal Robinson",
       time: "14s",
-      text: `This is a tweet. It can be long, or short. Depends on what you have to say. It can have some hashtags too. <span class="tw-content-hashtag">#likethis</span> This is a tweet. It can be long, or short. Depends on what you have to say. It can have some hashtags too. <span class="tw-content-hashtag">#likethis</span>`,
+      text: `This is a tweet. It can be long, or short. Depends on what you have to say. It can have some hashtags too. <span class="content-hashtag">#likethis</span> This is a tweet. It can be long, or short. Depends on what you have to say. It can have some hashtags too. <span class="content-hashtag">#likethis</span>`,
       tweetImage: "twitter-img/red.png",
       certified: true
     },
@@ -267,7 +267,7 @@ document.addEventListener('DOMContentLoaded', () => {
       username: "@Clyde Lowe",
       time: "14s",
       text: `This is a tweet. It can be long, or short. Depends on what you have
-              to say. It can have some hashtags too.<span class="tw-content-hashtag">#likethis</span>`,
+              to say. It can have some hashtags too.<span class="content-hashtag">#likethis</span>`,
       tweetImage: "twitter-img/car.png",
       certified: true
     },
@@ -277,7 +277,7 @@ document.addEventListener('DOMContentLoaded', () => {
       username: "@Kristin Murphy",
       time: "14s",
       text: `This is a tweet. It can be long, or short. Depends on what you have
-              to say. It can have some hashtags too. <span class="tw-content-hashtag">#likethis</span>`,
+              to say. It can have some hashtags too. <span class="content-hashtag">#likethis</span>`,
       tweetImage: "twitter-img/black.png",
       certified: true
     },
