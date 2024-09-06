@@ -15,6 +15,7 @@ $Windswept-Beach: #e2e4e6;
 $Noghrei-Silver: #bdbdbd;
 $Morning-Haze: #e1e8ed;
 $Space-Convoy: #657786;
+$Bright-Navy-Blue: #187cd8;
 
 // Boyut Değişkenleri
 $fs-11: 11px;
@@ -22,6 +23,7 @@ $fs-13: 13px;
 $fs-14: 14px;
 $fs-15: 15px;
 $fs-16: 16px;
+$fs-17: 17px;
 $fs-18: 18px;
 $fs-20: 20px;
 $fs-24: 24px;
@@ -54,13 +56,17 @@ body {
     &-button {
       background-color: transparent;
       border: none;
-      font-size: $fs-16;
+      font-size: $fs-17;
       padding: 10px;
       margin: 5px 0;
       cursor: pointer;
       display: flex;
       align-items: center;
       gap: 16px;
+
+      &:hover {
+        color: $button-blue;
+      }
   
       &-twitter {
         color: $button-blue;
@@ -90,11 +96,7 @@ body {
       font-weight: 500;
       font-style: normal;
     }
-  
-    // &-icon {
-    //   font-size: $fs-24;
-    // }  
-  
+
     &-tweet-container {
       width: 100%;
       display: flex;
@@ -110,6 +112,10 @@ body {
       width: 150px;
       background-color: $button-blue;
       color: $white;
+
+      &:hover {
+        background-color: $Bright-Navy-Blue; 
+      }
     }    
   }
   
@@ -208,6 +214,7 @@ body {
             gap: 16px;
             font-family: $ff-roboto;
             font-weight: 700;
+            margin-right: 6px;
           }
   
           &-conteiner {
@@ -289,6 +296,7 @@ body {
       display: flex;
       flex-direction: column;
       gap: 11px;
+      padding: 0 19px 0 0;
   
       &-body {
         padding: 0 0 0 11%;
@@ -329,7 +337,7 @@ body {
         i {
           font-size: $fs-18;
           color: $trolley-grey;
-  
+
           &-img {
             width: 16px;
             height: 16px;
@@ -375,216 +383,7 @@ body {
       }
     }
   }
-  
-  // .explore {
-  //   flex: 0 0 26%;
-  //   background-color: $white;
-  //   padding: 24px;
-  //   box-sizing: border-box;
-  
-  //   &__search {
-  //     display: flex;
-  //     align-items: center;
-  //     gap: 8px;
-  //     padding: 8px;
-  //     border-radius: 32px;
-  //     background-color: $ıce-winddale;
-  
-  //     &-icon {
-  //       font-size: $fs-20;
-  
-  //       &.custom-icon {
-  //         color: $trolley-grey;
-  //       }
-  //     }
-  //   }
-  
-  //   &__search-input {
-  //     flex: 1;
-  //     border: none;
-  //     outline: none;
-  //     font-size: $fs-13;
-  //     padding: 8px;
-  //     border-radius: 32px;
-  //     background-color: $ıce-winddale;
-  //   }
-  
-  //   &__search-button {
-  //     background-color: transparent;
-  //     border: none;
-  //     font-size: $fs-16;
-  //     cursor: pointer;
-  //   }
-  
-  //   &__trends {
-  //     margin-top: 16px;
-  //     background-color: $zhēn-zhū-bái-pearl;
-  //     padding: 16px;
-  //     border-radius: 16px;
-  
-  //     &-header {
-  //       display: flex;
-  //       justify-content: space-between;
-  //       align-items: center;
-  //     }
-  
-  //     &-title {
-  //       font-size: 1.2em;
-  //       font-weight: bold;
-  //       color: $black;
-  //     }
-  
-  //     &-settings {
-  //       font-size: 1.2em;
-  //       cursor: pointer;
-  //       color: $button-blue;
-  //     }
-  
-  //     &-list {
-  //       &-item {
-  //         padding: 10px 0;
-  //         border-bottom: 1px solid $Windswept-Beach;
-  //         position: relative;
-  
-  //         &-header {
-  //           display: flex;
-  //           justify-content: space-between;
-  //           align-items: center;
-  //         }
-  
-  //         &-category {
-  //           font-size: $fs-13;
-  //           color: $nickel;
-  //         }
-  
-  //         &-name {
-  //           font-size: $fs-16;
-  //           font-weight: bold;
-  //           margin: 5px 0;
-  //         }
-  
-  //         &-tweets {
-  //           font-size: 0.8em;
-  //           color: $nickel;
-  //         }
-  
-  //         &-dropdown {
-  //           font-size: $fs-11;
-  //           color: $trolley-grey;
-  //           position: absolute;
-  //           right: 0;
-  //           bottom: 10px;
-  //           cursor: pointer;
-  //         }
-  //       }
-  //     }
-  
-  //     &-show-more {
-  //       text-align: center;
-  //       font-size: $fs-15;
-  //       color: $button-blue;
-  //       cursor: pointer;
-  //       margin-top: 10px;
-  //       // border-top: 1px solid $line-color-Windswept-Beach;
-  //     }
-  //   }
-  
-  //   &__friends {
-  //     margin-top: 24px;
-  //     background-color: $zhēn-zhū-bái-pearl;
-  //     padding: 16px;
-  //     border-radius: 16px;
-  
-  //     &-header {
-  //       margin-bottom: 16px;
-  
-  //       &-title {
-  //         font-size: 1.2em;
-  //         font-weight: bold;
-  //       }
-  //     }
-  
-  //     &-list {
-  //       &-item {
-  //         display: flex;
-  //         align-items: center;
-  //         gap: 8px;
-  //         padding: 10px 0;
-  //         border-bottom: 1px solid $Morning-Haze;
-  //         position: relative; 
-  
-  //         &-img {
-  //           width: 40px;
-  //           height: 40px;
-  //           border-radius: 50%;
-  //           margin-right: 10px;
-  //         }
-  
-  //         &-info {
-  //           flex: 1;
-  //           display: flex;
-  //           flex-direction: column;
-  
-  //           &-certified {
-  //             display: flex;
-  //             align-items: center;
-  //             gap: 4px;
-  
-  //             &-name {
-  //               font-size: $fs-16;
-  //               color: $carbon;
-  //               margin-right: 5px;
-  //             }
-  //           }
-  
-  //           &-username {
-  //             font-size: $fs-14;
-  //             color: $Space-Convoy;
-  //           }
-  
-  //           &-details {
-  //             display: none;
-  //             position: absolute;
-  //             background-color: #f6f8fa;
-  //             border: 1px solid #ccc;
-  //             padding: 10px;
-  //             width: 280px;
-  //             z-index: 10;
-  //             top: 40px; 
-  //             left: 0;
-  //             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  //             border-radius: 20px;
-  //           }
-  //         }
-  
-  //         &-follow {
-  //           background-color: $zhēn-zhū-bái-pearl;
-  //           color: $button-blue;
-  //           border-radius: 16px;
-  //           padding: 6px 12px;
-  //           cursor: pointer;
-  //           font-size: $fs-16;
-  //           font-weight: bold;
-  //           border: 1px solid;
-  //         }
-  
-  //         &-show-more {
-  //           text-align: center;
-  //           border: none;
-  //           font-size: $fs-15;
-  //           color: $button-blue;
-  //           cursor: pointer;
-  //           margin-top: 10px;
-  //         }
-  
-  //         &:hover .explore__friends-list-item-info-details {
-  //           display: block; 
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
-  
+
   .explore {
     flex: 0 0 26%;
     background-color: $white;
@@ -777,6 +576,11 @@ body {
                   font-size: 16px;
                   font-weight: bold;
                   border: 1px solid $button-blue;
+
+                  &:hover{
+                    color: $white;
+                    background-color: $button-blue;
+                  }
                 }
               }
               &-credentials{
@@ -812,6 +616,11 @@ body {
             font-size: $fs-16;
             font-weight: bold;
             border: 1px solid $button-blue;
+
+            &:hover{
+              color: $white;
+              background-color: $button-blue;
+            }
           }
   
           &-show-more {
