@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <div class="explore__friends-list-item-info">
           <div class="explore__friends-list-item-info-certified">
             <span class="explore__friends-list-item-info-name">${friend.name}</span>
-            <img class="explore__friends-list-item-info-certified-img" src="twitter-img/Certified.svg" alt="Certified" />
+            <img class="explore__friends-list-item-info-certified-img" src="twitter-img/Certified.svg" alt="Certified"/>
           </div>
           <span class="explore__friends-list-item-info-username">${friend.username}</span>
         </div>
@@ -164,3 +164,13 @@ document.querySelectorAll('.explore__friends-list-item').forEach(item => {
   });
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+  document.addEventListener('click', function (e) {
+    if (e.target && e.target.id === 'like-button' || e.target.closest('#like-button')) {
+      const likeIcon = e.target.closest('#like-button').querySelector('i');
+      likeIcon.classList.toggle('fa-regular');
+      likeIcon.classList.toggle('fa-solid');
+      likeIcon.classList.toggle('liked');
+    }
+  });
+});
