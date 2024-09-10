@@ -164,13 +164,14 @@ document.querySelectorAll('.explore__friends-list-item').forEach(item => {
   });
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-  document.addEventListener('click', function (e) {
-    if (e.target && e.target.id === 'like-button' || e.target.closest('#like-button')) {
-      const likeIcon = e.target.closest('#like-button').querySelector('i');
-      likeIcon.classList.toggle('fa-regular');
-      likeIcon.classList.toggle('fa-solid');
-      likeIcon.classList.toggle('liked');
-    }
-  });
-});
+// document.addEventListener('DOMContentLoaded', function () {
+//   document.addEventListener('click', function (e) {
+//     if (e.target && e.target.id === 'like-button' || e.target.closest('#like-button')) {
+//       const likeIcon = e.target.closest('#like-button').querySelector('i');
+//       likeIcon.classList.toggle('fa-regular');
+//       likeIcon.classList.toggle('fa-solid');
+//       likeIcon.classList.toggle('liked');
+//     }
+//   });
+// });
+
