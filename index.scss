@@ -306,8 +306,9 @@ body {
       &-body {
         padding: 0 0 0 11%;
       }
-  
-      &-text {
+
+      span:not(.content-hashtag) {
+        color: inherit; // Diğer span'lar gri
         font-size: $fs-16;
         line-height: 1.5;
         display: block;
@@ -317,6 +318,17 @@ body {
         font-style: normal;
         padding: 0 0 0 11%;
       }
+  
+      // &-text {
+      //   font-size: $fs-16;
+      //   line-height: 1.5;
+      //   display: block;
+      //   color: $carbon;
+      //   font-family: $ff-roboto;
+      //   font-weight: 400;
+      //   font-style: normal;
+      //   padding: 0 0 0 11%;
+      // }
   
       &-image {
         padding: 0 1% 0 11%;
@@ -342,16 +354,15 @@ body {
           i {
             font-size: $fs-18;
             color: $trolley-grey;
-  
-            &:has(i.fa-regular) {
-              i {
-                color: $Pink-Ink;
-          
-                &:hover {
-                  box-shadow: 0 0 0 8px $Pink-Ink-hover;
-                  border-radius: 18px;
-                }
-              }
+            transition: color 0.3s ease, background-color 0.3s ease; 
+
+            &.fa-solid.liked {
+              color: $Pink-Ink;
+            }
+
+            &:hover {
+              box-shadow: 0 0 0 8px $Pink-Ink-hover;
+              border-radius: 18px;
             }
             
             &-img {
@@ -360,11 +371,11 @@ body {
               cursor: pointer;
             }
           }
-          &-img {
-            width: 16px;
-            height: 16px;
-            cursor: pointer;
-          }
+          // &-img {
+          //   width: 16px;
+          //   height: 16px;
+          //   cursor: pointer;
+          // }
       }
     }
   
@@ -382,6 +393,7 @@ body {
         &:hover {
           background-color:  $Calcareous-Sinter;
           border-radius: 16px;
+          box-shadow: 0 0 0 8px #dcf0ff;
         }
       }
   
@@ -477,7 +489,7 @@ body {
       &-list {
         &-item {
           padding: 10px 0;
-          border-bottom: 1px solid $Windswept-Beach;
+          border-bottom: 1px solid $windswept-Beach;
           position: relative;
           
           &-header {
