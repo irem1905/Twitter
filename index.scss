@@ -11,14 +11,18 @@ $steam: #ddd;
 $nickel: #929292;
 $pico-metal: #c2c4c6;
 $zhēn-zhū-bái-pearl: #f6f8fa;
-$windswept-Beach: #e2e4e6;
-$Noghrei-Silver: #bdbdbd;
-$Morning-Haze: #e1e8ed;
-$Space-Convoy: #657786;
-$Bright-Navy-Blue: #187cd8;
-$Calcareous-Sinter: #dcf0ff;
-$Pink-Ink-hover: rgba(249, 24, 128, 0.1);
-$Pink-Ink: #f91880;
+$windswept-beach: #e2e4e6;
+$noghrei-silver: #bdbdbd;
+$morning-haze: #e1e8ed;
+$space-convoy: #657786;
+$bright-navy-blue: #187cd8;
+$calcareous-sinter: #dcf0ff;
+$pink-ınk-hover: rgba(249, 24, 128, 0.1);
+$pink-ınk: #f91880;
+$karimun-blue-hover: rgba(29, 155, 240, 0.2);
+$karimun-blue: #1d9bf0;
+$fennel-fiesta-hover: rgba(0, 186, 124, 0.2);
+$fennel-fiesta: #00ba7c;
 
 // Boyut Değişkenleri
 $fs-11: 11px;
@@ -46,8 +50,7 @@ body {
 }
 
   .sidebar {
-    flex: 0 0 22%;
-    /* Yan barın genişliği */
+    flex: 0 0 22%;/* Yan barın genişliği */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -119,7 +122,7 @@ body {
       color: $white;
 
       &:hover {
-        background-color: $Bright-Navy-Blue; 
+        background-color: $bright-navy-blue; 
       }
     }    
   }
@@ -130,7 +133,6 @@ body {
     justify-content: flex-start;
     align-items: flex-start;
     background-color: $white;
-    // box-sizing: border-box;
     border-right: 0.5px solid $steam;
   
     &-hashtag {
@@ -181,6 +183,7 @@ body {
       align-items: center;
       gap: 15px;
       margin-top: 8px;
+      
   
       &-img {
         width: 50px;
@@ -196,6 +199,15 @@ body {
         font-family: $ff-roboto;
         font-weight: 400;
         font-style: normal;
+        border: none;
+
+        &:focus {
+          outline: none;
+        }
+        &[contenteditable="true"]:empty:before {
+          content: attr(data-placeholder);
+          color: #aaa; // Placeholder rengi
+        }
       }
     }
   
@@ -308,7 +320,7 @@ body {
       }
 
       span:not(.content-hashtag) {
-        color: inherit; // Diğer span'lar gri
+        color: inherit;
         font-size: $fs-16;
         line-height: 1.5;
         display: block;
@@ -354,17 +366,50 @@ body {
           i {
             font-size: $fs-18;
             color: $trolley-grey;
-            transition: color 0.3s ease, background-color 0.3s ease; 
+            // transition: color 0.3s ease, background-color 0.3s ease; 
 
             &.fa-solid.liked {
-              color: $Pink-Ink;
+              color: $pink-ınk;
+
+              &:hover {
+                box-shadow: 0 0 0 8px $pink-ınk-hover;
+                border-radius: 18px;
+              }
             }
 
-            &:hover {
-              box-shadow: 0 0 0 8px $Pink-Ink-hover;
-              border-radius: 18px;
-            }
-            
+    // &.fa-heart{
+    //   &:hover {
+    //     color: $pink-ınk; 
+    //     box-shadow: 0 0 0 8px $pink-ınk-hover;
+    //     border-radius: 18px;
+    //   }
+    // }
+
+  // Comment icon
+    &.fa-comment {
+      &:hover {
+        color: $karimun-blue; 
+        box-shadow: 0 0 0 8px $karimun-blue-hover;
+        border-radius: 18px;
+      }
+    }
+    // Retweet icon
+    &.fa-retweet {
+      &:hover {
+        color: $fennel-fiesta; 
+        box-shadow: 0 0 0 8px $fennel-fiesta-hover;
+        border-radius: 18px;
+      }
+    }
+    // Upload icon
+    &.fa-arrow-up-from-bracket {
+      &:hover {
+        color: $karimun-blue; 
+        box-shadow: 0 0 0 8px $karimun-blue-hover;
+        border-radius: 18px;
+      }
+    }
+
             &-img {
               width: 16px;
               height: 16px;
@@ -391,9 +436,9 @@ body {
         height: 24px;
 
         &:hover {
-          background-color:  $Calcareous-Sinter;
+          background-color:  $calcareous-sinter;
           border-radius: 16px;
-          box-shadow: 0 0 0 8px #dcf0ff;
+          box-shadow: 0 0 0 8px $calcareous-sinter;
         }
       }
   
@@ -489,7 +534,7 @@ body {
       &-list {
         &-item {
           padding: 10px 0;
-          border-bottom: 1px solid $windswept-Beach;
+          border-bottom: 1px solid $windswept-beach;
           position: relative;
           
           &-header {
@@ -556,7 +601,7 @@ body {
           align-items: center;
           gap: 8px;
           padding: 10px 0;
-          border-bottom: 1px solid $Morning-Haze;
+          border-bottom: 1px solid $morning-haze;
           position: relative; 
   
           &-img {
@@ -585,7 +630,7 @@ body {
   
             &-username {
               font-size: $fs-14;
-              color: $Space-Convoy;
+              color: $space-convoy;
             }
   
             &-details {
@@ -631,7 +676,7 @@ body {
               }
   
               &-username{
-                  color: $Space-Convoy;
+                  color: $space-convoy;
                   font-size: 14px;
                   margin: 0;
               }

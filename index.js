@@ -4,13 +4,14 @@ document.addEventListener('DOMContentLoaded', function () {
   const showMoreFriendsButton = document.querySelector('.explore__friends-list-item-show-more');
 
   const moreTrends = [
-    { category: '7. Trending', name: '#NewTrend1', tweets: '123K Tweets' },
-    { category: '8. Trending', name: '#NewTrend2', tweets: '234K Tweets' }
+    { category: '8. Trending', name: '#NewTrend1', tweets: '123K Tweets' },
+    { category: '9. Trending', name: '#NewTrend2', tweets: '234K Tweets' }
   ];
 
-  const moreFriends = [
-    { imgSrc: 'twitter-img/NewFriend1.png', name: 'NewFriend1', username: '@newfriend1' },
-    { imgSrc: 'twitter-img/NewFriend2.png', name: 'NewFriend2', username: '@newfriend2' }
+  const moreFriends = [ 
+    { imgSrc: 'twitter-img/McFly.png', name: 'İrem', username: '@sıla' },
+    { imgSrc: 'twitter-img/JohnDoe.png', name: 'Prens', username: '@vahşiKelebek' },
+    { imgSrc: 'twitter-img/Janis.png', name: 'Anonim', username: '@hellöö' },
   ];
 
   showMoreTrendsButton.addEventListener('click', function () {
@@ -30,14 +31,13 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-
   showMoreFriendsButton.addEventListener('click', function () {
     const friendsList = document.querySelector('.explore__friends-list');
     moreFriends.forEach(friend => {
       const friendItem = document.createElement('div');
       friendItem.className = 'explore__friends-list-item';
       friendItem.innerHTML = `
-        <img src="${friend.imgSrc}" alt="Profile Image" class="explore__friends-list-item-img" />
+        <img src="${friend.imgSrc}" alt="Profile Image" class="explore__friends-list-item-img"/>
         <div class="explore__friends-list-item-info">
           <div class="explore__friends-list-item-info-certified">
             <span class="explore__friends-list-item-info-name">${friend.name}</span>
@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </button>
         <button class="content__main-tweet-text-hashtag-actions-button" id="upload-button">
           <i class="fa-solid fa-arrow-up-from-bracket"></i>
-        </button>
+        </button> 
       </div>
     </div>
   `;
@@ -164,7 +164,6 @@ document.querySelectorAll('.explore__friends-list-item').forEach(item => {
   });
 });
 
-
 document.addEventListener('DOMContentLoaded', function () {
   document.addEventListener('click', function (e) {
     if (e.target && e.target.id === 'like-button' || e.target.closest('#like-button')) {
@@ -175,4 +174,38 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
+// const toggleSwitch = document.querySelector('.dark-mode-toggle');
+
+// toggleSwitch.addEventListener('click', () => {
+//   document.body.classList.toggle('dark-mode');
+// });
+
+// const tweetBtn = document.getElementById("tweetBtn");
+// const tweetText = document.querySelector(".content__post-text");
+
+// //  tweet alanı doldurulabilir
+// tweetText.addEventListener("focus", function() {
+//   if (tweetText.textContent === tweetText.getAttribute("data-placeholder")) {
+//     tweetText.textContent = ""; 
+//   }
+// });
+
+// tweetText.addEventListener("blur", function() {
+//   if (tweetText.textContent.trim() === "") {
+//     tweetText.textContent = tweetText.getAttribute("data-placeholder"); 
+//   }
+// });
+
+// tweetBtn.addEventListener("click", function() {
+//   const tweetContent = tweetText.textContent.trim();
+  
+//   if (tweetContent && tweetContent !== tweetText.getAttribute("data-placeholder")) {
+//     alert("Your tweet: " + tweetContent); 
+//     tweetText.textContent = tweetText.getAttribute("data-placeholder"); 
+//   } else {
+//     alert("Please write something before tweeting!");
+//   }
+// });
+
 

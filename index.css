@@ -7,8 +7,7 @@ body {
 }
 
 .sidebar {
-  flex: 0 0 22%;
-  /* Yan barın genişliği */
+  flex: 0 0 22%; /* Yan barın genişliği */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -140,6 +139,14 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
+  border: none;
+}
+.content__post-text:focus {
+  outline: none;
+}
+.content__post-text[contenteditable=true]:empty:before {
+  content: attr(data-placeholder);
+  color: #aaa;
 }
 .content__main {
   overflow-y: auto;
@@ -264,13 +271,27 @@ body {
 .content__main-tweet-text-hashtag-actions i {
   font-size: 18px;
   color: #828282;
-  transition: color 0.3s ease, background-color 0.3s ease;
 }
 .content__main-tweet-text-hashtag-actions i.fa-solid.liked {
   color: #f91880;
 }
-.content__main-tweet-text-hashtag-actions i:hover {
+.content__main-tweet-text-hashtag-actions i.fa-solid.liked:hover {
   box-shadow: 0 0 0 8px rgba(249, 24, 128, 0.1);
+  border-radius: 18px;
+}
+.content__main-tweet-text-hashtag-actions i.fa-comment:hover {
+  color: #1d9bf0;
+  box-shadow: 0 0 0 8px rgba(29, 155, 240, 0.2);
+  border-radius: 18px;
+}
+.content__main-tweet-text-hashtag-actions i.fa-retweet:hover {
+  color: #00ba7c;
+  box-shadow: 0 0 0 8px rgba(0, 186, 124, 0.2);
+  border-radius: 18px;
+}
+.content__main-tweet-text-hashtag-actions i.fa-arrow-up-from-bracket:hover {
+  color: #1d9bf0;
+  box-shadow: 0 0 0 8px rgba(29, 155, 240, 0.2);
   border-radius: 18px;
 }
 .content__main-tweet-text-hashtag-actions i-img {

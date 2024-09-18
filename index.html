@@ -2,17 +2,16 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-    rel="stylesheet" />
+    rel="stylesheet"/>
   <title>Twitter Clone</title>
   <link rel="stylesheet" href="index.css"/>
-  <script src="index.js"></script>
 </head>
 
 <body>
@@ -90,6 +89,31 @@
     <div class="content__post-container">
       <div class="content__post">
         <img src="twitter-img/me.png" alt="Me" class="content__post-img"/>
+        <div class="content__post-text" contenteditable="true" data-placeholder="What's happening"></div>
+      </div>
+    
+      <div class="content__toolbar">
+        <img src="twitter-img/Image.svg" alt="Image" class="content__toolbar-img"/>
+        <img src="twitter-img/Gif.svg" alt="Gif" class="content__toolbar-img"/>
+        <img src="twitter-img/Stats.svg" alt="stats" class="content__toolbar-img"/>
+        <img src="twitter-img/Smiley.svg" alt="Smiley" class="content__toolbar-img"/>
+    
+        <div class="content__toolbar-extra">
+          <img src="twitter-img/Ellipse 1 (1).svg" alt="Ellipse"/>
+          <img src="twitter-img/Line 1.png" alt="">
+          <img src="twitter-img/+ (1).svg" alt="+"/>
+    
+          <button class="content__toolbar-extra-button" id="tweetBtn">
+            <span class="content__toolbar-extra-button-text">Tweet</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- <div class="content__post-container">
+      <div class="content__post">
+        <img src="twitter-img/me.png" alt="Me" class="content__post-img"/>
         <p class="content__post-text">What's happening</p>
       </div>
 
@@ -109,7 +133,7 @@
           </button>
         </div>
       </div>
-    </div>  
+    </div>   -->
   </div>
 
   <div class="explore">
@@ -122,7 +146,7 @@
       <div class="explore__trends-header">
         <h2 class="explore__trends-title">Paris Trend</h2>
         <i class="fa-solid fa-cog explore__trends-settings setting"></i>
-      </div>
+      </div>  
 
       <div class="explore__trends-list">
         <!-- Trend item 1 -->
@@ -156,7 +180,7 @@
 
         <div class="explore__trends-list-item">
           <div class="explore__trends-list-item-header">
-            <span class="explore__trends-list-item-category">1. Trending</span>
+            <span class="explore__trends-list-item-category">4. Trending</span>
           </div>
           <div class="explore__trends-list-item-name">#StefanosTsitsipas</div>
           <div class="explore__trends-list-item-tweets">456K Tweets</div>
@@ -165,7 +189,7 @@
 
         <div class="explore__trends-list-item">
           <div class="explore__trends-list-item-header">
-            <span class="explore__trends-list-item-category">4. Trending</span>
+            <span class="explore__trends-list-item-category">5. Trending</span>
           </div>
           <div class="explore__trends-list-item-name">#RogerFederer</div>
           <div class="explore__trends-list-item-tweets">456K Tweets</div>
@@ -174,7 +198,7 @@
 
         <div class="explore__trends-list-item">
           <div class="explore__trends-list-item-header">
-            <span class="explore__trends-list-item-category">5. Trending</span>
+            <span class="explore__trends-list-item-category">6. Trending</span>
           </div>
           <div class="explore__trends-list-item-name">#DaniilMedvedev</div>
           <div class="explore__trends-list-item-tweets">456K Tweets</div>
@@ -183,7 +207,7 @@
 
         <div class="explore__trends-list-item">
           <div class="explore__trends-list-item-header">
-            <span class="explore__trends-list-item-category">6. Trending</span>
+            <span class="explore__trends-list-item-category">7. Trending</span>
           </div>
 
           <div class="explore__trends-list-item-name">#GrigorDimitrov</div>
@@ -193,7 +217,6 @@
       </div>
       <div class="explore__trends-show-more">Show More</div>
     </div>
-
 
     <div class="explore__friends">
       <div class="explore__friends-header">
@@ -257,6 +280,7 @@
               <p class="explore__friends-list-item-info-details-bio">Tech enthusiast | Web Developer | Coffee Lover ☕ | Sharing thoughts on coding, design, and everything in between. 🚀</p>
             </div>
           </div>
+
           <button class="explore__friends-list-item-follow">Follow</button>
         </div>
     
@@ -271,6 +295,7 @@
             </div>
 
             <span class="explore__friends-list-item-info-username">@realjanice</span>
+
             <div class="explore__friends-list-item-info-details">
               <div class="explore__friends-list-item-info-details-header">
                 <img src="twitter-img/Janis.png" alt="Janis">
@@ -292,6 +317,7 @@
       <div class="explore__friends-list-item-show-more">Show More</div>
     </div>
   </div>
+  <script src="index.js"></script>
 </body>
 
 </html>
