@@ -199,14 +199,17 @@ body {
         font-family: $ff-roboto;
         font-weight: 400;
         font-style: normal;
-        border: none;
+        // border: none;
+        padding: 10px; 
+        word-break: break-word; /* Satır sonu kırılması */
+        white-space: pre-wrap; /* İçerikteki boşlukların korunmasını ve alt satıra geçişi sağlar */
 
         &:focus {
-          outline: none;
+          outline: none; //yazının etrafında çizgi göstermemek için kullanılır
         }
         &[contenteditable="true"]:empty:before {
           content: attr(data-placeholder);
-          color: #aaa; // Placeholder rengi
+          color: $trolley-grey; 
         }
       }
     }
@@ -366,7 +369,6 @@ body {
           i {
             font-size: $fs-18;
             color: $trolley-grey;
-            // transition: color 0.3s ease, background-color 0.3s ease; 
 
             &.fa-solid.liked {
               color: $pink-ınk;

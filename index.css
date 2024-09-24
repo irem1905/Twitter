@@ -139,14 +139,16 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
-  border: none;
+  padding: 10px;
+  word-break: break-word; /* Satır sonu kırılması */
+  white-space: pre-wrap; /* İçerikteki boşlukların korunmasını ve alt satıra geçişi sağlar */
 }
 .content__post-text:focus {
   outline: none;
 }
 .content__post-text[contenteditable=true]:empty:before {
   content: attr(data-placeholder);
-  color: #aaa;
+  color: #828282;
 }
 .content__main {
   overflow-y: auto;

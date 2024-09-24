@@ -175,37 +175,40 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-// const toggleSwitch = document.querySelector('.dark-mode-toggle');
 
-// toggleSwitch.addEventListener('click', () => {
-//   document.body.classList.toggle('dark-mode');
-// });
 
-// const tweetBtn = document.getElementById("tweetBtn");
-// const tweetText = document.querySelector(".content__post-text");
 
-// //  tweet alanı doldurulabilir
-// tweetText.addEventListener("focus", function() {
-//   if (tweetText.textContent === tweetText.getAttribute("data-placeholder")) {
-//     tweetText.textContent = ""; 
-//   }
-// });
+const toggleSwitch = document.querySelector('.dark-mode-toggle');
 
-// tweetText.addEventListener("blur", function() {
-//   if (tweetText.textContent.trim() === "") {
-//     tweetText.textContent = tweetText.getAttribute("data-placeholder"); 
-//   }
-// });
+toggleSwitch.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+});
 
-// tweetBtn.addEventListener("click", function() {
-//   const tweetContent = tweetText.textContent.trim();
+const tweetBtn = document.getElementById("tweetBtn");
+const tweetText = document.querySelector(".content__post-text");
+
+//  tweet alanı doldurulabilir
+tweetText.addEventListener("focus", function() {
+  if (tweetText.textContent === tweetText.getAttribute("data-placeholder")) {
+    tweetText.textContent = ""; 
+  }
+});
+
+tweetText.addEventListener("blur", function() {
+  if (tweetText.textContent.trim() === "") {
+    tweetText.textContent = tweetText.getAttribute("data-placeholder"); 
+  }
+});
+
+tweetBtn.addEventListener("click", function() {
+  const tweetContent = tweetText.textContent.trim();
   
-//   if (tweetContent && tweetContent !== tweetText.getAttribute("data-placeholder")) {
-//     alert("Your tweet: " + tweetContent); 
-//     tweetText.textContent = tweetText.getAttribute("data-placeholder"); 
-//   } else {
-//     alert("Please write something before tweeting!");
-//   }
-// });
+  if (tweetContent && tweetContent !== tweetText.getAttribute("data-placeholder")) {
+    alert("Your tweet: " + tweetContent); 
+    tweetText.textContent = tweetText.getAttribute("data-placeholder"); 
+  } else {
+    alert("Please write something before tweeting!");
+  }
+});
 
 
