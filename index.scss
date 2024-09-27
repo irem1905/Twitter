@@ -2,6 +2,7 @@
 $backgroundcolor-grey: #f7f8fa;
 $button-blue: #1ea1f2;
 $black: #000000;
+$black-10: #0000001a;
 $carbon: #333333;
 $trolley-grey: #828282;
 $ıce-winddale: #e7ecf0;
@@ -17,21 +18,23 @@ $morning-haze: #e1e8ed;
 $space-convoy: #657786;
 $bright-navy-blue: #187cd8;
 $calcareous-sinter: #dcf0ff;
-$pink-ınk-hover: rgba(249, 24, 128, 0.1);
+$pink-ınk-hover: #f918801a;
 $pink-ınk: #f91880;
-$karimun-blue-hover: rgba(29, 155, 240, 0.2);
+$karimun-blue-hover: #1d9bf033;
 $karimun-blue: #1d9bf0;
-$fennel-fiesta-hover: rgba(0, 186, 124, 0.2);
+$fennel-fiesta-hover: #00ba7c33;
 $fennel-fiesta: #00ba7c;
 
 // Boyut Değişkenleri
 $fs-11: 11px;
+$fs-12: 12px;
 $fs-13: 13px;
 $fs-14: 14px;
 $fs-15: 15px;
 $fs-16: 16px;
 $fs-17: 17px;
 $fs-18: 18px;
+$fs-19: 19px;
 $fs-20: 20px;
 $fs-24: 24px;
 $fs-30: 30px;
@@ -49,687 +52,656 @@ body {
   margin: 0;
 }
 
-  .sidebar {
-    flex: 0 0 22%;/* Yan barın genişliği */
+.sidebar {
+  flex:0 0  234px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: $white;
+  padding: 48px;
+  box-sizing: border-box;
+  border-right: 0.5px solid $steam;
+
+  &-button {
+    background-color: transparent;
+    border: none;
+    font-size: $fs-17;
+    padding: 10px;
+    margin: 5px 0;
+    cursor: pointer;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: $white;
-    padding: 48px;
-    box-sizing: border-box;
-    border-right: 0.5px solid $steam;
-  
-    &-button {
-      background-color: transparent;
-      border: none;
-      font-size: $fs-17;
-      padding: 10px;
-      margin: 5px 0;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      font-weight: bold;
-      color: $carbon;
+    align-items: center;
+    gap: 16px;
+    font-weight: bold;
+    color: $carbon;
 
-      &:hover {
-        color: $button-blue;
-      }
-
-      &-twitter {
-        color: $button-blue;
-        font-size: $fs-30;
-        padding: 5px;
-        margin: 10px 0;
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-    }
-  
-    &-img {
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      margin-right: 10px;
-    }
-  
-    &-text {
-      color: $carbon;
-      font-size: $fs-16;
-      font-family: $ff-roboto;
-      font-weight: 500;
-      font-style: normal;
-    }
-
-    &-tweet-container {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-    }
-  
-    &-tweet-text {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 50px;
-      border-radius: 32px;
-      width: 150px;
-      background-color: $button-blue;
-      color: $white;
-
-      &:hover {
-        background-color: $bright-navy-blue; 
-      }
-    }    
-  }
-
-  .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    background-color: $white;
-    border-right: 0.5px solid $steam;
-  
-    &-hashtag {
+    &:hover {
       color: $button-blue;
     }
-  
-    &__header {
-      display: flex;
-      align-items: center;
-      width: 100%;
-      padding: 20px 32px 0 32px;
-      justify-content: space-between;
-      border-bottom: 1px solid $steam;  
-    }
-  
-    &__navbar {
-      display: flex;
-      align-items: center;
-    }
-  
-    &__title {
-      font-size: $fs-20;
-      font-weight: bold;
-      color: $black;
-    }
-  
-    &__star {
-      margin-right: 55px;
-    }
-  
-    &__post-container {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      border-bottom: 9px solid $ıce-winddale;
-      padding-bottom: 10px;
-      position: sticky;
-      top: 0;
-      background-color: $white;
-  
-      &.hidden {
-        display: none;
-      }
-    }
-  
-    &__post {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      margin-top: 8px;
-      
-  
-      &-img {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        margin-right: 10px;
-        margin-left: 19px;
-      }
-  
-      &-text {
-        font-size: $fs-16;
-        color: $trolley-grey;
-        font-family: $ff-roboto;
-        font-weight: 400;
-        font-style: normal;
-        // border: none;
-        padding: 10px; 
-        word-break: break-word; /* Satır sonu kırılması */
-        white-space: pre-wrap; /* İçerikteki boşlukların korunmasını ve alt satıra geçişi sağlar */
 
-        &:focus {
-          outline: none; //yazının etrafında çizgi göstermemek için kullanılır
-        }
-        &[contenteditable="true"]:empty:before {
-          content: attr(data-placeholder);
-          color: $trolley-grey; 
-        }
+    &-twitter {
+      color: $button-blue;
+      font-size: $fs-30;
+      padding: 5px;
+      margin: 10px 0;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  &-text {
+    color: $carbon;
+    font-size: $fs-16;
+    font-family: $ff-roboto;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  &-tweet-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  &-tweet-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border-radius: 32px;
+    width: 150px;
+    background-color: $button-blue;
+    color: $white;
+
+    &:hover {
+      background-color: $bright-navy-blue;
+    }
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: $white;
+  border-right: 0.5px solid $steam;
+
+  &-hashtag {
+    color: $button-blue;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 20px 32px 0 32px;
+    justify-content: space-between;
+    border-bottom: 1px solid $steam;
+  }
+
+  &__navbar {
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: $fs-20;
+    font-weight: bold;
+    color: $black;
+  }
+
+  &__star {
+    margin-right: 55px;
+  }
+
+  &__post-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-bottom: 9px solid $ıce-winddale;
+    padding-bottom: 10px;
+    position: sticky;
+    top: 0;
+    background-color: $white;
+
+    &.hidden {
+      display: none;
+    }
+  }
+
+  &__post {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 8px;
+
+
+    &-img {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+      margin-left: 32px;
+    }
+
+    &-text {
+      font-size: $fs-16;
+      color: $trolley-grey;
+      font-family: $ff-roboto;
+      font-weight: 400;
+      font-style: normal;
+      padding: 10px;
+      word-break: break-word;
+      white-space: pre-wrap;
+
+      &:focus {
+        outline: none;
+      }
+
+      &[contenteditable="true"]:empty:before {
+        content: attr(data-placeholder);
+        color: $trolley-grey;
       }
     }
-  
-    &__main {
-      overflow-y: auto;
-      margin-top: 20px;
-  
-      &-section {
-        padding: 16px 0 16px 32px;
-        border-bottom: 1px solid $steam;
-  
-        &-user {
-          display: flex;
-          align-items: center;
-          background-color: $white;
-          border-radius: 8px;
-  
-          &-info {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            font-family: $ff-roboto;
-            font-weight: 700;
-            margin-right: 6px;
-          }
-  
-          &-conteiner {
-            display: flex;
-            align-items: center;
-            margin-right: 10px;
-  
-            &-img {
-              width: 40px;
-              height: 40px;
-              border-radius: 50%;
-              margin-right: 10px;
-            }
-  
-            &-name {
-              font-size: $fs-16;
-            }
-          }
-  
-          &-certified-img {
-            width: 21px;
-            height: 21px;
-            margin-right: 10px;
-            margin-left: 8px;
-          }
-  
-          &-time {
-            font-size: $fs-16;
-            color: $trolley-grey;
-          }
-        }
-      }
-  
+  }
+
+  &__main {
+    overflow-y: auto;
+    margin-top: 20px;
+
+    &-section {
+      padding: 16px 0 16px 32px;
+      border-bottom: 1px solid $steam;
+
       &-user {
         display: flex;
         align-items: center;
         background-color: $white;
         border-radius: 8px;
-        padding: 10px;
-  
+
         &-info {
           display: flex;
           align-items: center;
+          gap: 16px;
+          font-family: $ff-roboto;
+          font-weight: 700;
+          margin-right: 6px;
+        }
+
+        &-conteiner {
+          display: flex;
+          align-items: center;
           margin-right: 10px;
-  
+
           &-img {
-            width: 40px;
+            width: 90px;
             height: 40px;
             border-radius: 50%;
             margin-right: 10px;
           }
-  
+
           &-name {
             font-size: $fs-16;
-            font-weight: bold;
           }
         }
-  
+
         &-certified-img {
           width: 21px;
           height: 21px;
           margin-right: 10px;
-        }
-  
-        &-meta {
-          display: flex;
-          align-items: center;
-  
-          &-time {
-            font-size: $fs-14;
-            color: $trolley-grey;
-            margin-right: 5px;
-          }
-        }
-      }
-    }
-  
-    &__main-tweet {
-      display: flex;
-      flex-direction: column;
-      gap: 11px;
-      padding: 0 19px 0 0;
-  
-      &-body {
-        padding: 0 0 0 11%;
-      }
-
-      span:not(.content-hashtag) {
-        color: inherit;
-        font-size: $fs-16;
-        line-height: 1.5;
-        display: block;
-        color: $carbon;
-        font-family: $ff-roboto;
-        font-weight: 400;
-        font-style: normal;
-        padding: 0 0 0 11%;
-      }
-  
-      // &-text {
-      //   font-size: $fs-16;
-      //   line-height: 1.5;
-      //   display: block;
-      //   color: $carbon;
-      //   font-family: $ff-roboto;
-      //   font-weight: 400;
-      //   font-style: normal;
-      //   padding: 0 0 0 11%;
-      // }
-  
-      &-image {
-        padding: 0 1% 0 11%;
-      }
-  
-      &-img {
-        margin-top: 10px;
-        width: 100%;
-        border-radius: 8px;
-      }
-  
-      &-text-hashtag-actions {
-        display: flex;
-        justify-content: space-around;
-        margin-top: 11px;
-        padding-bottom: 10px;
-  
-        &-button {
-          border: none;
-          background-color: $white;
+          margin-left: 8px;
         }
 
-          i {
-            font-size: $fs-18;
-            color: $trolley-grey;
-
-            &.fa-solid.liked {
-              color: $pink-ınk;
-
-              &:hover {
-                box-shadow: 0 0 0 8px $pink-ınk-hover;
-                border-radius: 18px;
-              }
-            }
-
-    // &.fa-heart{
-    //   &:hover {
-    //     color: $pink-ınk; 
-    //     box-shadow: 0 0 0 8px $pink-ınk-hover;
-    //     border-radius: 18px;
-    //   }
-    // }
-
-  // Comment icon
-    &.fa-comment {
-      &:hover {
-        color: $karimun-blue; 
-        box-shadow: 0 0 0 8px $karimun-blue-hover;
-        border-radius: 18px;
-      }
-    }
-    // Retweet icon
-    &.fa-retweet {
-      &:hover {
-        color: $fennel-fiesta; 
-        box-shadow: 0 0 0 8px $fennel-fiesta-hover;
-        border-radius: 18px;
-      }
-    }
-    // Upload icon
-    &.fa-arrow-up-from-bracket {
-      &:hover {
-        color: $karimun-blue; 
-        box-shadow: 0 0 0 8px $karimun-blue-hover;
-        border-radius: 18px;
-      }
-    }
-
-            &-img {
-              width: 16px;
-              height: 16px;
-              cursor: pointer;
-            }
-          }
-          // &-img {
-          //   width: 16px;
-          //   height: 16px;
-          //   cursor: pointer;
-          // }
-      }
-    }
-  
-    &__toolbar {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 0;
-      margin-left: 14%;
-  
-      &-img {
-        width: 24px;
-        height: 24px;
-
-        &:hover {
-          background-color:  $calcareous-sinter;
-          border-radius: 16px;
-          box-shadow: 0 0 0 8px $calcareous-sinter;
-        }
-      }
-  
-      &-extra {
-        display: flex;
-        gap: 15px;
-        margin-left: 45%;
-      }
-  
-      &-extra-img {
-        margin: 0 10px;
-      }
-  
-      &-extra-button {
-        width: 98px;
-        height: 42px;
-        background-color: $malmö-FF;
-        border: none;
-        border-radius: 20px;
-        cursor: pointer;
-  
-        &-text {
-          color: $white;
-        }
-      }
-    }
-  }
-
-  .explore {
-    flex: 0 0 26%;
-    background-color: $white;
-    padding: 24px;
-    box-sizing: border-box;
-  
-    &__search {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px;
-      border-radius: 32px;
-      background-color: $ıce-winddale;
-  
-      &-icon {
-        font-size: $fs-20;
-  
-        &.custom-icon {
+        &-time {
+          font-size: $fs-16;
           color: $trolley-grey;
         }
       }
     }
-  
-    &__search-input {
-      flex: 1;
-      border: none;
-      outline: none;
-      font-size: $fs-13;
-      padding: 8px;
-      border-radius: 32px;
-      background-color: $ıce-winddale;
-    }
-  
-    &__search-button {
-      background-color: transparent;
-      border: none;
-      font-size: $fs-16;
-      cursor: pointer;
-    }
-  
-    &__trends {
-      margin-top: 16px;
-      background-color: $zhēn-zhū-bái-pearl;
-      padding: 16px;
-      border-radius: 16px;
-      
-      &-header {
+
+    &-user {
+      display: flex;
+      align-items: center;
+      background-color: $white;
+      border-radius: 8px;
+      padding: 10px;
+
+      &-info {
         display: flex;
-        justify-content: space-between;
         align-items: center;
-      }
-  
-      &-title {
-        font-size: 1.2em;
-        font-weight: bold;
-        color: $black;
-      }
-  
-      &-settings {
-        font-size: 1.2em;
-        cursor: pointer;
-        color: $button-blue;
-      }
-  
-      &-list {
-        &-item {
-          padding: 10px 0;
-          border-bottom: 1px solid $windswept-beach;
-          position: relative;
-          
-          &-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-          }
-  
-          &-category {
-            font-size: $fs-13;
-            color: $nickel;
-          }
-  
-          &-name {
-            font-size: $fs-16;
-            font-weight: bold;
-            margin: 5px 0;
-          }
-  
-          &-tweets {
-            font-size: 0.8em;
-            color: $nickel;
-          }
-  
-          &-dropdown {
-            font-size: $fs-11;
-            color: $trolley-grey;
-            position: absolute;
-            right: 0;
-            bottom: 10px;
-            cursor: pointer;
-          }
+        margin-right: 10px;
+
+        &-img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          margin-right: 10px;
         }
-      }
-  
-      &-show-more {
-        text-align: center;
-        font-size: $fs-15;
-        color: $button-blue;
-        cursor: pointer;
-        margin-top: 10px;
-        // border-top: 1px solid $line-color-Windswept-Beach;
-      }
-    }
-  
-    &__friends {
-      margin-top: 24px;
-      background-color: $zhēn-zhū-bái-pearl;
-      padding: 16px;
-      border-radius: 16px;
-  
-      &-header {
-        margin-bottom: 16px;
-  
-        &-title {
-          font-size: 1.2em;
+
+        &-name {
+          font-size: $fs-16;
           font-weight: bold;
         }
       }
-  
-      &-list {
-        &-item {
-          display: flex;
-          align-items: center;
-          gap: 8px;
-          padding: 10px 0;
-          border-bottom: 1px solid $morning-haze;
-          position: relative; 
-  
-          &-img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            margin-right: 10px;
-          }
-  
-          &-info {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-  
-            &-certified {
-              display: flex;
-              align-items: center;
-              gap: 4px;
-  
-              &-name {
-                font-size: $fs-16;
-                color: $carbon;
-                margin-right: 5px;
-              }
-            }
-  
-            &-username {
-              font-size: $fs-14;
-              color: $space-convoy;
-            }
-  
-            &-details {
-              display: none;
-              position: absolute;
-              background-color: $zhēn-zhū-bái-pearl;
-              padding: 10px;
-              width: 280px;
-              z-index: 10;
-              top: 40px; 
-              left: 0;
-              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-              border-radius: 20px;
-  
-              &-header{
-                display: flex;
-                padding: 5px;
-                justify-content: space-between;
-  
-                &-button{
-                  background-color: $zhēn-zhū-bái-pearl;
-                  color: $button-blue;
-                  border-radius: 20px;
-                  padding: 6px 12px;
-                  cursor: pointer;
-                  font-size: 16px;
-                  font-weight: bold;
-                  border: 1px solid $button-blue;
 
-                  &:hover{
-                    color: $white;
-                    background-color: $button-blue;
-                  }
-                }
-              }
-              &-credentials{
-                display: flex;
-                gap: 5px;
-  
-                &-name{
-                  color: $black;
-                }
-              }
-  
-              &-username{
-                  color: $space-convoy;
-                  font-size: 14px;
-                  margin: 0;
-              }
-  
-              &-bio{
-                    color: $carbon;
-                    margin-top: 8px;
-                    font-size: 14px;
-                    font-family: $ff-roboto;
-              }
-            }
-          }
-  
-          &-follow {
-            background-color: $zhēn-zhū-bái-pearl;
-            color: $button-blue;
-            border-radius: 16px;
-            padding: 6px 12px;
-            cursor: pointer;
-            font-size: $fs-16;
-            font-weight: bold;
-            border: 1px solid $button-blue;
+      &-certified-img {
+        width: 21px;
+        height: 21px;
+        margin-right: 10px;
+      }
 
-            &:hover{
-              color: $white;
-              background-color: $button-blue;
-            }
-          }
-  
-          &-show-more {
-            text-align: center;
-            border: none;
-            font-size: $fs-15;
-            color: $button-blue;
-            cursor: pointer;
-            margin-top: 10px;
-          }
-  
-          &:hover .explore__friends-list-item-info-details {
-            display: block; 
-          }
+      &-meta {
+        display: flex;
+        align-items: center;
+
+        &-time {
+          font-size: $fs-14;
+          color: $trolley-grey;
+          margin-right: 5px;
         }
       }
     }
   }
 
+  &__main-tweet {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    padding: 0 19px 0 0;
 
+    &-body {
+      padding: 0 0 0 11%;
+    }
 
+    span:not(.content-hashtag) {
+      color: inherit;
+      font-size: $fs-16;
+      line-height: 24px;
+      display: block;
+      color: $carbon;
+      font-family: $ff-roboto;
+      font-weight: 400;
+      font-style: normal;
+      padding: 0 0 0 11%;
+    }
 
+    &-image {
+      padding: 0 1% 0 11%;
+    }
 
+    &-img {
+      margin-top: 10px;
+      width: 100%;
+      border-radius: 8px;
+    }
 
+    &-text-hashtag-actions {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 11px;
+      padding-bottom: 10px;
 
+      &-button {
+        border: none;
+        background-color: $white;
+      }
 
+      i {
+        font-size: $fs-18;
+        color: $trolley-grey;
 
+        //Heart icon
+        &.fa-solid.liked {
+          color: $pink-ınk;
+          &:hover {
+            box-shadow: 0 0 0 8px $pink-ınk-hover;
+            border-radius: 18px;
+          }
+        }
+
+        // Comment icon
+        &.fa-comment {
+          &:hover {
+            color: $karimun-blue;
+            box-shadow: 0 0 0 8px $karimun-blue-hover;
+            border-radius: 18px;
+          }
+        }
+
+        // Retweet icon
+        &.fa-retweet {
+          &:hover {
+            color: $fennel-fiesta;
+            box-shadow: 0 0 0 8px $fennel-fiesta-hover;
+            border-radius: 18px;
+          }
+        }
+
+        // Upload icon
+        &.fa-arrow-up-from-bracket {
+          &:hover {
+            color: $karimun-blue;
+            box-shadow: 0 0 0 8px $karimun-blue-hover;
+            border-radius: 18px;
+          }
+        }
+
+        &-img {
+          width: 16px;
+          height: 16px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  &__toolbar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    margin-left: 14%;
+
+    &-img {
+      width: 24px;
+      height: 24px;
+
+      &:hover {
+        background-color: $calcareous-sinter;
+        border-radius: 16px;
+        box-shadow: 0 0 0 8px $calcareous-sinter;
+      }
+    }
+
+    &-extra {
+      display: flex;
+      gap: 15px;
+      margin-left: 45%;
+    }
+
+    &-extra-img {
+      margin: 0 10px;
+    }
+
+    &-extra-button {
+      width: 98px;
+      height: 42px;
+      background-color: $malmö-FF;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+
+      &-text {
+        color: $white;
+      }
+    }
+  }
+}
+
+.explore {
+  // flex: 0 0 26%;
+  flex: 0 0 389px;
+  background-color: $white;
+  padding: 24px;
+  box-sizing: border-box;
+
+  &__search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+    border-radius: 32px;
+    background-color: $ıce-winddale;
+
+    &-icon {
+      font-size: $fs-20;
+
+      &.custom-icon {
+        color: $trolley-grey;
+      }
+    }
+  }
+
+  &__search-input {
+    border: none;
+    outline: none;
+    font-size: $fs-13;
+    padding: 8px;
+    border-radius: 32px;
+    background-color: $ıce-winddale;
+  }
+
+  &__search-button {
+    background-color: transparent;
+    border: none;
+    font-size: $fs-16;
+    cursor: pointer;
+  }
+
+  &__trends {
+    margin-top: 16px;
+    background-color: $zhēn-zhū-bái-pearl;
+    padding: 16px;
+    border-radius: 16px;
+
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-title {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: $black;
+    }
+
+    &-settings {
+      font-size: 1.2em;
+      cursor: pointer;
+      color: $button-blue;
+    }
+
+    &-list {
+      &-item {
+        padding: 10px 0;
+        border-bottom: 1px solid $windswept-beach;
+        position: relative;
+
+        &-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        &-category {
+          font-size: $fs-12;
+          color: $nickel;
+        }
+
+        &-name {
+          font-size: $fs-15;
+          font-weight: bold;
+          margin: 5px 0;
+          color: $carbon;
+        }
+
+        &-tweets {
+          font-size: $fs-14;
+          color: $nickel;
+        }
+
+        &-dropdown {
+          font-size: $fs-16;
+          margin-bottom: 15%;
+          color: $trolley-grey;
+          position: absolute;
+          right: 0;
+          bottom: 10px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    &-show-more {
+      text-align: center;
+      font-size: $fs-14;
+      color: $button-blue;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+  }
+
+  &__friends {
+    margin-top: 24px;
+    background-color: $zhēn-zhū-bái-pearl;
+    padding: 16px;
+    border-radius: 16px;
+
+    &-header {
+      margin-bottom: 16px;
+
+      &-title {
+        font-size: 1.2em;
+        font-weight: bold;
+      }
+    }
+
+    &-list {
+      &-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 0;
+        border-bottom: 1px solid $morning-haze;
+        position: relative;
+
+        &-img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          margin-right: 10px;
+        }
+
+        &-info {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+
+          &-certified {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+
+            &-name {
+              font-size: $fs-16;
+              color: $carbon;
+              margin-right: 5px;
+            }
+          }
+
+          &-username {
+            font-size: $fs-14;
+            color: $space-convoy;
+          }
+
+          &-details {
+            display: none;
+            position: absolute;
+            background-color: $zhēn-zhū-bái-pearl;
+            padding: 10px;
+            width: 280px;
+            z-index: 10;
+            top: 40px;
+            left: 0;
+            box-shadow: 0 4px 8px #0000001a;
+            border-radius: 20px;
+
+            &-header {
+              display: flex;
+              padding: 5px;
+              justify-content: space-between;
+
+              &-button {
+                background-color: $zhēn-zhū-bái-pearl;
+                color: $button-blue;
+                border-radius: 20px;
+                padding: 6px 12px;
+                cursor: pointer;
+                font-size: 16px;
+                font-weight: bold;
+                border: 1px solid $button-blue;
+
+                &:hover {
+                  color: $white;
+                  background-color: $button-blue;
+                }
+              }
+            }
+
+            &-credentials {
+              display: flex;
+              gap: 5px;
+
+              &-name {
+                color: $black;
+              }
+            }
+
+            &-username {
+              color: $space-convoy;
+              font-size: 14px;
+              margin: 0;
+            }
+
+            &-bio {
+              color: $carbon;
+              margin-top: 8px;
+              font-size: 14px;
+              font-family: $ff-roboto;
+            }
+          }
+        }
+
+        &-follow {
+          background-color: $zhēn-zhū-bái-pearl;
+          color: $button-blue;
+          border-radius: 16px;
+          padding: 6px 12px;
+          cursor: pointer;
+          font-size: $fs-16;
+          font-weight: bold;
+          border: 1px solid $button-blue;
+
+          &:hover {
+            color: $white;
+            background-color: $button-blue;
+          }
+        }
+
+        &-show-more {
+          text-align: center;
+          border: none;
+          font-size: $fs-15;
+          color: $button-blue;
+          cursor: pointer;
+          margin-top: 10px;
+        }
+
+        &:hover .explore__friends-list-item-info-details {
+          display: block;
+        }
+      }
+    }
+  }
+}

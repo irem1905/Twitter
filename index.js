@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <div class="explore__friends-list-item-info">
           <div class="explore__friends-list-item-info-certified">
             <span class="explore__friends-list-item-info-name">${friend.name}</span>
-            <img class="explore__friends-list-item-info-certified-img" src="twitter-img/Certified.svg" alt="Certified"/>
+            <img class="explore__friends-list-item-info-certified-img" src="twitter-img/certified.svg" alt="Certified"/>
           </div>
           <span class="explore__friends-list-item-info-username">${friend.username}</span>
         </div>
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const tweets = [
     {
-      imgSrc: "twitter-img/Annie.png",
+      imgSrc: "twitter-img/annie.png",
       name: "Annie",
       username: "@annie",
       time: "14s",
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
       certified: true
     },
     {
-      imgSrc: "twitter-img/Jorge.png",
+      imgSrc: "twitter-img/jorge.png",
       name: "Jorge Mckinney",
       username: "@Travis Wade",
       time: "14s",
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
       certified: true
     },
     {
-      imgSrc: "twitter-img/Serenity.png",
+      imgSrc: "twitter-img/serenity.png",
       name: "Serenity Jones",
       username: "@Crystal Robinson",
       time: "14s",
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
       certified: false
     },
     {
-      imgSrc: "twitter-img/Dianne.png",
+      imgSrc: "twitter-img/dianne.png",
       name: "Dianne Fisher",
       username: "@Clyde Lowe",
       time: "14s",
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
       certified: false
     },
     {
-      imgSrc: "twitter-img/Dustin.png",
+      imgSrc: "twitter-img/dustin.png",
       name: "Dustin Alexander",
       username: "@Kristin Murphy",
       time: "14s",
@@ -113,13 +113,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const userDiv = `
       <div class="content__main-section-user">
         <div class="content__main-section-user-info">
-          <img src="${tweet.imgSrc}" alt="${tweet.name}" class="content__main-section-user-info-img" />
+          <img src="${tweet.imgSrc}" alt="${tweet.name}" class="content__main-section-user-info-img"/>
           <span class="content__main-section-user-info-name">${tweet.name}</span>
-          ${tweet.certified ? '<img src="twitter-img/Certified.svg" alt="Certified" class="content__main-section-user-info-Certified" />' : ''}
+          ${tweet.certified ? '<img src="twitter-img/certified.svg" alt="Certified" class="content__main-section-user-info-certified" />' : ''}
         </div>
         <div class="content__main-section-user-meta">
           <span class="content__main-section-user-time">${tweet.username} • ${tweet.time}</span>
-          <img src="twitter-img/Chevron down.svg" alt="Chevron"/>
+          <img src="twitter-img/chevron-down.svg" alt="Chevron"/>
         </div>
       </div>
     `;
@@ -175,9 +175,6 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-
-
-
 const toggleSwitch = document.querySelector('.dark-mode-toggle');
 
 toggleSwitch.addEventListener('click', () => {
@@ -187,7 +184,7 @@ toggleSwitch.addEventListener('click', () => {
 const tweetBtn = document.getElementById("tweetBtn");
 const tweetText = document.querySelector(".content__post-text");
 
-//  tweet alanı doldurulabilir
+//  tweet alanı doldurulabilir (:
 tweetText.addEventListener("focus", function() {
   if (tweetText.textContent === tweetText.getAttribute("data-placeholder")) {
     tweetText.textContent = ""; 
